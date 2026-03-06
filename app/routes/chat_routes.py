@@ -1,43 +1,61 @@
 from fastapi import APIRouter
 import requests
+import os
 from app.chat_router import detect_intent
 
 router = APIRouter()
 
-BASE_URL = "https://unimate-lg25.onrender.com"
+# BASE URL for deployed server
+BASE_URL = os.getenv("BASE_URL", "https://unimate-lg25.onrender.com")
+
+# store sessions in memory
 user_sessions = {}
 
 
 @router.post("/chat")
 def chat(message: str, user_id: str = "default"):
 
-    # LOGIN PHASE
+    # ---------- LOGIN PHASE ----------
     if user_id not in user_sessions:
 
+        # user must send system id first
         if message.isdigit():
 
-            r = requests.post(
-                f"{BASE_URL}/login",
-                json={"system_id": message}
-            )
+            try:
+                r = requests.post(
+                    f"{BASE_URL}/login",
+                    json={"system_id": message}
+                )
 
-            token = r.json()["session_token"]
+                data = r.json()
 
-            user_sessions[user_id] = token
+                # safe check
+                if "session_token" not in data:
+                    return {
+                        "reply": "Login failed. Please check your system ID."
+                    }
 
-            return {
-                "reply": "Login successful. Ask me anything."
-            }
+                token = data["session_token"]
+
+                user_sessions[user_id] = token
+
+                return {
+                    "reply": "Login successful. Ask me anything."
+                }
+
+            except Exception:
+                return {
+                    "reply": "Login service unavailable. Try again."
+                }
 
         return {"reply": "Please enter your system ID."}
 
-
-    # AFTER LOGIN
+    # ---------- AFTER LOGIN ----------
     session_token = user_sessions[user_id]
 
     intent = detect_intent(message)
 
-
+    # ---------- ATTENDANCE ----------
     if intent == "attendance":
 
         r = requests.get(
@@ -46,7 +64,7 @@ def chat(message: str, user_id: str = "default"):
 
         return r.json()
 
-
+    # ---------- ABSENTEE ALERT ----------
     if intent == "absentee_alert":
 
         r = requests.get(
@@ -55,7 +73,7 @@ def chat(message: str, user_id: str = "default"):
 
         return r.json()
 
-
+    # ---------- TODAY CLASSES ----------
     if intent == "today_classes":
 
         r = requests.get(
@@ -64,7 +82,7 @@ def chat(message: str, user_id: str = "default"):
 
         return r.json()
 
-
+    # ---------- HOLIDAYS ----------
     if intent == "holidays":
 
         r = requests.get(
@@ -73,7 +91,7 @@ def chat(message: str, user_id: str = "default"):
 
         return r.json()
 
-
+    # ---------- FACULTY LOCATION ----------
     if intent.startswith("faculty_location"):
 
         name = intent.split(":")[1]
@@ -83,6 +101,5 @@ def chat(message: str, user_id: str = "default"):
         )
 
         return r.json()
-
-
+        
     return {"reply": "Sorry, I couldn't understand that."}
