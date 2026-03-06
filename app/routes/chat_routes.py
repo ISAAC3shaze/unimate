@@ -4,8 +4,7 @@ from app.chat_router import detect_intent
 
 router = APIRouter()
 
-BASE_URL = "http://localhost:8000"
-
+BASE_URL = "https://unimate-lg25.onrender.com"
 user_sessions = {}
 
 
