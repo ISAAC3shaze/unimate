@@ -7,39 +7,28 @@ EZONE_URL = "https://student.sharda.ac.in/admin"
 # ---------------- OTP TRIGGER ----------------
 def trigger_otp(system_id: str):
 
-    print("DEBUG: trigger_otp called with", system_id)
+
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"]
-        )
-
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
 
-        print("DEBUG: opening ezone")
 
         page.goto(EZONE_URL)
         page.wait_for_load_state("networkidle")
 
-        print("DEBUG: filling system id")
 
         page.fill("#system_id", system_id)
 
-        print("DEBUG: clicking send otp")
 
         page.click("#send_stu_otp_email")
         
-        page.wait_for_timeout(5000)
-
-        print("DEBUG: otp click finished")
 
         browser.close()
 
         return True
-
 
 
 # ---------------- ATTENDANCE ----------------
@@ -47,12 +36,7 @@ def fetch_attendance(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"],
-            slow_mo=50
-        )
-
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
 
@@ -97,12 +81,7 @@ def fetch_today_classes(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"],
-            slow_mo=50
-        )
-
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
 
@@ -117,6 +96,7 @@ def fetch_today_classes(system_id: str, otp: str):
 
         page.wait_for_selector("text=Today's Class")
 
+        # holiday check
         if page.locator("text=Holiday").count() > 0:
             browser.close()
             return {"status": "holiday"}
@@ -178,12 +158,7 @@ def fetch_absentee_alert(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"],
-            slow_mo=50
-        )
-
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
 
@@ -224,12 +199,7 @@ def fetch_holidays(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(
-            headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"],
-            slow_mo=50
-        )
-
+        browser = p.chromium.launch(headless=True)
         context = browser.new_context()
         page = context.new_page()
 
@@ -264,4 +234,4 @@ def fetch_holidays(system_id: str, otp: str):
             "status": "success",
             "holidays": holidays
         }
-
+    
