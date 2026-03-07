@@ -25,6 +25,9 @@ def trigger_otp(system_id: str):
 
         page.click("#send_stu_otp_email")
 
+        # IMPORTANT: wait so OTP request actually fires
+        page.wait_for_timeout(5000)
+
         browser.close()
 
         return True
@@ -104,7 +107,7 @@ def fetch_today_classes(system_id: str, otp: str):
         page.wait_for_load_state("networkidle")
 
         page.wait_for_selector("text=Today's Class")
-        
+
         if page.locator("text=Holiday").count() > 0:
             browser.close()
             return {"status": "holiday"}
