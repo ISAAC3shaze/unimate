@@ -9,7 +9,12 @@ def trigger_otp(system_id: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+            slow_mo=50
+        )
+
         context = browser.new_context()
         page = context.new_page()
 
@@ -30,7 +35,12 @@ def fetch_attendance(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+            slow_mo=50
+        )
+
         context = browser.new_context()
         page = context.new_page()
 
@@ -75,7 +85,12 @@ def fetch_today_classes(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+            slow_mo=50
+        )
+
         context = browser.new_context()
         page = context.new_page()
 
@@ -89,8 +104,7 @@ def fetch_today_classes(system_id: str, otp: str):
         page.wait_for_load_state("networkidle")
 
         page.wait_for_selector("text=Today's Class")
-
-        # holiday check
+        
         if page.locator("text=Holiday").count() > 0:
             browser.close()
             return {"status": "holiday"}
@@ -152,7 +166,12 @@ def fetch_absentee_alert(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+            slow_mo=50
+        )
+
         context = browser.new_context()
         page = context.new_page()
 
@@ -193,7 +212,12 @@ def fetch_holidays(system_id: str, otp: str):
 
     with sync_playwright() as p:
 
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage"],
+            slow_mo=50
+        )
+
         context = browser.new_context()
         page = context.new_page()
 
@@ -228,3 +252,4 @@ def fetch_holidays(system_id: str, otp: str):
             "status": "success",
             "holidays": holidays
         }
+
