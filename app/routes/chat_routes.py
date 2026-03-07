@@ -2,14 +2,16 @@ from fastapi import APIRouter
 import requests
 import os
 from app.chat_router import detect_intent
+from app.automation import trigger_otp   # NEW
 
 router = APIRouter()
 
-# BASE URL for deployed server
+
 BASE_URL = os.getenv("BASE_URL", "https://unimate-lg25.onrender.com")
 
-# store sessions in memory
+
 user_sessions = {}
+user_ids = {}   # store system ids
 
 
 @router.post("/chat")
@@ -18,7 +20,7 @@ def chat(message: str, user_id: str = "default"):
     # ---------- LOGIN PHASE ----------
     if user_id not in user_sessions:
 
-        # user must send system id first
+
         if message.isdigit():
 
             try:
@@ -29,24 +31,24 @@ def chat(message: str, user_id: str = "default"):
 
                 data = r.json()
 
-                # safe check
+
                 if "session_token" not in data:
-                    return {
-                        "reply": "Login failed. Please check your system ID."
-                    }
+                    return {"reply": "Login failed. Please check your system ID."}
 
                 token = data["session_token"]
 
                 user_sessions[user_id] = token
+                user_ids[user_id] = message
+
+                # 🔥 trigger OTP here
+                trigger_otp(message)
 
                 return {
-                    "reply": "Login successful. Ask me anything."
+                    "reply": "OTP sent to your email. Please enter the OTP."
                 }
 
-            except Exception:
-                return {
-                    "reply": "Login service unavailable. Try again."
-                }
+            except Exception as e:
+                return {"reply": f"Login service unavailable: {str(e)}"}
 
         return {"reply": "Please enter your system ID."}
 
@@ -101,5 +103,5 @@ def chat(message: str, user_id: str = "default"):
         )
 
         return r.json()
-        
+
     return {"reply": "Sorry, I couldn't understand that."}

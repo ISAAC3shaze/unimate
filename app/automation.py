@@ -7,30 +7,39 @@ EZONE_URL = "https://student.sharda.ac.in/admin"
 # ---------------- OTP TRIGGER ----------------
 def trigger_otp(system_id: str):
 
+    print("DEBUG: trigger_otp called with", system_id)
+
     with sync_playwright() as p:
 
         browser = p.chromium.launch(
             headless=True,
-            args=["--no-sandbox", "--disable-dev-shm-usage"],
-            slow_mo=50
+            args=["--no-sandbox", "--disable-dev-shm-usage"]
         )
 
         context = browser.new_context()
         page = context.new_page()
 
+        print("DEBUG: opening ezone")
+
         page.goto(EZONE_URL)
         page.wait_for_load_state("networkidle")
 
+        print("DEBUG: filling system id")
+
         page.fill("#system_id", system_id)
 
-        page.click("#send_stu_otp_email")
+        print("DEBUG: clicking send otp")
 
-        # IMPORTANT: wait so OTP request actually fires
+        page.click("#send_stu_otp_email")
+        
         page.wait_for_timeout(5000)
+
+        print("DEBUG: otp click finished")
 
         browser.close()
 
         return True
+
 
 
 # ---------------- ATTENDANCE ----------------
