@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.db import get_db_connection
+from app.db import get_connection
 from app.automation import fetch_attendance
 from datetime import date
 
@@ -9,7 +9,7 @@ router = APIRouter()
 @router.get("/attendance/{session_token}")
 def get_attendance(session_token: str):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         # get system_id from session

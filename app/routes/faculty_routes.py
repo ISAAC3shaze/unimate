@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.db import get_db_connection
+from app.db import get_connection
 from datetime import datetime
 
 router = APIRouter()
@@ -8,7 +8,7 @@ router = APIRouter()
 @router.get("/faculty-location/{faculty_name}")
 def faculty_location(faculty_name: str):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         now = datetime.now()
@@ -70,7 +70,7 @@ def faculty_location(faculty_name: str):
 @router.get("/faculty-next-class/{faculty_name}")
 def faculty_next_class(faculty_name: str):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         now = datetime.now()
@@ -113,7 +113,7 @@ def faculty_next_class(faculty_name: str):
 @router.get("/faculty-contact/{faculty_name}")
 def faculty_contact(faculty_name: str):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         cur.execute("""

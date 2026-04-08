@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.db import get_db_connection
+from app.db import get_connection
 from app.automation import fetch_absentee_alert
 from datetime import date
 
@@ -10,7 +10,7 @@ router = APIRouter()
 def absentee_alert(session_token: str):
 
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         # get system_id
