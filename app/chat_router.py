@@ -1,7 +1,12 @@
 import os
 from groq import Groq
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+api_key = os.getenv("GROQ_API_KEY")
+
+if not api_key:
+    client = None
+else:
+    client = Groq(api_key=api_key)
 
 SYSTEM_PROMPT = """
 You are an intent classifier for a university assistant called UniMate.
