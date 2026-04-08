@@ -7,6 +7,7 @@ from datetime import date
 
 router = APIRouter()
 
+
 class LoginRequest(BaseModel):
     system_id: str
 
@@ -22,25 +23,14 @@ def login_student(data: LoginRequest):
         conn = get_connection()
         cur = conn.cursor()
 
-        cur.execute("""
-            SELECT student_name, system_id, section
-            FROM students
-            WHERE system_id = %s
-        """, (data.system_id,))
 
-        student = cur.fetchone()
-
-        if not student:
-            cur.close()
-            conn.close()
-            return {"status": "error", "message": "Student not found"}
 
         session_token = str(uuid.uuid4())
 
         cur.execute("""
-            INSERT INTO user_sessions (system_id, session_token)
+            INSERT INTO sessions (system_id, session_token)
             VALUES (%s, %s)
-        """, (student[1], session_token))
+        """, (data.system_id, session_token))
 
         conn.commit()
         cur.close()
@@ -48,9 +38,7 @@ def login_student(data: LoginRequest):
 
         return {
             "status": "success",
-            "student_name": student[0],
-            "system_id": student[1],
-            "section": student[2],
+            "message": "OTP required",
             "session_token": session_token
         }
 
@@ -66,9 +54,10 @@ def check_login(session_token: str):
         cur = conn.cursor()
 
         cur.execute("""
-            SELECT system_id FROM user_sessions
+            SELECT system_id, otp, created_at FROM sessions
             WHERE session_token = %s
         """, (session_token,))
+
         session = cur.fetchone()
 
         if not session:
@@ -76,22 +65,18 @@ def check_login(session_token: str):
             conn.close()
             return {"status": "error", "message": "Invalid session"}
 
-        system_id = session[0]
+        system_id, otp, created_at = session
+
         today = date.today()
 
-        cur.execute("""
-            SELECT otp FROM ezone_logins
-            WHERE system_id = %s AND login_date = %s
-        """, (system_id, today))
-
-        login = cur.fetchone()
-
-        cur.close()
-        conn.close()
-
-        if login:
+        # check if OTP exists and is from today
+        if otp and created_at.date() == today:
+            cur.close()
+            conn.close()
             return {"status": "logged_in"}
         else:
+            cur.close()
+            conn.close()
             return {"status": "otp_required"}
 
     except Exception as e:
@@ -106,9 +91,10 @@ def request_otp(session_token: str):
         cur = conn.cursor()
 
         cur.execute("""
-            SELECT system_id FROM user_sessions
+            SELECT system_id FROM sessions
             WHERE session_token = %s
         """, (session_token,))
+
         session = cur.fetchone()
 
         if not session:
@@ -137,9 +123,10 @@ def verify_otp(session_token: str, data: OTPRequest):
         cur = conn.cursor()
 
         cur.execute("""
-            SELECT system_id FROM user_sessions
+            SELECT system_id FROM sessions
             WHERE session_token = %s
         """, (session_token,))
+
         session = cur.fetchone()
 
         if not session:
@@ -148,17 +135,19 @@ def verify_otp(session_token: str, data: OTPRequest):
             return {"status": "error", "message": "Invalid session"}
 
         system_id = session[0]
-        today = date.today()
 
-        cur.execute("""
-            DELETE FROM ezone_logins
-            WHERE system_id = %s AND login_date = %s
-        """, (system_id, today))
 
+
+
+
+
+
+        # store OTP in sessions table
         cur.execute("""
-            INSERT INTO ezone_logins (system_id, otp, login_date)
-            VALUES (%s, %s, %s)
-        """, (system_id, data.otp, today))
+            UPDATE sessions
+            SET otp = %s, created_at = CURRENT_TIMESTAMP
+            WHERE session_token = %s
+        """, (data.otp, session_token))
 
         conn.commit()
         cur.close()
