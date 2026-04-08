@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from app.db import get_db_connection
+from app.db import get_connection
 from app.automation import trigger_otp
 import uuid
 from datetime import date
@@ -19,7 +19,7 @@ class OTPRequest(BaseModel):
 @router.post("/login")
 def login_student(data: LoginRequest):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         cur.execute("""
@@ -62,7 +62,7 @@ def login_student(data: LoginRequest):
 @router.get("/check-login/{session_token}")
 def check_login(session_token: str):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         cur.execute("""
@@ -102,7 +102,7 @@ def check_login(session_token: str):
 @router.post("/request-otp/{session_token}")
 def request_otp(session_token: str):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         cur.execute("""
@@ -133,7 +133,7 @@ def request_otp(session_token: str):
 @router.post("/verify-otp/{session_token}")
 def verify_otp(session_token: str, data: OTPRequest):
     try:
-        conn = get_db_connection()
+        conn = get_connection()
         cur = conn.cursor()
 
         cur.execute("""
