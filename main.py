@@ -9,6 +9,13 @@ from app.routes.holiday_routes import router as holiday_router
 from app.routes.next_class_routes import router as next_class_router
 from app.routes.chat_routes import router as chat_router
 
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/health")
+def health():
+    return {"message": "server running"}
 
 app = FastAPI(title="UniMate API")
 
@@ -27,7 +34,7 @@ app.include_router(attendance_router)
 # Today's classes / next class
 app.include_router(timetable_router)
 
-# Faculty location / cabin
+#Facultylocation / cabin
 app.include_router(faculty_router)
 
 # Absentee alerts
