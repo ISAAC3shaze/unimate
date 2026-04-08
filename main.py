@@ -49,4 +49,34 @@ app.include_router(next_class_router)
 #chat
 app.include_router(chat_router)
 
+from app.db import get_connection
 
+def create_tables():
+    conn = get_connection()
+    cur = conn.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        system_id VARCHAR(50) UNIQUE
+    );
+    """)
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS sessions (
+        id SERIAL PRIMARY KEY,
+        session_token VARCHAR(255),
+        system_id VARCHAR(50),
+        otp VARCHAR(10),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    """)
+
+    conn.commit()
+    cur.close()
+    conn.close()
+
+
+@app.on_event("startup")
+def startup():
+    create_tables()
