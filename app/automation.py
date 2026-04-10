@@ -181,25 +181,32 @@ def fetch_holidays(system_id: str, otp: str):
 
     login(page, system_id, otp)
 
-    holiday_widget = page.locator(".studentbg").filter(has_text="Holiday").nth(2)
+    try:
+        page.wait_for_selector("text=Holiday", timeout=10000)
 
-    text = holiday_widget.inner_text()
+        # locate the Holiday section container
+        holiday_section = page.locator("text=Holiday").first.locator("..")
 
-    context.close()
+        text = holiday_section.inner_text()
 
-    lines = [l.strip() for l in text.split("\n") if l.strip()]
+        context.close()
 
-    holidays = []
+        lines = [l.strip() for l in text.split("\n") if l.strip()]
 
-    i = 1
-    while i < len(lines):
-        holidays.append({
-            "name": lines[i],
-            "date": lines[i + 1] if i + 1 < len(lines) else ""
-        })
-        i += 2
+        holidays = []
 
-    return {
-        "status": "success",
-        "holidays": holidays
-    }
+        for i in range(len(lines)):
+            if i + 1 < len(lines) and ("Day" in lines[i] or "Holiday" in lines[i]):
+                holidays.append({
+                    "name": lines[i],
+                    "date": lines[i + 1]
+                })
+
+        return {
+            "status": "success",
+            "holidays": holidays
+        }
+
+    except Exception as e:
+        context.close()
+        return {"status": "error", "message": str(e)}
