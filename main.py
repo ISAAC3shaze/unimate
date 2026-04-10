@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from app.routes.auth_routes import router as auth_router
 from app.routes.attendance_routes import router as attendance_router
+from app.routes.today_class_routes import router as today_class_router
 # from app.routes.timetable_routes import router as timetable_router
 # from app.routes.faculty_routes import router as faculty_router
 # from app.routes.absentee_routes import router as absentee_router
@@ -30,6 +31,9 @@ app.include_router(auth_router)
 
 # Attendance (overall)
 app.include_router(attendance_router)
+
+#today class
+app.include_router(today_class_router)
 
 # # Today's classes / next class
 # app.include_router(timetable_router)
