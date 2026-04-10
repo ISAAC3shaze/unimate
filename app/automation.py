@@ -195,12 +195,20 @@ def fetch_holidays(system_id: str, otp: str):
 
         holidays = []
 
-        for i in range(len(lines)):
-            if i + 1 < len(lines) and ("Day" in lines[i] or "Holiday" in lines[i]):
+        i = 0
+        while i < len(lines) - 1:
+            name = lines[i]
+            date = lines[i + 1]
+
+            # basic validation: next line must contain a date
+            if any(day in date for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
                 holidays.append({
-                    "name": lines[i],
-                    "date": lines[i + 1]
+                    "name": name,
+                    "date": date
                 })
+                i += 2
+            else:
+                i += 1
 
         return {
             "status": "success",
