@@ -139,3 +139,35 @@ def fetch_today_classes(system_id: str, otp: str):
             return {"status": "next_class", **c}
 
     return {"status": "college_over"}
+
+
+#absentee alert function 
+def fetch_absentee_alert(system_id: str, otp: str):
+
+    browser = get_browser()
+    context = browser.new_context()
+    page = context.new_page()
+
+    login(page, system_id, otp)
+
+    page.wait_for_selector("text=Absentee Alert")
+
+    alert_block = page.locator("text=Absentee Alert").locator("..")
+
+    text = alert_block.inner_text()
+
+    context.close()
+
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+
+    if len(lines) <= 1:
+        return {"status": "no_absence"}
+
+    if len(lines) >= 3:
+        return {
+            "status": "absent",
+            "subject": lines[1],
+            "date": lines[2]
+        }
+
+    return {"status": "no_absence"}

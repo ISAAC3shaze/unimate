@@ -5,7 +5,7 @@ from app.routes.attendance_routes import router as attendance_router
 from app.routes.today_class_routes import router as today_class_router
 # from app.routes.timetable_routes import router as timetable_router
 # from app.routes.faculty_routes import router as faculty_router
-# from app.routes.absentee_routes import router as absentee_router
+from app.routes.absentee_routes import router as absentee_router
 # from app.routes.holiday_routes import router as holiday_router
 # from app.routes.next_class_routes import router as next_class_router
 # from app.routes.chat_routes import router as chat_router
@@ -42,7 +42,7 @@ app.include_router(today_class_router)
 # app.include_router(faculty_router)
 
 # # Absentee alerts
-# app.include_router(absentee_router)
+app.include_router(absentee_router)
 
 # # Holidays
 # app.include_router(holiday_router)
