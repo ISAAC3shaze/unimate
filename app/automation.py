@@ -182,12 +182,10 @@ def fetch_holidays(system_id: str, otp: str):
     login(page, system_id, otp)
 
     try:
-        page.wait_for_selector("text=Holiday", timeout=10000)
+        page.wait_for_timeout(4000)
 
-        # locate the Holiday section container
-        holiday_section = page.locator("text=Holiday").first.locator("..")
-
-        text = holiday_section.inner_text()
+        # 👉 get full page text (debug approach)
+        text = page.inner_text("body")
 
         context.close()
 
@@ -195,20 +193,13 @@ def fetch_holidays(system_id: str, otp: str):
 
         holidays = []
 
-        i = 0
-        while i < len(lines) - 1:
-            name = lines[i]
-            date = lines[i + 1]
-
-            # basic validation: next line must contain a date
-            if any(day in date for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]):
+        for i in range(len(lines) - 1):
+            if any(day in lines[i+1] for day in ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]):
                 holidays.append({
-                    "name": name,
-                    "date": date
+                    "name": lines[i],
+                    "date": lines[i+1]
                 })
-                i += 2
-            else:
-                i += 1
+
 
         return {
             "status": "success",
