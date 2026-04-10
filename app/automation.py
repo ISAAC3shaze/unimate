@@ -94,7 +94,7 @@ def fetch_today_classes(system_id: str, otp: str):
 
     page.wait_for_selector("text=Today's Class")
 
-    if page.locator("text=Holiday").count() > 0:
+    if page.locator("text=Holiday").count() > 0 and len(class_cards) == 0:
         context.close()
         return {"status": "holiday"}
 
