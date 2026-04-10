@@ -94,11 +94,13 @@ def fetch_today_classes(system_id: str, otp: str):
 
     page.wait_for_selector("text=Today's Class")
 
+    class_cards = page.locator("text=Block").locator("..").all()
+
     if page.locator("text=Holiday").count() > 0 and len(class_cards) == 0:
         context.close()
         return {"status": "holiday"}
 
-    class_cards = page.locator("text=Block").locator("..").all()
+    
 
     classes = []
 
