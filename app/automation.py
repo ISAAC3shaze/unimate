@@ -68,12 +68,15 @@ def fetch_attendance(system_id: str, otp: str):
     attendance = {}
 
     for i in range(len(lines)):
-        if "Total" in lines[i]:
-            attendance["total"] = int(lines[i + 1])
-        if "Present" in lines[i]:
-            attendance["present"] = int(lines[i + 1])
-        if "Absent" in lines[i]:
-            attendance["absent"] = int(lines[i + 1])
+        try:
+            if "Total" in lines[i]:
+                attendance["total"] = int(lines[i + 1])
+            if "Present" in lines[i]:
+                attendance["present"] = int(lines[i + 1])
+            if "Absent" in lines[i]:
+                attendance["absent"] = int(lines[i + 1])
+        except:
+            continue
 
     context.close()
 
