@@ -171,3 +171,35 @@ def fetch_absentee_alert(system_id: str, otp: str):
         }
 
     return {"status": "no_absence"}
+
+#HOLIDAYS FUNCTION 
+def fetch_holidays(system_id: str, otp: str):
+
+    browser = get_browser()
+    context = browser.new_context()
+    page = context.new_page()
+
+    login(page, system_id, otp)
+
+    holiday_widget = page.locator(".studentbg").filter(has_text="Holiday").nth(2)
+
+    text = holiday_widget.inner_text()
+
+    context.close()
+
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+
+    holidays = []
+
+    i = 1
+    while i < len(lines):
+        holidays.append({
+            "name": lines[i],
+            "date": lines[i + 1] if i + 1 < len(lines) else ""
+        })
+        i += 2
+
+    return {
+        "status": "success",
+        "holidays": holidays
+    }
