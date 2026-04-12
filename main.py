@@ -10,6 +10,7 @@ from app.routes.holiday_routes import router as holiday_router
 # from app.routes.next_class_routes import router as next_class_router
 # from app.routes.chat_routes import router as chat_router
 from app.routes.faculty_live_routes import router as faculty_live_router
+from app.routes.free_class_routes import router as free_class_router
 
 from fastapi import FastAPI
 
@@ -50,6 +51,9 @@ app.include_router(holiday_router)
 
 #FACULTY DETAILS
 app.include_router(faculty_live_router)
+
+#FREE CLASS DETAILS
+app.include_router(free_class_router)
 
 # #next class
 # app.include_router(next_class_router)
