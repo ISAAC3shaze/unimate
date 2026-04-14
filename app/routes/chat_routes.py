@@ -56,9 +56,9 @@ def chat(data: ChatRequest):
             }
 
         except Exception as e:
-            print("ERROR:", e)
+            print("FULL ERROR:", str(e))
             return {
-            "response": "Error fetching attendance."
+            "response": f"Error: {str(e)}"
         }
         
         except Exception as e:
