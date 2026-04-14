@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes.auth_routes import router as auth_router
 from app.routes.attendance_routes import router as attendance_router
@@ -15,6 +16,13 @@ from app.routes.free_class_routes import router as free_class_router
 from fastapi import FastAPI
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all (for now)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/health")
 def health():

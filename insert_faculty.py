@@ -8,7 +8,7 @@ df = pd.read_csv("Free_class_final.csv")
 
 data = [tuple(row) for row in df.values]
 
-cur.execute("DELETE FROM free_class;")
+ 
 
 cur.executemany("""
     INSERT INTO free_class (room, day, start_time, end_time, status)
