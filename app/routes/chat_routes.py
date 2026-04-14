@@ -35,13 +35,18 @@ def chat(data: ChatRequest):
         try:
             # 🔥 Call your attendance function
             result = get_attendance(system_id)
+            print("Attendance result:", result)
 
             # adjust based on your actual return
             attendance = result.get("attendance", "not available")
+            
 
             return {
             "response": f"Your attendance is {attendance}."
+            
+        
         }
+        
 
         except Exception as e:
             return {
