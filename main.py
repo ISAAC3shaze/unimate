@@ -10,6 +10,7 @@ from app.routes.holiday_routes import router as holiday_router
 
 from app.routes.faculty_live_routes import router as faculty_live_router
 from app.routes.free_class_routes import router as free_class_router
+from app.routes.chat_routes import router as chat_router
 
 from app.db import get_connection
 
@@ -63,6 +64,7 @@ app.include_router(faculty_live_router)
 
 app.include_router(free_class_router)
 
+app.include_router(chat_router)
 
 
 
