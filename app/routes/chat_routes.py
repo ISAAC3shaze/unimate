@@ -31,26 +31,14 @@ def chat(data: ChatRequest):
     # 🧠 RULE-BASED INTENT DETECTION
 
     # 1️⃣ ATTENDANCE
-    if  "attendance" in message:
+    if "attendance" in message:
         try:
-            # 🔥 Call your attendance function
-            result = get_attendance(system_id)
-            print("Attendance result:", result)
-
-            # adjust based on your actual return
-            attendance = result.get("attendance", "not available")
-            
-
             return {
-            "response": f"Your attendance is {attendance}."
-            
-        
+            "response": f"Attendance feature is being fixed. Your system ID is {system_id}"
         }
-        
-
         except Exception as e:
             return {
-            "response": "Sorry, I couldn't fetch your attendance right now."
+            "response": "Error fetching attendance."
         }
 
     # 2️⃣ FREE CLASS
