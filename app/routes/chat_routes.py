@@ -33,9 +33,34 @@ def chat(data: ChatRequest):
     # 1️⃣ ATTENDANCE
     if "attendance" in message:
         try:
+            conn = get_connection()
+            cur = conn.cursor()
+
+            # simple test query
+            cur.execute("""
+                SELECT * FROM attendance WHERE system_id = %s
+                """, (system_id,))
+
+            data = cur.fetchone()
+
+            cur.close()
+            conn.close()
+
+            if data:
+                return {
+                "response": f"Attendance data found: {data}"
+            }
+            else:
+                return {
+                "response": "No attendance data found."
+            }
+
+        except Exception as e:
+            print("ERROR:", e)
             return {
-            "response": f"Attendance feature is being fixed. Your system ID is {system_id}"
+            "response": "Error fetching attendance."
         }
+        
         except Exception as e:
             return {
             "response": "Error fetching attendance."
