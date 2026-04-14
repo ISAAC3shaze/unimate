@@ -5,3 +5,185 @@ http://127.0.0.1:8000
 http://127.0.0.1:8000/docs
 
 
+
+dropping code
+
+import psycopg2
+
+conn = psycopg2.connect("postgresql://postgres:JiYQPfttbblGtLQeNJDCHMCtcEadIxuV@maglev.proxy.rlwy.net:43060/railway")
+cur = conn.cursor()
+
+# 🔥 DROP TABLE
+cur.execute("""
+DROP TABLE IF EXISTS students;
+""")
+
+
+conn.commit()
+cur.close()
+conn.close()
+
+print("Students table recreated successfully ✅")
+
+
+
+
+from fastapi import APIRouter
+from pydantic import BaseModel
+from app.db import get_connection
+from app.automation import trigger_otp
+import uuid
+from datetime import date
+
+router = APIRouter()
+
+
+class LoginRequest(BaseModel):
+    system_id: str
+
+
+class OTPRequest(BaseModel):
+    otp: str
+
+
+# ---------------- LOGIN ----------------
+@router.post("/login")
+def login_student(data: LoginRequest):
+    try:
+        conn = get_connection()
+        cur = conn.cursor()
+
+
+
+        session_token = str(uuid.uuid4())
+
+        cur.execute("""
+            INSERT INTO sessions (system_id, session_token)
+            VALUES (%s, %s)
+        """, (data.system_id, session_token))
+
+        conn.commit()
+        cur.close()
+        conn.close()
+
+        return {
+            "status": "success",
+            "message": "OTP required",
+            "session_token": session_token
+        }
+
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
+
+# ---------------- CHECK LOGIN ----------------
+@router.get("/check-login/{session_token}")
+def check_login(session_token: str):
+    try:
+        conn = get_connection()
+        cur = conn.cursor()
+
+        cur.execute("""
+            SELECT system_id, otp, created_at FROM sessions
+            WHERE session_token = %s
+        """, (session_token,))
+
+        session = cur.fetchone()
+
+        if not session:
+            cur.close()
+            conn.close()
+            return {"status": "error", "message": "Invalid session"}
+
+        system_id, otp, created_at = session
+
+        today = date.today()
+
+        # check if OTP exists and is from today
+        if otp and created_at.date() == today:
+            cur.close()
+            conn.close()
+            return {"status": "logged_in"}
+        else:
+            cur.close()
+            conn.close()
+            return {"status": "otp_required"}
+
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
+
+# ---------------- REQUEST OTP ----------------
+@router.post("/request-otp/{session_token}")
+def request_otp(session_token: str):
+    try:
+        conn = get_connection()
+        cur = conn.cursor()
+
+        cur.execute("""
+            SELECT system_id FROM sessions
+            WHERE session_token = %s
+        """, (session_token,))
+
+        session = cur.fetchone()
+
+        if not session:
+            cur.close()
+            conn.close()
+            return {"status": "error", "message": "Invalid session"}
+
+        system_id = session[0]
+
+        cur.close()
+        conn.close()
+
+        trigger_otp(system_id)
+
+        return {"status": "otp_sent"}
+
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
+
+# ---------------- VERIFY OTP ----------------
+@router.post("/verify-otp/{session_token}")
+def verify_otp(session_token: str, data: OTPRequest):
+    try:
+        conn = get_connection()
+        cur = conn.cursor()
+
+        cur.execute("""
+            SELECT system_id FROM sessions
+            WHERE session_token = %s
+        """, (session_token,))
+
+        session = cur.fetchone()
+
+        if not session:
+            cur.close()
+            conn.close()
+            return {"status": "error", "message": "Invalid session"}
+
+        system_id = session[0]
+
+
+
+
+
+
+
+        # store OTP in sessions table
+        cur.execute("""
+            UPDATE sessions
+            SET otp = %s, created_at = CURRENT_TIMESTAMP
+            WHERE session_token = %s
+        """, (data.otp, session_token))
+
+        conn.commit()
+        cur.close()
+        conn.close()
+
+        return {"status": "otp_saved"}
+
+    except Exception as e:
+        return {"status": "error", "message": str(e)}

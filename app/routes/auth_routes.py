@@ -23,8 +23,23 @@ def login_student(data: LoginRequest):
         conn = get_connection()
         cur = conn.cursor()
 
+        # 🔍 CHECK STUDENT IN DB
+        cur.execute("""
+            SELECT name, course, section 
+            FROM students 
+            WHERE system_id = %s
+        """, (data.system_id,))
 
+        student = cur.fetchone()
 
+        if not student:
+            cur.close()
+            conn.close()
+            return {"status": "error", "message": "Invalid Student ID"}
+
+        name, course, section = student
+
+        # 🔐 CREATE SESSION TOKEN
         session_token = str(uuid.uuid4())
 
         cur.execute("""
@@ -39,7 +54,10 @@ def login_student(data: LoginRequest):
         return {
             "status": "success",
             "message": "OTP required",
-            "session_token": session_token
+            "session_token": session_token,
+            "name": name,
+            "course": course,
+            "section": section
         }
 
     except Exception as e:
@@ -69,7 +87,6 @@ def check_login(session_token: str):
 
         today = date.today()
 
-        # check if OTP exists and is from today
         if otp and created_at.date() == today:
             cur.close()
             conn.close()
@@ -134,15 +151,7 @@ def verify_otp(session_token: str, data: OTPRequest):
             conn.close()
             return {"status": "error", "message": "Invalid session"}
 
-        system_id = session[0]
-
-
-
-
-
-
-
-        # store OTP in sessions table
+        # store OTP
         cur.execute("""
             UPDATE sessions
             SET otp = %s, created_at = CURRENT_TIMESTAMP

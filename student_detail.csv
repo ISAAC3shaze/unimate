@@ -1,0 +1,902 @@
+Sr No.,Student Name,Student System ID,Student Roll No.,Course,Section,Student Email ID,Specialization
+1,Anutosh Mishra,2021308861,210101102,B-Tech,CSE-VI A,2021308861.anutosh@ug.sharda.ac.in,Computer Science
+2,Garv Sharma,2021529806,210101190,B-Tech,CSE-VI A,2021529806.garv@ug.sharda.ac.in,Computer Science
+3,Nandani Chaudhary,2021828405,210101591,B-Tech,CSE-VI A,2021828405.nandani@ug.sharda.ac.in,Computer Science
+4,Farheen Khan,2021000009,210121021,B-Tech,CSE-VI A,2021000009.farheen@ug.sharda.ac.in,Computer Science
+5,Abhiraj Singh,2022579515,2201010023,B-Tech,CSE-VI A,2022579515.abhiraj@ug.sharda.ac.in,Computer Science
+6,Aman Sinha,2022534811,2201010078,B-Tech,CSE-VI A,2022534811.aman@ug.sharda.ac.in,Computer Science
+7,Ansh Shrivastav,2022475156,2201010099,B-Tech,CSE-VI A,2022475156.ansh@ug.sharda.ac.in,Computer Science
+8,Anuj Rawat,2022394343,2201010111,B-Tech,CSE-VI A,2022394343.anuj@ug.sharda.ac.in,Computer Science
+9,Arbaz Ahmed,2022006308,2201010121,B-Tech,CSE-VI A,2022006308.arbaz@ug.sharda.ac.in,Computer Science
+10,Atithi Negi,2022438604,2201010162,B-Tech,CSE-VI A,2022438604.atithi@ug.sharda.ac.in,Computer Science
+11,Basharat Hassan,2022521926,2201010175,B-Tech,CSE-VI A,2022521926.basharat@ug.sharda.ac.in,Computer Science
+12,Bhoomi Sharma,2022325232,2201010178,B-Tech,CSE-VI A,2022325232.bhoomi@ug.sharda.ac.in,Computer Science
+13,Chirag Nirwan,2022305905,2201010193,B-Tech,CSE-VI A,2022305905.chirag@ug.sharda.ac.in,Computer Science
+14,Faiyaz Azim,2022411800,2201010236,B-Tech,CSE-VI A,2022411800.faiyaz@ug.sharda.ac.in,Computer Science
+15,Jigar Kumar,2022503298,2201010308,B-Tech,CSE-VI A,2022503298.jigar@ug.sharda.ac.in,Computer Science
+16,Keshav Bisht,2022476255,2201010325,B-Tech,CSE-VI A,2022476255.keshav@ug.sharda.ac.in,Computer Science
+17,Lakshay Rekhi,2022501762,2201010355,B-Tech,CSE-VI A,2022501762.lakshay@ug.sharda.ac.in,Computer Science
+18,Lokender Singh,2022002689,2201010358,B-Tech,CSE-VI A,2022002689.lokender@ug.sharda.ac.in,Computer Science
+19,Manish Kumar,2022004863,2201010370,B-Tech,CSE-VI A,2022004863.manish@ug.sharda.ac.in,Computer Science
+20,Mohammed Mikael Rashid,2022526514,2201010415,B-Tech,CSE-VI A,2022526514.mohammedmikael@ug.sharda.ac.in,Computer Science
+21,Mohammed Shaquib Khan,2022429026,2201010417,B-Tech,CSE-VI A,2022429026.mohammed@ug.sharda.ac.in,Computer Science
+22,Naveen Kumar Jha,2022518370,2201010459,B-Tech,CSE-VI A,2022518370.naveen@ug.sharda.ac.in,Computer Science
+23,Nidhi Pandey,2022437668,2201010467,B-Tech,CSE-VI A,2022437668.nidhi@ug.sharda.ac.in,Computer Science
+24,Pulle Thirupathi,2022513603,2201010538,B-Tech,CSE-VI A,2022513603.pulle@ug.sharda.ac.in,Computer Science
+25,Rajan Sharma,2022497991,2201010552,B-Tech,CSE-VI A,2022497991.rajan@ug.sharda.ac.in,Computer Science
+26,Rakshit Garg,2022563106,2201010558,B-Tech,CSE-VI A,2022563106.rakshit@ug.sharda.ac.in,Computer Science
+27,Rohan Srivastava,2022506102,2201010597,B-Tech,CSE-VI A,2022506102.rohan@ug.sharda.ac.in,Computer Science
+28,Deepali Singh,2022462663,2201010204,B-Tech,CSE-VI A,2022462663.deepali@ug.sharda.ac.in,Computer Science
+29,Sanket Sharma,2022344264,2201010634,B-Tech,CSE-VI A,2022344264.sanket@ug.sharda.ac.in,Computer Science
+30,Divyansh Singh,2022487133,2201010227,B-Tech,CSE-VI A,2022487133.divyansh@ug.sharda.ac.in,Computer Science
+31,Saumya Suman,2022438521,2201010646,B-Tech,CSE-VI A,2022438521.saumya@ug.sharda.ac.in,Computer Science
+32,Shaurya Singh,2022006789,2201010661,B-Tech,CSE-VI A,2022006789.shaurya@ug.sharda.ac.in,Computer Science
+33,Shivam Kaintyura,2022472720,2201010668,B-Tech,CSE-VI A,2022472720.shivam@ug.sharda.ac.in,Computer Science
+34,Shivam Kumar,2022577110,2201010671,B-Tech,CSE-VI A,2022577110.shivam@ug.sharda.ac.in,Computer Science
+35,Shivam Yadav,2022432518,2201010676,B-Tech,CSE-VI A,2022432518.shivam@ug.sharda.ac.in,Computer Science
+36,Shobhit Agrawal,2022512360,2201010681,B-Tech,CSE-VI A,2022512360.shobhit@ug.sharda.ac.in,Computer Science
+37,Shreyal Gupta,2022004756,2201010684,B-Tech,CSE-VI A,2022004756.shreyal@ug.sharda.ac.in,Computer Science
+38,Shubhojit Sen,2022520978,2201010693,B-Tech,CSE-VI A,2022520978.shubhojit@ug.sharda.ac.in,Computer Science
+39,Suhail Nazir Taili,2022003913,2201010718,B-Tech,CSE-VI A,2022003913.suhail@ug.sharda.ac.in,Computer Science
+40,Surbhi Rana,2022006898,2201010729,B-Tech,CSE-VI A,2022006898.surbhi@ug.sharda.ac.in,Computer Science
+41,Suruchi Kumari,2022517301,2201010730,B-Tech,CSE-VI A,2022517301.suruchi@ug.sharda.ac.in,Computer Science
+42,Taukir Alam,2022534653,2201010751,B-Tech,CSE-VI A,2022534653.taukir@ug.sharda.ac.in,Computer Science
+43,Vigyanshu Pandey,2022452189,2201010787,B-Tech,CSE-VI A,2022452189.vigyanshu@ug.sharda.ac.in,Computer Science
+44,Yashika .,2022006072,2201010815,B-Tech,CSE-VI A,2022006072.yashika@ug.sharda.ac.in,Computer Science
+45,Yukti Arora,2022518505,2201010821,B-Tech,CSE-VI A,2022518505.yukti@ug.sharda.ac.in,Computer Science
+46,Aryan Raj,2022006613,2201010831,B-Tech,CSE-VI A,2022006613.aryan@ug.sharda.ac.in,Computer Science
+47,Krishi Sehrawat,2022007518,2201010850,B-Tech,CSE-VI A,2022007518.krishi@ug.sharda.ac.in,Computer Science
+48,Lakshya Dixit,2022007615,2201010852,B-Tech,CSE-VI A,2022007615.lakshya@ug.sharda.ac.in,Computer Science
+49,Akshansu .,2022007629,2201010853,B-Tech,CSE-VI A,2022007629.akshansu@ug.sharda.ac.in,Computer Science
+50,Astha Gupta,2022007684,2201010859,B-Tech,CSE-VI A,2022007684.astha@ug.sharda.ac.in,Computer Science
+51,Bhupendra Saini,2022007720,2201010861,B-Tech,CSE-VI A,2022007720.bhupendra@ug.sharda.ac.in,Computer Science
+52,Ayush Srivastava,2022545040,2201010880,B-Tech,CSE-VI A,2022545040.ayush@ug.sharda.ac.in,Computer Science
+53,Sahil Kumar,2022565552,2201010883,B-Tech,CSE-VI A,2022565552.sahil@ug.sharda.ac.in,Computer Science
+54,Utkarsh Singh,2022583301,2201010885,B-Tech,CSE-VI A,2022583301.utkarsh@ug.sharda.ac.in,Computer Science
+55,Purushottam Choudhary,2022592906,2201010889,B-Tech,CSE-VI A,2022592906.purushottam@ug.sharda.ac.in,Computer Science
+56,Abhijeet Kumar,2022596015,2201010893,B-Tech,CSE-VI A,2022596015.abhijeet@ug.sharda.ac.in,Computer Science
+57,Abhishek Kumar,2022609610,2201010899,B-Tech,CSE-VI A,2022609610.abhishek@ug.sharda.ac.in,Computer Science
+58,Sarthak Sanghai,2022837427,2201010913,B-Tech,CSE-VI A,2022837427.sarthak@ug.sharda.ac.in,Computer Science
+59,Andrew Chingthat Khaigoulen Mate,2023248088,2301017003,B-Tech,CSE-VI A,2023248088.andrew@ug.sharda.ac.in,Computer Science
+60,Prashid Shanker,2023583466,2301017012,B-Tech,CSE-VI A,2023583466.prashid@ug.sharda.ac.in,Computer Science
+61,Sudiksha Bhogal,2023524672,2301017018,B-Tech,CSE-VI A,2023524672.sudiksha@ug.sharda.ac.in,Computer Science
+62,Tauhid Hashmi,2023500162,2301017020,B-Tech,CSE-VI A,2023500162.tauhid@ug.sharda.ac.in,Computer Science
+63,Abhishek Chaudhary,2021479763,210101025,B-Tech,CSE-VI A,2021479763.abhishek@ug.sharda.ac.in,Computer Science
+64,Ankit kumar,2024389953,,B-Tech,CSE-VI A,,Computer Science
+65,Tarun Patel,2019005675,190101319,B-Tech,CSE-VI B,,Computer Science
+66,Mohammad Aatif Quamre,2020516582,200101181,B-Tech,CSE-VI B,,Computer Science
+67,Aditi Tiwari,2021378869,210101036,B-Tech,CSE-VI B,,Computer Science
+68,Azeem Malik,2021420120,210101143,B-Tech,CSE-VI B,2021420120.azeem@ug.sharda.ac.in,Computer Science
+69,Rinjal Sagar,2021003785,210101586,B-Tech,CSE-VI B,2021003785.rinjal@ug.sharda.ac.in,Computer Science
+70,A Vishwam Rao,2022003574,2201010001,B-Tech,CSE-VI B,2022003574.a@ug.sharda.ac.in,Computer Science
+71,Abhinay Singh Rawat,2022360529,2201010022,B-Tech,CSE-VI B,2022360529.abhinay@ug.sharda.ac.in,Computer Science
+72,Ankit Yadav,2022538932,2201010096,B-Tech,CSE-VI B,2022538932.ankit@ug.sharda.ac.in,Computer Science
+73,Anshuman Singh,2022002787,2201010105,B-Tech,CSE-VI B,2022002787.anshuman@ug.sharda.ac.in,Computer Science
+74,Anushka Kashyap,2022005229,2201010115,B-Tech,CSE-VI B,2022005229.anushka@ug.sharda.ac.in,Computer Science
+75,Aryan Rattan Trakroo,2022419571,2201010146,B-Tech,CSE-VI B,2022419571.aryan@ug.sharda.ac.in,Computer Science
+76,Bolla Manoj Sai,2022433389,2201010183,B-Tech,CSE-VI B,2022433389.bolla@ug.sharda.ac.in,Computer Science
+77,Brahmtej Mohanty,2022002578,2201010184,B-Tech,CSE-VI B,2022002578.brahmtej@ug.sharda.ac.in,Computer Science
+78,Chirag Pathak,2022005228,2201010194,B-Tech,CSE-VI B,2022005228.chirag@ug.sharda.ac.in,Computer Science
+79,Danish Kamal,2022349970,2201010201,B-Tech,CSE-VI B,2022349970.danish@ug.sharda.ac.in,Computer Science
+80,Hameem Yaseen,2022565603,2201010257,B-Tech,CSE-VI B,2022565603.hameem@ug.sharda.ac.in,Computer Science
+81,Jabir Luqman Ismail,2022804425,2201010297,B-Tech,CSE-VI B,2022804425.jabir@ug.sharda.ac.in,Computer Science
+82,Kadam Pathak,2022003231,2201010312,B-Tech,CSE-VI B,2022003231.kadam@ug.sharda.ac.in,Computer Science
+83,Kritika Rawat,2022004681,2201010339,B-Tech,CSE-VI B,2022004681.kritika@ug.sharda.ac.in,Computer Science
+84,Kunal Singh Yadav,2022455169,2201010348,B-Tech,CSE-VI B,2022455169.kunal@ug.sharda.ac.in,Computer Science
+85,Kalpana Mishra,2022004703,2201010314,B-Tech,CSE-VI B,2022004703.kalpana@ug.sharda.ac.in,Computer Science
+86,Lavanya Jain,2022384000,2201010357,B-Tech,CSE-VI B,2022384000.lavanya@ug.sharda.ac.in,Computer Science
+87,Lovkesh Chauhan,2022462273,2201010360,B-Tech,CSE-VI B,2022462273.lovkesh@ug.sharda.ac.in,Computer Science
+88,Manish Kumar Ray,2022308623,2201010372,B-Tech,CSE-VI B,2022308623.manish@ug.sharda.ac.in,Computer Science
+89,Manjeet Saini,2022310930,2201010376,B-Tech,CSE-VI B,2022310930.manjeet@ug.sharda.ac.in,Computer Science
+90,Mansi Singh,2022532088,2201010378,B-Tech,CSE-VI B,2022532088.mansi@ug.sharda.ac.in,Computer Science
+91,Mohd Adeeb Siddiqui,2022355780,2201010419,B-Tech,CSE-VI B,2022355780.mohd@ug.sharda.ac.in,Computer Science
+92,Mohd Kaif Ul Haq,2022408542,2201010422,B-Tech,CSE-VI B,2022408542.mohd@ug.sharda.ac.in,Computer Science
+93,Mohd Tabish Mahmood,2022486143,2201010427,B-Tech,CSE-VI B,2022486143.mohd@ug.sharda.ac.in,Computer Science
+94,Mohd. Zaid,2022001475,2201010429,B-Tech,CSE-VI B,2022001475.mohd@ug.sharda.ac.in,Computer Science
+95,Naman Oli,2022368285,2201010454,B-Tech,CSE-VI B,2022368285.naman@ug.sharda.ac.in,Computer Science
+96,Navdisha .,2022005715,2201010458,B-Tech,CSE-VI B,2022005715.navdisha@ug.sharda.ac.in,Computer Science
+97,Nayan Nayak,2022504837,2201010464,B-Tech,CSE-VI B,2022504837.nayan@ug.sharda.ac.in,Computer Science
+98,Nistha Diwedi,2022413491,2201010480,B-Tech,CSE-VI B,2022413491.nistha@ug.sharda.ac.in,Computer Science
+99,Nitish Kumar,2022550696,2201010483,B-Tech,CSE-VI B,2022550696.nitish@ug.sharda.ac.in,Computer Science
+100,Megha Singh,2022512176,2201010399,B-Tech,CSE-VI B,2022512176.megha@ug.sharda.ac.in,Computer Science
+101,Piyush Agnihotri,2022520753,2201010502,B-Tech,CSE-VI B,2022520753.piyush@ug.sharda.ac.in,Computer Science
+102,Poorab Agrawal,2022536903,2201010506,B-Tech,CSE-VI B,2022536903.poorab@ug.sharda.ac.in,Computer Science
+103,Prinsvil Yadav,2022472521,2201010526,B-Tech,CSE-VI B,2022472521.prinsvil@ug.sharda.ac.in,Computer Science
+104,Priyanshi .,2022441764,2201010529,B-Tech,CSE-VI B,2022441764.priyanshi@ug.sharda.ac.in,Computer Science
+105,Sanchit .,2022004682,2201010630,B-Tech,CSE-VI B,2022004682.sanchit@ug.sharda.ac.in,Computer Science
+106,Sandali Sinha,2022002703,2201010631,B-Tech,CSE-VI B,2022002703.sandali@ug.sharda.ac.in,Computer Science
+107,Satyendra Negi,2022001659,2201010643,B-Tech,CSE-VI B,2022001659.satyendra@ug.sharda.ac.in,Computer Science
+108,Shiva Srivastava,2022002786,2201010667,B-Tech,CSE-VI B,2022002786.shiva@ug.sharda.ac.in,Computer Science
+109,Somil Modi,2022437700,2201010706,B-Tech,CSE-VI B,2022437700.somil@ug.sharda.ac.in,Computer Science
+110,Sparsh Singh,2022001846,2201010715,B-Tech,CSE-VI B,2022001846.sparsh@ug.sharda.ac.in,Computer Science
+111,Swarn Pratap Singh,2022461609,2201010734,B-Tech,CSE-VI B,2022461609.swarn@ug.sharda.ac.in,Computer Science
+112,Upendra Giri,2022559074,2201010762,B-Tech,CSE-VI B,2022559074.upendra@ug.sharda.ac.in,Computer Science
+113,Varshita Mishra,2022545204,2201010778,B-Tech,CSE-VI B,2022545204.varshita@ug.sharda.ac.in,Computer Science
+114,Vedanshu Singh,2022473978,2201010781,B-Tech,CSE-VI B,2022473978.vedanshu@ug.sharda.ac.in,Computer Science
+115,Yash Pratap Singh,2022470797,2201010810,B-Tech,CSE-VI B,2022470797.yash@ug.sharda.ac.in,Computer Science
+116,Yash Raj,2022415397,2201010811,B-Tech,CSE-VI B,2022415397.yash@ug.sharda.ac.in,Computer Science
+117,Zaid Meman,2022004909,2201010827,B-Tech,CSE-VI B,2022004909.zaid@ug.sharda.ac.in,Computer Science
+118,Pratham Kumar,2022372515,2201010518,B-Tech,CSE-VI B,2022372515.pratham@ug.sharda.ac.in,Computer Science
+119,Mr Keshav Kumar,2022006973,2201010835,B-Tech,CSE-VI B,2022006973.keshav@ug.sharda.ac.in,Computer Science
+120,Khushi Singh,2022007308,2201010841,B-Tech,CSE-VI B,2022007308.khushi@ug.sharda.ac.in,Computer Science
+121,Ahmed M A Ejweli,2022008336,2201010867,B-Tech,CSE-VI B,2022008336.ahmedma@ug.sharda.ac.in,Computer Science
+122,Saahil Singh,2022402175,2201010871,B-Tech,CSE-VI B,2022402175.saahil@ug.sharda.ac.in,Computer Science
+123,Syed Farheen,2022615611,2201010902,B-Tech,CSE-VI B,2022615611.syed@ug.sharda.ac.in,Computer Science
+124,Priyanshu Raj,2022624448,2201010907,B-Tech,CSE-VI B,2022624448.priyanshu@ug.sharda.ac.in,Computer Science
+125,Togon Chakma,2022831961,2201010909,B-Tech,CSE-VI B,2022831961.togon@ug.sharda.ac.in,Computer Science
+126,Avik Roy,2022836161,2201010911,B-Tech,CSE-VI B,2022836161.avik@ug.sharda.ac.in,Computer Science
+127,Shubh Sahu,2021361239,210101480,B-Tech,CSE-VI B,2021361239.shubh@ug.sharda.ac.in,Computer Science
+128,Aradhya Mittal,2022480934,2201010119,B-Tech,CSE-VI C,2022480934.aradhya@ug.sharda.ac.in,Computer Science
+129,Hemant Kumar,2022441875,2201010284,B-Tech,CSE-VI C,2022441875.hemant@ug.sharda.ac.in,Computer Science
+130,Mohammed Saim Khan,2022815775,2201010416,B-Tech,CSE-VI C,2022815775.mohammed@ug.sharda.ac.in,Computer Science
+131,Nishant Kumar,2022472932,2201010477,B-Tech,CSE-VI C,2022472932.nishant@ug.sharda.ac.in,Computer Science
+132,Rayyaan Tasaduq Wani,2022306733,2201010564,B-Tech,CSE-VI C,2022306733.rayyaantasaduq@ug.sharda.ac.in,Computer Science
+133,Shivam Kumar,2022437807,2201010669,B-Tech,CSE-VI C,2022437807.shivam@ug.sharda.ac.in,Computer Science
+134,Swaraj Upreti,2022005992,2201010733,B-Tech,CSE-VI C,2022005992.swaraj@ug.sharda.ac.in,Computer Science
+135,Vidhi Bansal,2022608746,2201010898,B-Tech,CSE-VI C,2022608746.vidhi@ug.sharda.ac.in,Computer Science
+136,Aditya Kartik,2022410342,2201010039,B-Tech,CSE-VI C,2022410342.aditya@ug.sharda.ac.in,Computer Science
+137,Arpit Arya,2022544781,2201010131,B-Tech,CSE-VI C,2022544781.arpit@ug.sharda.ac.in,Computer Science
+138,Mehran Arsh Hussain,2022517877,2201010401,B-Tech,CSE-VI C,2022517877.mehran@ug.sharda.ac.in,Computer Science
+139,Riya Singh,2022004737,2201010594,B-Tech,CSE-VI C,2022004737.riya@ug.sharda.ac.in,Computer Science
+140,Rajat Singhal,2022474990,2201010553,B-Tech,CSE-VI C,2022474990.rajat@ug.sharda.ac.in,Computer Science
+141,Rishabh Kushwaha,2022448095,2201010575,B-Tech,CSE-VI C,2022448095.rishabh@ug.sharda.ac.in,Computer Science
+142,Rishita .,2022526985,2201010581,B-Tech,CSE-VI C,2022526985.rishita@ug.sharda.ac.in,Computer Science
+143,Riya Chauhan,2022004280,2201010591,B-Tech,CSE-VI C,2022004280.riya@ug.sharda.ac.in,Computer Science
+144,Rohan Kumar,2022004675,2201010596,B-Tech,CSE-VI C,2022004675.rohan@ug.sharda.ac.in,Computer Science
+145,Dharmender .,2022007543,2201010851,B-Tech,CSE-VI C,2022007543.dharmender@ug.sharda.ac.in,Computer Science
+146,Abesh Biswas,2022433132,2201010015,B-Tech,CSE-VI C,2022433132.abesh@ug.sharda.ac.in,Computer Science
+147,Aman Aswal,2022516167,2201010073,B-Tech,CSE-VI C,2022516167.aman@ug.sharda.ac.in,Computer Science
+148,Harsh Sharma,2022530377,2201010273,B-Tech,CSE-VI C,2022530377.harsh@ug.sharda.ac.in,Computer Science
+149,Keshav Goyal,2022455176,2201010326,B-Tech,CSE-VI C,2022455176.keshav@ug.sharda.ac.in,Computer Science
+150,Manoj Kumar Singh,2022516793,2201010377,B-Tech,CSE-VI C,2022516793.manoj@ug.sharda.ac.in,Computer Science
+151,Richan Dutta,2022428593,2201010571,B-Tech,CSE-VI C,2022428593.richan@ug.sharda.ac.in,Computer Science
+152,Rohit Kumar Thakur,2022811446,2201010600,B-Tech,CSE-VI C,2022811446.rohit@ug.sharda.ac.in,Computer Science
+153,Sachin Kumar,2022006609,2201010606,B-Tech,CSE-VI C,2022006609.sachin@ug.sharda.ac.in,Computer Science
+154,Shristy Jaiswal,2022508269,2201010687,B-Tech,CSE-VI C,2022508269.shristy@ug.sharda.ac.in,Computer Science
+155,Srishti Shukla,2022503088,2201010716,B-Tech,CSE-VI C,2022503088.srishti@ug.sharda.ac.in,Computer Science
+156,Vivek Kumar,2022554244,2201010800,B-Tech,CSE-VI C,2022554244.vivek@ug.sharda.ac.in,Computer Science
+157,Zobia Riyaz,2022003343,2201010828,B-Tech,CSE-VI C,2022003343.zobia@ug.sharda.ac.in,Computer Science
+158,Jasjot Singh Walia,2022561995,2201010300,B-Tech,CSE-VI C,2022561995.jasjot@ug.sharda.ac.in,Computer Science
+159,Miss Ruhi Mahaseth,2022836012,2201010405,B-Tech,CSE-VI C,2022836012.ruhi@ug.sharda.ac.in,Computer Science
+160,Mr Priyanshu Karn,2022832236,2201010443,B-Tech,CSE-VI C,2022832236.priyanshu@ug.sharda.ac.in,Computer Science
+161,Rahul Yadav,2022528691,2201010547,B-Tech,CSE-VI C,2022528691.rahul@ug.sharda.ac.in,Computer Science
+162,Sachin Kumar,2022582528,2201010608,B-Tech,CSE-VI C,2022582528.sachin@ug.sharda.ac.in,Computer Science
+163,Saurabh Patel,2022501073,2201010650,B-Tech,CSE-VI C,2022501073.saurabh@ug.sharda.ac.in,Computer Science
+164,Sneha Kumari,2022511567,2201010701,B-Tech,CSE-VI C,2022511567.sneha@ug.sharda.ac.in,Computer Science
+165,Vishal Kumar,2022552668,2201010794,B-Tech,CSE-VI C,2022552668.vishal@ug.sharda.ac.in,Computer Science
+166,Neeti Gupta,2022007786,2201010863,B-Tech,CSE-VI C,2022007786.neeti@ug.sharda.ac.in,Computer Science
+167,Harsh Sharma,2022604034,2201010895,B-Tech,CSE-VI C,2022604034.harsh@ug.sharda.ac.in,Computer Science
+168,Abhinav Pandey,2022509625,2201010018,B-Tech,CSE-VI C,2022509625.abhinav@ug.sharda.ac.in,Computer Science
+169,Al Zabir,2022344459,2201010069,B-Tech,CSE-VI C,2022344459.al@ug.sharda.ac.in,Computer Science
+170,Aryan Verma,2022506074,2201010150,B-Tech,CSE-VI C,2022506074.aryan@ug.sharda.ac.in,Computer Science
+171,Mantasha Imran,2022004442,2201010379,B-Tech,CSE-VI C,2022004442.mantasha@ug.sharda.ac.in,Computer Science
+172,Nkenglefack Anyike Megan Williams,2022807476,2201010485,B-Tech,CSE-VI C,2022807476.nkenglefack@ug.sharda.ac.in,Computer Science
+173,Pooja Mishra,2022005582,2201010505,B-Tech,CSE-VI C,2022005582.pooja@ug.sharda.ac.in,Computer Science
+174,Saloni Sikriwal,2022502729,2201010622,B-Tech,CSE-VI C,2022502729.saloni@ug.sharda.ac.in,Computer Science
+175,Ritika Rajput,2022359008,2201010586,B-Tech,CSE-VI C,2022359008.ritika@ug.sharda.ac.in,Computer Science
+176,Rohit Rawat,2022478479,2201010602,B-Tech,CSE-VI C,2022478479.rohit@ug.sharda.ac.in,Computer Science
+177,Shailesh Kumar Yadav,2022481225,2201010652,B-Tech,CSE-VI C,2022481225.shailesh@ug.sharda.ac.in,Computer Science
+178,Vats Raj Kashyap,2022004757,2201010779,B-Tech,CSE-VI C,2022004757.vats@ug.sharda.ac.in,Computer Science
+179,Raikindi Sravan Kumar,2022614550,2201010901,B-Tech,CSE-VI C,2022614550.raikindi@ug.sharda.ac.in,Computer Science
+180,Shourya Sharma,2022414495,2201010682,B-Tech,CSE-VI C,2022414495.shourya@ug.sharda.ac.in,Computer Science
+181,Devashish Raj,2022481431,2201010213,B-Tech,CSE-VI C,2022481431.devashish@ug.sharda.ac.in,Computer Science
+182,Gaurav Pal,2022003691,2201010245,B-Tech,CSE-VI C,2022003691.gaurav@ug.sharda.ac.in,Computer Science
+183,Kirtiman Singh,2022567867,2201010333,B-Tech,CSE-VI C,2022567867.kirtiman@ug.sharda.ac.in,Computer Science
+184,Surya Raj,2022484252,2201010731,B-Tech,CSE-VI C,2022484252.surya@ug.sharda.ac.in,Computer Science
+185,Kadugula Joel,2022607404,2201010896,B-Tech,CSE-VI C,2022607404.kadugula@ug.sharda.ac.in,Computer Science
+186,Abhay Mishra,2023000910,2301017001,B-Tech,CSE-VI C,2023000910.abhay@ug.sharda.ac.in,Computer Science
+187,Samyak Katiyar,2022005613,2201010628,B-Tech,CSE-VI C,2022005613.samyak@ug.sharda.ac.in,Computer Science
+188,Yenni Gnana Prasanna,2022363409,2201010818,B-Tech,CSE-VI C,2022363409.yenni@ug.sharda.ac.in,Computer Science
+189,Adarsh Raj,2022525962,2201010034,B-Tech,CSE-VI C,2022525962.adarsh@ug.sharda.ac.in,Computer Science
+190,Gracy Chauhan,2022007202,2201010254,B-Tech,CSE-VI C,2022007202.gracy@ug.sharda.ac.in,Computer Science
+191,Rajshree Dhoundiyal,2022464792,2201010557,B-Tech,CSE-VI C,2022464792.rajshree@ug.sharda.ac.in,Computer Science
+192,Asmit Kumar,2022446378,2201010160,B-Tech,CSE-VI C,2022446378.asmit@ug.sharda.ac.in,Computer Science
+193,Rudra Pratap Tomar,2022478036,2201010605,B-Tech,CSE-VI D,2022478036.rudra@ug.sharda.ac.in,Computer Science
+194,Sanskriti Verma,2022004547,2201010635,B-Tech,CSE-VI D,2022004547.sanskriti@ug.sharda.ac.in,Computer Science
+195,Lakshay Bhatnagar,2022507647,2201010353,B-Tech,CSE-VI D,2022507647.lakshay@ug.sharda.ac.in,Computer Science
+196,Omit Kumar,2022492018,2201010489,B-Tech,CSE-VI D,2022492018.omit@ug.sharda.ac.in,Computer Science
+197,Mohammad Shaazan Muzaffar,2022003923,2201010829,B-Tech,CSE-VI D,2022003923.mohammad@ug.sharda.ac.in,Computer Science
+198,Nitesh Kumar,2022544783,2201010481,B-Tech,CSE-VI D,2022544783.nitesh@ug.sharda.ac.in,Computer Science
+199,Vedant Tiwari,2022003580,2201010782,B-Tech,CSE-VI D,2022003580.vedant@ug.sharda.ac.in,Computer Science
+200,Rajesh Ranjan,2022506580,2201010556,B-Tech,CSE-VI D,2022506580.rajesh@ug.sharda.ac.in,Computer Science
+201,Akash Rattan,2022405479,2201010062,B-Tech,CSE-VI D,2022405479.akash@ug.sharda.ac.in,Computer Science
+202,Aakriti Bansal,2022552819,2201010005,B-Tech,CSE-VI D,2022552819.aakriti@ug.sharda.ac.in,Computer Science
+203,Uday B Thakur,2022418998,2201010756,B-Tech,CSE-VI D,2022418998.uday@ug.sharda.ac.in,Computer Science
+204,Tarun Kumar,2022007306,2201010840,B-Tech,CSE-VI D,2022007306.tarun@ug.sharda.ac.in,Computer Science
+205,Aryan Kumar,2022395305,2201010140,B-Tech,CSE-VI D,2022395305.aryan@ug.sharda.ac.in,Computer Science
+206,Yash Rawat,2022423199,2201010812,B-Tech,CSE-VI D,2022423199.yash@ug.sharda.ac.in,Computer Science
+207,Anshu Geetanjali,2022577648,2201010102,B-Tech,CSE-VI D,2022577648.anshu@ug.sharda.ac.in,Computer Science
+208,Mr Amrit Raut,2022834464,2201010437,B-Tech,CSE-VI D,2022834464.amrit@ug.sharda.ac.in,Computer Science
+209,Tarun Sirohi,2022561225,2201010750,B-Tech,CSE-VI D,2022561225.tarun@ug.sharda.ac.in,Computer Science
+210,Sneha .,2022502947,2201010698,B-Tech,CSE-VI D,2022502947.sneha@ug.sharda.ac.in,Computer Science
+211,Sneha Bansal,2022521244,2201010700,B-Tech,CSE-VI D,2022521244.sneha@ug.sharda.ac.in,Computer Science
+212,Souptik Giri,2022387392,2201010713,B-Tech,CSE-VI D,2022387392.souptik@ug.sharda.ac.in,Computer Science
+213,Md Altaf Raza,2022007728,2201010862,B-Tech,CSE-VI D,2022007728.md@ug.sharda.ac.in,Computer Science
+214,Anubhav Choudhary,2022006210,2201010109,B-Tech,CSE-VI D,2022006210.anubhav@ug.sharda.ac.in,Computer Science
+215,Karan Kumar,2022548161,2201010317,B-Tech,CSE-VI D,2022548161.karan@ug.sharda.ac.in,Computer Science
+216,Khushi Jaiswal,2022435738,2201010330,B-Tech,CSE-VI D,2022435738.khushi@ug.sharda.ac.in,Computer Science
+217,Kumari Monisha,2022331708,2201010345,B-Tech,CSE-VI D,2022331708.kumari@ug.sharda.ac.in,Computer Science
+218,Paarth Lal,2022006143,2201010490,B-Tech,CSE-VI D,2022006143.paarth@ug.sharda.ac.in,Computer Science
+219,Prasoon Bhatt,2022505917,2201010514,B-Tech,CSE-VI D,2022505917.prasoon@ug.sharda.ac.in,Computer Science
+220,Shubham Mishra,2022531964,2201010692,B-Tech,CSE-VI D,2022531964.shubham@ug.sharda.ac.in,Computer Science
+221,Ajib Astani Magar,2022805717,2201010059,B-Tech,CSE-VI D,2022805717.ajib@ug.sharda.ac.in,Computer Science
+222,Aman Kumar,2022005223,2201010076,B-Tech,CSE-VI D,2022005223.aman@ug.sharda.ac.in,Computer Science
+223,Harsh Kumar,2022574196,2201010266,B-Tech,CSE-VI D,2022574196.harsh@ug.sharda.ac.in,Computer Science
+224,Jasim Ansari,2022552969,2201010299,B-Tech,CSE-VI D,2022552969.jasim@ug.sharda.ac.in,Computer Science
+225,Nikita Kanwar,2022472832,2201010474,B-Tech,CSE-VI D,2022472832.nikita@ug.sharda.ac.in,Computer Science
+226,Nishant Jadon,2022414180,2201010476,B-Tech,CSE-VI D,2022414180.nishant@ug.sharda.ac.in,Computer Science
+227,Rohit Kumar Sah,2022576883,2201010599,B-Tech,CSE-VI D,2022576883.rohit@ug.sharda.ac.in,Computer Science
+228,Sachin Kumar,2022467393,2201010607,B-Tech,CSE-VI D,2022467393.sachin@ug.sharda.ac.in,Computer Science
+229,Vicky Kumar,2022002769,2201010786,B-Tech,CSE-VI D,2022002769.vicky@ug.sharda.ac.in,Computer Science
+230,Vikas Kumar Mishra,2022007111,2201010788,B-Tech,CSE-VI D,2022007111.vikas@ug.sharda.ac.in,Computer Science
+231,Alok Kumar,2022007403,2201010847,B-Tech,CSE-VI D,2022007403.alok@ug.sharda.ac.in,Computer Science
+232,Ayush Kumar,2022555807,2201010881,B-Tech,CSE-VI D,2022555807.ayush@ug.sharda.ac.in,Computer Science
+233,Apoorv Vikram Singh,2022448509,2201010118,B-Tech,CSE-VI D,2022448509.apoorv@ug.sharda.ac.in,Computer Science
+234,Priyanshu Dimri,2022005818,2201010531,B-Tech,CSE-VI D,2022005818.priyanshu@ug.sharda.ac.in,Computer Science
+235,Richa Pandey,2022463682,2201010570,B-Tech,CSE-VI D,2022463682.richa@ug.sharda.ac.in,Computer Science
+236,Shivam Tripathi,2022005275,2201010675,B-Tech,CSE-VI D,2022005275.shivam@ug.sharda.ac.in,Computer Science
+237,Shiwangi .,2022506607,2201010680,B-Tech,CSE-VI D,2022506607.shiwangi@ug.sharda.ac.in,Computer Science
+238,Utkarsh Kumar,2022005062,2201010764,B-Tech,CSE-VI D,2022005062.utkarsh@ug.sharda.ac.in,Computer Science
+239,Vanshika Gupta,2022511135,2201010774,B-Tech,CSE-VI D,2022511135.vanshika@ug.sharda.ac.in,Computer Science
+240,Vishal Suryan,2022498812,2201010796,B-Tech,CSE-VI D,2022498812.vishal@ug.sharda.ac.in,Computer Science
+241,Aaditya Singhal,2022508346,2201010003,B-Tech,CSE-VI D,2022508346.aaditya@ug.sharda.ac.in,Computer Science
+242,Ashutosh Gola,2022413603,2201010153,B-Tech,CSE-VI D,2022413603.ashutosh@ug.sharda.ac.in,Computer Science
+243,Brijesh Yadav,2022519020,2201010185,B-Tech,CSE-VI D,2022519020.brijesh@ug.sharda.ac.in,Computer Science
+244,Faiz Anwar,2022497244,2201010237,B-Tech,CSE-VI D,2022497244.faiz@ug.sharda.ac.in,Computer Science
+245,Hemant Kumar,2022484179,2201010285,B-Tech,CSE-VI D,2022484179.hemant@ug.sharda.ac.in,Computer Science
+246,Lakshay Bhardwaj,2022515249,2201010352,B-Tech,CSE-VI D,2022515249.lakshay@ug.sharda.ac.in,Computer Science
+247,Yash Chauhan,2022484682,2201010807,B-Tech,CSE-VI D,2022484682.yash@ug.sharda.ac.in,Computer Science
+248,Arvind Patel,2022540466,2201010135,B-Tech,CSE-VI D,2022540466.arvind@ug.sharda.ac.in,Computer Science
+249,Harshada Negi,2022506880,2201010275,B-Tech,CSE-VI D,2022506880.harshada@ug.sharda.ac.in,Computer Science
+250,Rahul Bhai Patel,2022805251,2201010543,B-Tech,CSE-VI D,2022805251.rahul@ug.sharda.ac.in,Computer Science
+251,Prakhar .,2022453096,2201010510,B-Tech,CSE-VI D,2022453096.prakhar@ug.sharda.ac.in,Computer Science
+252,Aman Anand,2022007819,2201010866,B-Tech,CSE-VI D,2022007819.aman@ug.sharda.ac.in,Computer Science
+253,Pranyush Jha,2022835895,2201010910,B-Tech,CSE-VI D,2022835895.pranyush@ug.sharda.ac.in,Computer Science
+254,Ishita Roy,2022472005,2201010296,B-Tech,CSE-VI D,2022472005.ishita@ug.sharda.ac.in,Computer Science
+255,Nikita Roy,2022504261,2201010475,B-Tech,CSE-VI D,2022504261.nikita@ug.sharda.ac.in,Computer Science
+256,Vaibhav Dhor,2022003889,2201010770,B-Tech,CSE-VI D,2022003889.vaibhav@ug.sharda.ac.in,Computer Science
+257,Zahabiya Hamied,2022450179,2201010826,B-Tech,CSE-VI D,2022450179.zahabiya@ug.sharda.ac.in,Computer Science
+258,Arfat Khan,2022000982,2201010125,B-Tech,CSE-VI E,2022000982.arfat@ug.sharda.ac.in,Computer Science
+259,Harsh Chaudhary,2022476992,2201010263,B-Tech,CSE-VI E,2022476992.harsh@ug.sharda.ac.in,Computer Science
+260,Harsh Rastogi,2022482951,2201010270,B-Tech,CSE-VI E,2022482951.harsh@ug.sharda.ac.in,Computer Science
+261,Karan Kumar Das,2022301943,2201010318,B-Tech,CSE-VI E,2022301943.karan@ug.sharda.ac.in,Computer Science
+262,MD Atif,2022480728,2201010389,B-Tech,CSE-VI E,2022480728.md@ug.sharda.ac.in,Computer Science
+263,Prateek Kumar,2022003695,2201010515,B-Tech,CSE-VI E,2022003695.prateek@ug.sharda.ac.in,Computer Science
+264,Riti Kumari,2022306401,2201010585,B-Tech,CSE-VI E,2022306401.riti@ug.sharda.ac.in,Computer Science
+265,Tanvee Vashist,2022002431,2201010745,B-Tech,CSE-VI E,2022002431.tanvee@ug.sharda.ac.in,Computer Science
+266,Ujjwal Gupta,2022006932,2201010834,B-Tech,CSE-VI E,2022006932.ujjwal@ug.sharda.ac.in,Computer Science
+267,Vishal Kumar,2022007788,2201010864,B-Tech,CSE-VI E,2022007788.vishal@ug.sharda.ac.in,Computer Science
+268,Aman Kumar,2022505059,2201010875,B-Tech,CSE-VI E,2022505059.aman@ug.sharda.ac.in,Computer Science
+269,Avinash Chauhan,2023322783,2301017004,B-Tech,CSE-VI E,2023322783.avinash@ug.sharda.ac.in,Computer Science
+270,Niranjan Kumar,2023205860,2301017011,B-Tech,CSE-VI E,2023205860.niranjan@ug.sharda.ac.in,Computer Science
+271,Anand Raj,2022516410,2201010082,B-Tech,CSE-VI E,2022516410.anand@ug.sharda.ac.in,Computer Science
+272,Ananya Tyagi,2022433429,2201010083,B-Tech,CSE-VI E,2022433429.ananya@ug.sharda.ac.in,Computer Science
+273,Chandni Tyagi,2022528415,2201010188,B-Tech,CSE-VI E,2022528415.chandni@ug.sharda.ac.in,Computer Science
+274,Fardeen Mansoori,2022000239,2201010239,B-Tech,CSE-VI E,2022000239.fardeen@ug.sharda.ac.in,Computer Science
+275,Gaurav Singh,2022540214,2201010246,B-Tech,CSE-VI E,2022540214.gaurav@ug.sharda.ac.in,Computer Science
+276,Harsh Saini,2022413331,2201010271,B-Tech,CSE-VI E,2022413331.harsh@ug.sharda.ac.in,Computer Science
+277,Harshita Narayan,2022006470,2201010281,B-Tech,CSE-VI E,2022006470.harshita@ug.sharda.ac.in,Computer Science
+278,Khushi Chauhan,2022005495,2201010329,B-Tech,CSE-VI E,2022005495.khushi@ug.sharda.ac.in,Computer Science
+279,Kunal Chauhan,2022395723,2201010346,B-Tech,CSE-VI E,2022395723.kunal@ug.sharda.ac.in,Computer Science
+280,Manav Prakash,2022369814,2201010367,B-Tech,CSE-VI E,2022369814.manav@ug.sharda.ac.in,Computer Science
+281,Mohammad Zubair,2022366848,2201010414,B-Tech,CSE-VI E,2022366848.mohammad@ug.sharda.ac.in,Computer Science
+282,Miss Sonali Dass,2022808929,2201010445,B-Tech,CSE-VI E,2022808929.sonali@ug.sharda.ac.in,Computer Science
+283,Rahul Kumar,2022443216,2201010545,B-Tech,CSE-VI E,2022443216.rahul@ug.sharda.ac.in,Computer Science
+284,Reshma Swain,2022312023,2201010569,B-Tech,CSE-VI E,2022312023.reshma@ug.sharda.ac.in,Computer Science
+285,Ritanshu .,2022404040,2201010583,B-Tech,CSE-VI E,2022404040.ritanshu@ug.sharda.ac.in,Computer Science
+286,Satyam Kumar,2022001775,2201010641,B-Tech,CSE-VI E,2022001775.satyam@ug.sharda.ac.in,Computer Science
+287,Saumya Singh,2022475752,2201010645,B-Tech,CSE-VI E,2022475752.saumya@ug.sharda.ac.in,Computer Science
+288,Tanishqa Singh,2022005800,2201010740,B-Tech,CSE-VI E,2022005800.tanishqa@ug.sharda.ac.in,Computer Science
+289,Yashovardhan Awasthi,2022003238,2201010817,B-Tech,CSE-VI E,2022003238.yashovardhan@ug.sharda.ac.in,Computer Science
+290,Aayush Sharma,2022007029,2201010009,B-Tech,CSE-VI E,2022007029.aayush@ug.sharda.ac.in,Computer Science
+291,Abdul Wazid Bashar,2022438394,2201010012,B-Tech,CSE-VI E,2022438394.abdul@ug.sharda.ac.in,Computer Science
+292,Anushka Panwar,2022508678,2201010116,B-Tech,CSE-VI E,2022508678.anushka@ug.sharda.ac.in,Computer Science
+293,Chetan Kumar,2022345566,2201010189,B-Tech,CSE-VI E,2022345566.chetan@ug.sharda.ac.in,Computer Science
+294,Divyesh Singh Bisht,2022006402,2201010229,B-Tech,CSE-VI E,2022006402.divyesh@ug.sharda.ac.in,Computer Science
+295,Faizan Alam,2022307961,2201010238,B-Tech,CSE-VI E,2022307961.faizan@ug.sharda.ac.in,Computer Science
+296,Harsh Raj Singh,2022006272,2201010269,B-Tech,CSE-VI E,2022006272.harsh@ug.sharda.ac.in,Computer Science
+297,Kashish Mishra,2022521021,2201010323,B-Tech,CSE-VI E,2022521021.kashish@ug.sharda.ac.in,Computer Science
+298,Khushi Raghav,2022006140,2201010331,B-Tech,CSE-VI E,2022006140.khushi@ug.sharda.ac.in,Computer Science
+299,Rahul Kumar,2022459779,2201010546,B-Tech,CSE-VI E,2022459779.rahul@ug.sharda.ac.in,Computer Science
+300,Raj Tiwari,2022473330,2201010551,B-Tech,CSE-VI E,2022473330.raj@ug.sharda.ac.in,Computer Science
+301,Rimjhim Jha,2022512387,2201010572,B-Tech,CSE-VI E,2022512387.rimjhim@ug.sharda.ac.in,Computer Science
+302,Shashank Shekhar,2022514886,2201010656,B-Tech,CSE-VI E,2022514886.shashank@ug.sharda.ac.in,Computer Science
+303,Shashwat Raj,2022378413,2201010659,B-Tech,CSE-VI E,2022378413.shashwat@ug.sharda.ac.in,Computer Science
+304,Shikha Kumari,2022000791,2201010664,B-Tech,CSE-VI E,2022000791.shikha@ug.sharda.ac.in,Computer Science
+305,Siddharth Kumar,2022003069,2201010694,B-Tech,CSE-VI E,2022003069.siddharth@ug.sharda.ac.in,Computer Science
+306,Yajushi Mittal,2022381725,2201010804,B-Tech,CSE-VI E,2022381725.yajushi@ug.sharda.ac.in,Computer Science
+307,Bhaven Shah,2022007677,2201010857,B-Tech,CSE-VI E,2022007677.bhaven@ug.sharda.ac.in,Computer Science
+308,Md Sahil,2022585888,2201010886,B-Tech,CSE-VI E,2022585888.md@ug.sharda.ac.in,Computer Science
+309,Aashika Singh,2022578067,2201010007,B-Tech,CSE-VI E,2022578067.aashika@ug.sharda.ac.in,Computer Science
+310,Aditya Raj,2022374295,2201010045,B-Tech,CSE-VI E,2022374295.aditya@ug.sharda.ac.in,Computer Science
+311,Aman Kumar,2022467293,2201010077,B-Tech,CSE-VI E,2022467293.aman@ug.sharda.ac.in,Computer Science
+312,Asmit Aditya,2022434340,2201010159,B-Tech,CSE-VI E,2022434340.asmit@ug.sharda.ac.in,Computer Science
+313,Dheerendra Pratap,2022004342,2201010217,B-Tech,CSE-VI E,2022004342.dheerendra@ug.sharda.ac.in,Computer Science
+314,Ujjwal Kumar,2022006787,2201010757,B-Tech,CSE-VI E,2022006787.ujjwal@ug.sharda.ac.in,Computer Science
+315,Arun Pratap Singh,2022007323,2201010843,B-Tech,CSE-VI E,2022007323.arun@ug.sharda.ac.in,Computer Science
+316,Mr Hridoy Roy,2022007795,2201010865,B-Tech,CSE-VI E,2022007795.hridoy@ug.sharda.ac.in,Computer Science
+317,Shivam Niranjan,2022610409,2201010900,B-Tech,CSE-VI E,2022610409.shivam@ug.sharda.ac.in,Computer Science
+318,Siddharth Kundu,2021463218,210101493,B-Tech,CSE-VI E,2021463218.siddharth@ug.sharda.ac.in,Computer Science
+319,Vivek Gupta,2022527904,2201010799,B-Tech,CSE-VI E,2022527904.vivek@ug.sharda.ac.in,Computer Science
+320,Ayush Kumar,2023263567,2301017005,B-Tech,CSE-VI E,2023263567.ayush@ug.sharda.ac.in,Computer Science
+321,param prakash,2021001342,210101351,B-Tech,CSE-VI E,2021001342.param@ug.sharda.ac.in,Computer Science
+322,Amit Raj,2022004659,2201010079,B-Tech,CSE-VI E,2022004659.amit@ug.sharda.ac.in,Computer Science
+323,Mohammad Faisal Faizan,2022497340,2201010409,B-Tech,CSE-VI F,2022497340.mohammadfaisal@ug.sharda.ac.in,Computer Science
+324,Moses Clement Msumi,2022824586,2201010435,B-Tech,CSE-VI F,2022824586.moses@ug.sharda.ac.in,Computer Science
+325,Pratyush Kanungo,2022506127,2201010521,B-Tech,CSE-VI F,2022506127.pratyush@ug.sharda.ac.in,Computer Science
+326,Tanya Mall,2022005567,2201010747,B-Tech,CSE-VI F,2022005567.tanya@ug.sharda.ac.in,Computer Science
+327,Chetan Raj Singh,2022003287,2201010190,B-Tech,CSE-VI F,2022003287.chetan@ug.sharda.ac.in,Computer Science
+328,Utkarsh Gupta,2022307471,2201010763,B-Tech,CSE-VI F,2022307471.utkarsh@ug.sharda.ac.in,Computer Science
+329,Mr Sarwesh Kumar,2022006361,2201010830,B-Tech,CSE-VI F,2022006361.sarwesh@ug.sharda.ac.in,Computer Science
+330,Aditya Kumar,2022591631,2201010888,B-Tech,CSE-VI F,2022591631.aditya@ug.sharda.ac.in,Computer Science
+331,Aashna Sharma,2022469915,2201010008,B-Tech,CSE-VI F,2022469915.aashna@ug.sharda.ac.in,Computer Science
+332,Amritanshu Ranjan,2022448964,2201010080,B-Tech,CSE-VI F,2022448964.amritanshu@ug.sharda.ac.in,Computer Science
+333,Atul Anand,2022531916,2201010163,B-Tech,CSE-VI F,2022531916.atul@ug.sharda.ac.in,Computer Science
+334,Deepak Yadav,2022514536,2201010203,B-Tech,CSE-VI F,2022514536.deepak@ug.sharda.ac.in,Computer Science
+335,Jay .,2022469745,2201010306,B-Tech,CSE-VI F,2022469745.jay@ug.sharda.ac.in,Computer Science
+336,Mohd Aahiluddin Shaikh,2022003834,2201010418,B-Tech,CSE-VI F,2022003834.mohd@ug.sharda.ac.in,Computer Science
+337,Sehaj Bral,2022526278,2201010651,B-Tech,CSE-VI F,2022526278.sehaj@ug.sharda.ac.in,Computer Science
+338,Sushant Raj,2022413369,2201010732,B-Tech,CSE-VI F,2022413369.sushant@ug.sharda.ac.in,Computer Science
+339,Taniya Chaudhary,2022457752,2201010741,B-Tech,CSE-VI F,2022457752.taniya@ug.sharda.ac.in,Computer Science
+340,Himanshu Singh Nirwan,2022536274,2201010878,B-Tech,CSE-VI F,2022536274.himanshu@ug.sharda.ac.in,Computer Science
+341,Aryanshu Singh,2021369177,210101120,B-Tech,CSE-VI F,2021369177.aryanshu@ug.sharda.ac.in,Computer Science
+342,Chandan Kumar Singh,2021375907,210101149,B-Tech,CSE-VI F,2021375907.chandan@ug.sharda.ac.in,Computer Science
+343,Aditya Jha,2022004546,2201010038,B-Tech,CSE-VI F,2022004546.aditya@ug.sharda.ac.in,Computer Science
+344,Aditya Pratap Singh,2022535859,2201010043,B-Tech,CSE-VI F,2022535859.aditya@ug.sharda.ac.in,Computer Science
+345,Aditya Sharma,2022536473,2201010049,B-Tech,CSE-VI F,2022536473.aditya@ug.sharda.ac.in,Computer Science
+346,Agrim Gupta,2022001884,2201010055,B-Tech,CSE-VI F,2022001884.agrim@ug.sharda.ac.in,Computer Science
+347,Akshat Singh,2022559297,2201010066,B-Tech,CSE-VI F,2022559297.akshat@ug.sharda.ac.in,Computer Science
+348,Ashutosh Tyagi,2022334212,2201010157,B-Tech,CSE-VI F,2022334212.ashutosh@ug.sharda.ac.in,Computer Science
+349,Isha Jakhad,2022002383,2201010292,B-Tech,CSE-VI F,2022002383.isha@ug.sharda.ac.in,Computer Science
+350,Khushi Roria,2022004755,2201010332,B-Tech,CSE-VI F,2022004755.khushi@ug.sharda.ac.in,Computer Science
+351,Krishna Kumar,2022507069,2201010337,B-Tech,CSE-VI F,2022507069.krishna@ug.sharda.ac.in,Computer Science
+352,Md Yushuf Reja,2022829153,2201010397,B-Tech,CSE-VI F,2022829153.mdyushuf@ug.sharda.ac.in,Computer Science
+353,Pracchi Gupta,2022506240,2201010509,B-Tech,CSE-VI F,2022506240.pracchi@ug.sharda.ac.in,Computer Science
+354,Pratham Grewal,2022490152,2201010517,B-Tech,CSE-VI F,2022490152.pratham@ug.sharda.ac.in,Computer Science
+355,Sahil Chauhan,2022427336,2201010611,B-Tech,CSE-VI F,2022427336.sahil@ug.sharda.ac.in,Computer Science
+356,Saniya .,2022523724,2201010632,B-Tech,CSE-VI F,2022523724.saniya@ug.sharda.ac.in,Computer Science
+357,Soubhik Roy,2022363290,2201010711,B-Tech,CSE-VI F,2022363290.soubhik@ug.sharda.ac.in,Computer Science
+358,Sumit Gupta,2022498440,2201010721,B-Tech,CSE-VI F,2022498440.sumit@ug.sharda.ac.in,Computer Science
+359,Ashmit Yadav,2022007195,2201010837,B-Tech,CSE-VI F,2022007195.ashmit@ug.sharda.ac.in,Computer Science
+360,Sahil Sikka,2022536169,2201010877,B-Tech,CSE-VI F,2022536169.sahil@ug.sharda.ac.in,Computer Science
+361,Anirban Dutta,2022573413,2201010884,B-Tech,CSE-VI F,2022573413.anirban@ug.sharda.ac.in,Computer Science
+362,Ankush Kumar,2022000245,2201010098,B-Tech,CSE-VI F,2022000245.ankush@ug.sharda.ac.in,Computer Science
+363,Anshu Kumar,2022577356,2201010103,B-Tech,CSE-VI F,2022577356.anshu@ug.sharda.ac.in,Computer Science
+364,Bishal Jha,2022820872,2201010182,B-Tech,CSE-VI F,2022820872.bishal@ug.sharda.ac.in,Computer Science
+365,Chandan Kumar Tiwari,2022007055,2201010187,B-Tech,CSE-VI F,2022007055.chandan@ug.sharda.ac.in,Computer Science
+366,Chitransh Shrivastava,2022007141,2201010196,B-Tech,CSE-VI F,2022007141.chitransh@ug.sharda.ac.in,Computer Science
+367,Daniel Kholumo,2022833385,2201010199,B-Tech,CSE-VI F,2022833385.daniel@ug.sharda.ac.in,Computer Science
+368,Govind Ray,2022816874,2201010252,B-Tech,CSE-VI F,2022816874.govind@ug.sharda.ac.in,Computer Science
+369,Jigyashu Raj,2022006870,2201010310,B-Tech,CSE-VI F,2022006870.jigyashu@ug.sharda.ac.in,Computer Science
+370,Kishan Yadav,2022444658,2201010334,B-Tech,CSE-VI F,2022444658.kishan@ug.sharda.ac.in,Computer Science
+371,Matanut Md Kamran,2022540866,2201010382,B-Tech,CSE-VI F,2022540866.mohammad@ug.sharda.ac.in,Computer Science
+372,Mayank Kumar,2022309654,2201010383,B-Tech,CSE-VI F,2022309654.mayank@ug.sharda.ac.in,Computer Science
+373,Md Absarul Haque,2022505407,2201010387,B-Tech,CSE-VI F,2022505407.md@ug.sharda.ac.in,Computer Science
+374,Mohammad Shabab,2022832103,2201010413,B-Tech,CSE-VI F,2022832103.mohammad@ug.sharda.ac.in,Computer Science
+375,Mohd Kaif,2022005063,2201010420,B-Tech,CSE-VI F,2022005063.mohd@ug.sharda.ac.in,Computer Science
+376,Mohit Sharma,2022447440,2201010432,B-Tech,CSE-VI F,2022447440.mohit@ug.sharda.ac.in,Computer Science
+377,Nikhil Kumar Singh,2022006827,2201010832,B-Tech,CSE-VI F,2022006827.nikhil@ug.sharda.ac.in,Computer Science
+378,Rajan Kumar Saini,2022006845,2201010833,B-Tech,CSE-VI F,2022006845.rajankumar@ug.sharda.ac.in,Computer Science
+379,Harshit Arora,2022005252,2201010278,B-Tech,CSE-VI F,2022005252.harshit@ug.sharda.ac.in,Computer Science
+380,Vishnu Prakash,2022007320,2201010842,B-Tech,CSE-VI F,2022007320.vishnu@ug.sharda.ac.in,Computer Science
+381,Tanu .,2022007438,2201010848,B-Tech,CSE-VI F,2022007438.tanu@ug.sharda.ac.in,Computer Science
+382,Mr Aditya Raj,2022007661,2201010855,B-Tech,CSE-VI F,2022007661.aditya@ug.sharda.ac.in,Computer Science
+383,Nancy Rathee,2022007718,2201010860,B-Tech,CSE-VI F,2022007718.nancy@ug.sharda.ac.in,Computer Science
+384,Dhananjay Siwach,2022364256,2201010869,B-Tech,CSE-VI F,2022364256.dhananjay@ug.sharda.ac.in,Computer Science
+385,Unnati Raikwal,2022540836,2201010879,B-Tech,CSE-VI F,2022540836.unnati@ug.sharda.ac.in,Computer Science
+386,Gautam Kumar,2022594458,2201010892,B-Tech,CSE-VI F,2022594458.gautam@ug.sharda.ac.in,Computer Science
+387,Chulbul S Pratyashrit,2023503067,2301017006,B-Tech,CSE-VI F,2023503067.chulbul@ug.sharda.ac.in,Computer Science
+388,Aditya Keshri,2022002562,2201010041,B-Tech,CSE-VI G,2022002562.aditya@ug.sharda.ac.in,Computer Science
+389,Aditya Raj Singh,2022439077,2201010048,B-Tech,CSE-VI G,2022439077.aditya@ug.sharda.ac.in,Computer Science
+390,Aditya Tiwari,2022526282,2201010053,B-Tech,CSE-VI G,2022526282.aditya@ug.sharda.ac.in,Computer Science
+391,Aniruddh Singh,2022003597,2201010086,B-Tech,CSE-VI G,2022003597.aniruddh@ug.sharda.ac.in,Computer Science
+392,Anuj Naruka,2022004609,2201010110,B-Tech,CSE-VI G,2022004609.anuj@ug.sharda.ac.in,Computer Science
+393,Nehal Najmi,2022541296,2201010466,B-Tech,CSE-VI G,2022541296.nehal@ug.sharda.ac.in,Computer Science
+394,Aryan Kumar Pandey,2022386541,2201010141,B-Tech,CSE-VI G,2022386541.aryan@ug.sharda.ac.in,Computer Science
+395,Deependra Singh,2022429052,2201010207,B-Tech,CSE-VI G,2022429052.deependra@ug.sharda.ac.in,Computer Science
+396,Dibyanshu Mohanty,2022330872,2201010220,B-Tech,CSE-VI G,2022330872.dibyanshu@ug.sharda.ac.in,Computer Science
+397,Divyani Patel,2022511372,2201010225,B-Tech,CSE-VI G,2022511372.divyani@ug.sharda.ac.in,Computer Science
+398,Fahad Najmi,2022470752,2201010235,B-Tech,CSE-VI G,2022470752.fahad@ug.sharda.ac.in,Computer Science
+399,MD Millat Hosen,2022811342,2201010391,B-Tech,CSE-VI G,2022811342.md@ug.sharda.ac.in,Computer Science
+400,Md Motiur Rahman,2022499099,2201010392,B-Tech,CSE-VI G,2022499099.md@ug.sharda.ac.in,Computer Science
+401,Mohit Purohit,2022400915,2201010431,B-Tech,CSE-VI G,2022400915.mohit@ug.sharda.ac.in,Computer Science
+402,Pushkar Dangwal,2022492019,2201010540,B-Tech,CSE-VI G,2022492019.pushkar@ug.sharda.ac.in,Computer Science
+403,Raj Laxmi,2022523416,2201010550,B-Tech,CSE-VI G,2022523416.raj@ug.sharda.ac.in,Computer Science
+404,Shikhar Singh,2022487397,2201010665,B-Tech,CSE-VI G,2022487397.shikhar@ug.sharda.ac.in,Computer Science
+405,Takmeel Fatima,2022360071,2201010737,B-Tech,CSE-VI G,2022360071.takmeel@ug.sharda.ac.in,Computer Science
+406,Priyesh Mishra,2022346624,2201010537,B-Tech,CSE-VI G,2022346624.priyesh@ug.sharda.ac.in,Computer Science
+407,Yuvraj Sinha,2022433386,2201010825,B-Tech,CSE-VI G,2022433386.yuvraj@ug.sharda.ac.in,Computer Science
+408,Sayyed Amaan Ali,2022007676,2201010856,B-Tech,CSE-VI G,2022007676.sayyed@ug.sharda.ac.in,Computer Science
+409,Anjali Singh,2022591296,2201010887,B-Tech,CSE-VI G,2022591296.anjali@ug.sharda.ac.in,Computer Science
+410,Adarsh .,2022539291,2201010030,B-Tech,CSE-VI G,2022539291.adarsh@ug.sharda.ac.in,Computer Science
+411,Adarsh Kumar Singh,2022508626,2201010032,B-Tech,CSE-VI G,2022508626.adarsh@ug.sharda.ac.in,Computer Science
+412,Aditya Sharma,2022558776,2201010050,B-Tech,CSE-VI G,2022558776.aditya@ug.sharda.ac.in,Computer Science
+413,Ajay Singh,2022476104,2201010058,B-Tech,CSE-VI G,2022476104.ajay@ug.sharda.ac.in,Computer Science
+414,Anjali Singh,2022511918,2201010090,B-Tech,CSE-VI G,2022511918.anjali@ug.sharda.ac.in,Computer Science
+415,Ankita Kumari,2022407716,2201010097,B-Tech,CSE-VI G,2022407716.ankita@ug.sharda.ac.in,Computer Science
+416,Rohit Ranjan,2022501361,2201010601,B-Tech,CSE-VI G,2022501361.rohit@ug.sharda.ac.in,Computer Science
+417,Ashutosh Sharma,2022484200,2201010156,B-Tech,CSE-VI G,2022484200.ashutosh@ug.sharda.ac.in,Computer Science
+418,Gauri Jakhmola,2022506998,2201010247,B-Tech,CSE-VI G,2022506998.gauri@ug.sharda.ac.in,Computer Science
+419,Harshit Chaudhary,2022006162,2201010279,B-Tech,CSE-VI G,2022006162.harshit@ug.sharda.ac.in,Computer Science
+420,Isha Sakhuja,2022570019,2201010293,B-Tech,CSE-VI G,2022570019.isha@ug.sharda.ac.in,Computer Science
+421,Jatin Kumar,2022582150,2201010304,B-Tech,CSE-VI G,2022582150.jatin@ug.sharda.ac.in,Computer Science
+422,Kritika Sharma,2022359778,2201010340,B-Tech,CSE-VI G,2022359778.kritika@ug.sharda.ac.in,Computer Science
+423,Lakshay Khandelwal,2022006582,2201010354,B-Tech,CSE-VI G,2022006582.lakshay@ug.sharda.ac.in,Computer Science
+424,Miss Pratibha Dhungel,2022831935,2201010404,B-Tech,CSE-VI G,2022831935.pratibha@ug.sharda.ac.in,Computer Science
+425,Rohit Singh,2022452725,2201010603,B-Tech,CSE-VI G,2022452725.rohit@ug.sharda.ac.in,Computer Science
+426,Namrata Singh,2022006799,2201010456,B-Tech,CSE-VI G,2022006799.namrata@ug.sharda.ac.in,Computer Science
+427,Priyanshu Chauhan,2022559558,2201010530,B-Tech,CSE-VI G,2022559558.priyanshu@ug.sharda.ac.in,Computer Science
+428,Mohd Raza Khan,2022446209,2201010565,B-Tech,CSE-VI G,2022446209.raza@ug.sharda.ac.in,Computer Science
+429,Renuka Chaudhary,2022829568,2201010568,B-Tech,CSE-VI G,2022829568.renuka@ug.sharda.ac.in,Computer Science
+430,Saksham Pokhrel,2022818891,2201010617,B-Tech,CSE-VI G,2022818891.saksham@ug.sharda.ac.in,Computer Science
+431,Satyam Singh,2022502747,2201010642,B-Tech,CSE-VI G,2022502747.satyam@ug.sharda.ac.in,Computer Science
+432,Shashwat Singh,2022006694,2201010660,B-Tech,CSE-VI G,2022006694.shashwat@ug.sharda.ac.in,Computer Science
+433,Shivam Nayak,2022006868,2201010673,B-Tech,CSE-VI G,2022006868.shivam@ug.sharda.ac.in,Computer Science
+434,Simran Kumari,2022338616,2201010695,B-Tech,CSE-VI G,2022338616.simran@ug.sharda.ac.in,Computer Science
+435,Sumit .,2022508695,2201010720,B-Tech,CSE-VI G,2022508695.sumit@ug.sharda.ac.in,Computer Science
+436,Shivansh Tiwari,2022404783,2201010679,B-Tech,CSE-VI G,2022404783.shivansh@ug.sharda.ac.in,Computer Science
+437,Kunal Rajput,2022007342,2201010845,B-Tech,CSE-VI G,2022007342.kunal@ug.sharda.ac.in,Computer Science
+438,Ankit Kumar,2022007381,2201010846,B-Tech,CSE-VI G,2022007381.ankit@ug.sharda.ac.in,Computer Science
+439,Md Adnan Ahsani,2022558410,2201010882,B-Tech,CSE-VI G,2022558410.md@ug.sharda.ac.in,Computer Science
+440,Anagh C Nambiar,2022621767,2201010905,B-Tech,CSE-VI G,2022621767.anagh@ug.sharda.ac.in,Computer Science
+441,Aiyaan Qaiser,2022484684,2201010056,B-Tech,CSE-VI G,2022484684.aiyaan@ug.sharda.ac.in,Computer Science
+442,Anjani Kumar,2022434676,2201010091,B-Tech,CSE-VI G,2022434676.anjani@ug.sharda.ac.in,Computer Science
+443,Mohit Kumar,2022506408,2201010430,B-Tech,CSE-VI G,2022506408.mohit@ug.sharda.ac.in,Computer Science
+444,Pawan .,2022003474,2201010499,B-Tech,CSE-VI G,2022003474.pawan@ug.sharda.ac.in,Computer Science
+445,Purushottam Kumar,2022344698,2201010539,B-Tech,CSE-VI G,2022344698.purushottam@ug.sharda.ac.in,Computer Science
+446,Rao Rudra Pratap,2022004614,2201010561,B-Tech,CSE-VI G,2022004614.rao@ug.sharda.ac.in,Computer Science
+447,Salman Alam,2022000799,2201010619,B-Tech,CSE-VI G,2022000799.salman@ug.sharda.ac.in,Computer Science
+448,Salman Gazi,2022001198,2201010620,B-Tech,CSE-VI G,2022001198.salman@ug.sharda.ac.in,Computer Science
+449,Sumit Pathak,2022408033,2201010723,B-Tech,CSE-VI G,2022408033.sumit@ug.sharda.ac.in,
+450,Sumit Yadav,2022498602,2201010724,B-Tech,CSE-VI G,2022498602.sumit@ug.sharda.ac.in,
+451,Vaibhav Gupta,2022393356,2201010771,B-Tech,CSE-VI G,2022393356.vaibhav@ug.sharda.ac.in,
+452,Aaron Moses,2021316862,210101007,B-Tech,CSE-VI H,2021316862.aaron@ug.sharda.ac.in,Computer Science
+453,Amaan Sajad Mir,2021301933,210101058,B-Tech,CSE-VI H,2021301933.amaan@ug.sharda.ac.in,Computer Science
+454,Anil,2021373068,210101077,B-Tech,CSE-VI H,2021373068.anil@ug.sharda.ac.in,Computer Science
+455,Dharam Priya Gautam,2021396844,210101170,B-Tech,CSE-VI H,2021396844.dharam@ug.sharda.ac.in,Computer Science
+456,Ishaan Bisht,2021447448,210101223,B-Tech,CSE-VI H,2021447448.ishaan@ug.sharda.ac.in,Computer Science
+457,Kartik Aggarwal,2021428834,210101239,B-Tech,CSE-VI H,2021428834.kartik@ug.sharda.ac.in,Computer Science
+458,Rishabh Rathi,2021300643,210101393,B-Tech,CSE-VI H,2021300643.rishabh@ug.sharda.ac.in,Computer Science
+459,Kavi Sharma,2021446146,210101241,B-Tech,CSE-VI H,2021446146.kavi@ug.sharda.ac.in,Computer Science
+460,Preetish,2021474998,210101366,B-Tech,CSE-VI H,2021474998.preetish@ug.sharda.ac.in,Computer Science
+461,Harshit Gautam,2023526347,2301017007,B-Tech,CSE-VI H,2023526347.harshit@ug.sharda.ac.in,Computer Science
+462,Nikhil Sinha,2022303213,2201010472,B-Tech,CSE-VI H,2022303213.nikhil@ug.sharda.ac.in,Computer Science
+463,Aditya Singh,2022005321,2201010051,B-Tech,CSE-VI H,2022005321.aditya@ug.sharda.ac.in,Computer Science
+464,Alfi Khan,2022473379,2201010070,B-Tech,CSE-VI H,2022473379.alfi@ug.sharda.ac.in,Computer Science
+465,Anshika Tyagi,2022006171,2201010101,B-Tech,CSE-VI H,2022006171.anshika@ug.sharda.ac.in,Computer Science
+466,Arun Kumar Pal,2022502414,2201010132,B-Tech,CSE-VI H,2022502414.arun@ug.sharda.ac.in,Computer Science
+467,Aryan .,2022329124,2201010138,B-Tech,CSE-VI H,2022329124.aryan@ug.sharda.ac.in,Computer Science
+468,Bharat Nagar,2022557408,2201010176,B-Tech,CSE-VI H,2022557408.bharat@ug.sharda.ac.in,Computer Science
+469,Daksh Pal,2022535159,2201010197,B-Tech,CSE-VI H,2022535159.daksh@ug.sharda.ac.in,Computer Science
+470,Devansh Jha,2022003043,2201010209,B-Tech,CSE-VI H,2022003043.devansh@ug.sharda.ac.in,Computer Science
+471,Harshvardhan Sinha,2022505448,2201010283,B-Tech,CSE-VI H,2022505448.harshvardhan@ug.sharda.ac.in,Computer Science
+472,Junaid Basaad,2022458909,2201010311,B-Tech,CSE-VI H,2022458909.junaid@ug.sharda.ac.in,Computer Science
+473,Keshav Sharma,2022002824,2201010327,B-Tech,CSE-VI H,2022002824.keshav@ug.sharda.ac.in,Computer Science
+474,Lakshya Jaiswal,2022436300,2201010356,B-Tech,CSE-VI H,2022436300.lakshya@ug.sharda.ac.in,Computer Science
+475,Maaz Ul Hasan,2022004161,2201010362,B-Tech,CSE-VI H,2022004161.maaz@ug.sharda.ac.in,Computer Science
+476,Manas Thakur,2022506809,2201010364,B-Tech,CSE-VI H,2022506809.manas@ug.sharda.ac.in,Computer Science
+477,Mohit Singh Bisht,2022482796,2201010433,B-Tech,CSE-VI H,2022482796.mohit@ug.sharda.ac.in,Computer Science
+478,Shreyansh Dixit,2022495153,2201010685,B-Tech,CSE-VI H,2022495153.shreyansh@ug.sharda.ac.in,Computer Science
+479,Swati Kumari,2022543079,2201010735,B-Tech,CSE-VI H,2022543079.swati@ug.sharda.ac.in,Computer Science
+480,Tripathi Kartik Umashanker,2022005697,2201010754,B-Tech,CSE-VI H,2022005697.tripathikartik@ug.sharda.ac.in,Computer Science
+481,Ved Sharma,2022439020,2201010780,B-Tech,CSE-VI H,2022439020.ved@ug.sharda.ac.in,Computer Science
+482,Mr Ayush Sharma,2022007449,2201010849,B-Tech,CSE-VI H,2022007449.ayush@ug.sharda.ac.in,Computer Science
+483,Sahil Ahmad Shah,2022369268,2201010870,B-Tech,CSE-VI H,2022369268.sahil@ug.sharda.ac.in,Computer Science
+484,Aman Raj,2022528998,2201010876,B-Tech,CSE-VI H,2022528998.aman@ug.sharda.ac.in,Computer Science
+485,Purushottam Murmu,2021482470,210101376,B-Tech,CSE-VI H,2021482470.purushottam@ug.sharda.ac.in,Computer Science
+486,Alok Kumar Mishra,2022567112,2201010071,B-Tech,CSE-VI H,2022567112.alok@ug.sharda.ac.in,Computer Science
+487,Aman Dogra,2022006152,2201010075,B-Tech,CSE-VI H,2022006152.aman@ug.sharda.ac.in,Computer Science
+488,Anish Kumar Rai,2022006654,2201010088,B-Tech,CSE-VI H,2022006654.anish@ug.sharda.ac.in,Computer Science
+489,Arman Ahmed,2022006318,2201010126,B-Tech,CSE-VI H,2022006318.arman@ug.sharda.ac.in,Computer Science
+490,Ayush Garg,2022416656,2201010169,B-Tech,CSE-VI H,2022416656.ayush@ug.sharda.ac.in,Computer Science
+491,Harsh Sharma,2022002822,2201010272,B-Tech,CSE-VI H,2022002822.harsh@ug.sharda.ac.in,Computer Science
+492,Jayanti Kumari,2022819221,2201010307,B-Tech,CSE-VI H,2022819221.jayanti@ug.sharda.ac.in,Computer Science
+493,Miss Saraswati Kumari,2022832635,2201010406,B-Tech,CSE-VI H,2022832635.saraswati@ug.sharda.ac.in,Computer Science
+494,Mr Shekhar Kumar Purbe,2022834589,2201010444,B-Tech,CSE-VI H,2022834589.shekharkumar@ug.sharda.ac.in,Computer Science
+495,Muskan Babele,2022443535,2201010451,B-Tech,CSE-VI H,2022443535.muskan@ug.sharda.ac.in,Computer Science
+496,Nakul Sharma,2022503208,2201010453,B-Tech,CSE-VI H,2022503208.nakul@ug.sharda.ac.in,Computer Science
+497,Paritosh Rawat,2022559563,2201010495,B-Tech,CSE-VI H,2022559563.paritosh@ug.sharda.ac.in,Computer Science
+498,Priyanshu Mishra,2022304804,2201010534,B-Tech,CSE-VI H,2022304804.priyanshu@ug.sharda.ac.in,Computer Science
+499,Priyanshu Tyagi,2022006437,2201010536,B-Tech,CSE-VI H,2022006437.priyanshu@ug.sharda.ac.in,Computer Science
+500,Pushkar Kumar Jha,2022502123,2201010541,B-Tech,CSE-VI H,2022502123.pushkar@ug.sharda.ac.in,Computer Science
+501,Raushan Kumar,2022554897,2201010562,B-Tech,CSE-VI H,2022554897.raushan@ug.sharda.ac.in,Computer Science
+502,Ravi Sharma,2022006859,2201010563,B-Tech,CSE-VI H,2022006859.ravi@ug.sharda.ac.in,Computer Science
+503,Ritika Ruhal,2022317952,2201010587,B-Tech,CSE-VI H,2022317952.ritika@ug.sharda.ac.in,Computer Science
+504,Rockey Kumar,2022483390,2201010595,B-Tech,CSE-VI H,2022483390.rockey@ug.sharda.ac.in,Computer Science
+505,Saloni Kumari,2022558819,2201010621,B-Tech,CSE-VI H,2022558819.saloni@ug.sharda.ac.in,Computer Science
+506,Saurab Gurung,2022820996,2201010647,B-Tech,CSE-VI H,2022820996.saurab@ug.sharda.ac.in,Computer Science
+507,Shivam Kumar,2022468330,2201010670,B-Tech,CSE-VI H,2022468330.shivam@ug.sharda.ac.in,Computer Science
+508,Shristi Jain,2022006890,2201010686,B-Tech,CSE-VI H,2022006890.shristi@ug.sharda.ac.in,Computer Science
+509,Shubham Harbola,2022559432,2201010689,B-Tech,CSE-VI H,2022559432.shubham@ug.sharda.ac.in,Computer Science
+510,Surabhi Singh,2022403475,2201010726,B-Tech,CSE-VI H,2022403475.surabhi@ug.sharda.ac.in,Computer Science
+511,Vishvendra Dhama,2022003841,2201010798,B-Tech,CSE-VI H,2022003841.vishvendra@ug.sharda.ac.in,Computer Science
+512,Akshit Kumar,2022007179,2201010836,B-Tech,CSE-VI H,2022007179.akshit@ug.sharda.ac.in,Computer Science
+513,Ashish Kumar Mahato,2022007635,2201010854,B-Tech,CSE-VI H,2022007635.ashish@ug.sharda.ac.in,Computer Science
+514,Baliram Kumar,2022485674,2201010872,B-Tech,CSE-VI H,2022485674.baliram@ug.sharda.ac.in,Computer Science
+515,Alok Kumar,2022593768,2201010891,B-Tech,CSE-VI H,2022593768.alok@ug.sharda.ac.in,
+516,Anshuman Gautam,2022624445,2201010906,B-Tech,CSE-VI H,2022624445.anshuman@ug.sharda.ac.in,
+517,Sahil Goswami,2023521223,2301017014,B-Tech,CSE-VI H,2023521223.sahil@ug.sharda.ac.in,
+518,Aadesh Kumar,2022003160,2201010002,B-Tech,CSE (SPL)-VI J,2022003160.aadesh@ug.sharda.ac.in,CS - AI& Machine Learning
+519,Suraj Belwal,2022434098,2201010727,B-Tech,CSE (SPL)-VI J,2022434098.suraj@ug.sharda.ac.in,CS - AI& Machine Learning
+520,Nitesh Saxena,2022361106,2201010482,B-Tech,CSE (SPL)-VI J,2022361106.nitesh@ug.sharda.ac.in,CS - AI& Machine Learning
+521,Yash Gupta,2022427832,2201010809,B-Tech,CSE (SPL)-VI J,2022427832.yash@ug.sharda.ac.in,CS - AI& Machine Learning
+522,Manav Verma,2022503936,2201010368,B-Tech,CSE (SPL)-VI J,2022503936.manav@ug.sharda.ac.in,CS - AI& Machine Learning
+523,Navika Chauhan,2022507071,2201010461,B-Tech,CSE (SPL)-VI J,2022507071.navika@ug.sharda.ac.in,CS - AI& Machine Learning
+524,Abiral Upadhyay,2022445444,2201010028,B-Tech,CSE (SPL)-VI J,2022445444.abiral@ug.sharda.ac.in,CS - AI& Machine Learning
+525,Adeem Gul,2022489115,2201010036,B-Tech,CSE (SPL)-VI J,2022489115.adeem@ug.sharda.ac.in,CS - AI& Machine Learning
+526,Navya John,2022002243,2201010462,B-Tech,CSE (SPL)-VI J,2022002243.navya@ug.sharda.ac.in,CS - AI& Machine Learning
+527,Aman Chand,2022002974,2201010074,B-Tech,CSE (SPL)-VI J,2022002974.aman@ug.sharda.ac.in,CS - AI& Machine Learning
+528,Anuj Singh,2022405043,2201010112,B-Tech,CSE (SPL)-VI J,2022405043.anuj@ug.sharda.ac.in,CS - AI& Machine Learning
+529,Arvind Pratap Tripathi,2022445607,2201010136,B-Tech,CSE (SPL)-VI J,2022445607.arvind@ug.sharda.ac.in,CS - AI& Machine Learning
+530,Ashwani Kumar Mishra,2022005224,2201010158,B-Tech,CSE (SPL)-VI J,2022005224.ashwani@ug.sharda.ac.in,CS - AI& Machine Learning
+531,Avni Nehru,2022002716,2201010165,B-Tech,CSE (SPL)-VI J,2022002716.avni@ug.sharda.ac.in,CS - AI& Machine Learning
+532,Ayinaparthi Kirti Meghana,2022305160,2201010168,B-Tech,CSE (SPL)-VI J,2022305160.ayinaparthi@ug.sharda.ac.in,CS - AI& Machine Learning
+533,Bikash Ranjan Sabat,2022408489,2201010180,B-Tech,CSE (SPL)-VI J,2022408489.bikash@ug.sharda.ac.in,CS - AI& Machine Learning
+534,Daniel Soubam,2022360947,2201010200,B-Tech,CSE (SPL)-VI J,2022360947.daniel@ug.sharda.ac.in,CS - AI& Machine Learning
+535,Deepayan Thakur,2022520080,2201010206,B-Tech,CSE (SPL)-VI J,2022520080.deepayan@ug.sharda.ac.in,CS - AI& Machine Learning
+536,Dheeraj Kumar Yadav,2022487026,2201010216,B-Tech,CSE (SPL)-VI J,2022487026.dheeraj@ug.sharda.ac.in,CS - AI& Machine Learning
+537,Divya .,2022345074,2201010223,B-Tech,CSE (SPL)-VI J,2022345074.divya@ug.sharda.ac.in,CS - AI& Machine Learning
+538,Harsh Gupta,2022005900,2201010265,B-Tech,CSE (SPL)-VI J,2022005900.harsh@ug.sharda.ac.in,CS - AI& Machine Learning
+539,Harshit .,2022004383,2201010277,B-Tech,CSE (SPL)-VI J,2022004383.harshit@ug.sharda.ac.in,CS - AI& Machine Learning
+540,Himanshu Singh,2022477650,2201010287,B-Tech,CSE (SPL)-VI J,2022477650.himanshu@ug.sharda.ac.in,CS - AI& Machine Learning
+541,Isaac Massey,2022451567,2201010291,B-Tech,CSE (SPL)-VI J,2022451567.isaac@ug.sharda.ac.in,CS - AI& Machine Learning
+542,Jigisha Mourya,2022003541,2201010309,B-Tech,CSE (SPL)-VI J,2022003541.jigisha@ug.sharda.ac.in,CS - AI& Machine Learning
+543,Kambam Sai Charan,2022543048,2201010315,B-Tech,CSE (SPL)-VI J,2022543048.kambam@ug.sharda.ac.in,CS - AI& Machine Learning
+544,Kartikay Sharma,2022501831,2201010320,B-Tech,CSE (SPL)-VI J,2022501831.kartikay@ug.sharda.ac.in,CS - AI& Machine Learning
+545,Krish Babbar,2022321571,2201010336,B-Tech,CSE (SPL)-VI J,2022321571.krish@ug.sharda.ac.in,CS - AI& Machine Learning
+546,Krishna Kumar Choudhary,2022006436,2201010338,B-Tech,CSE (SPL)-VI J,2022006436.krishna@ug.sharda.ac.in,CS - AI& Machine Learning
+547,Kritika Singh,2022005401,2201010341,B-Tech,CSE (SPL)-VI J,2022005401.kritika@ug.sharda.ac.in,CS - AI& Machine Learning
+548,Kritika Upadhyay,2022502804,2201010342,B-Tech,CSE (SPL)-VI J,2022502804.kritika@ug.sharda.ac.in,CS - AI& Machine Learning
+549,Rishita Tehlan,2022544917,2201010582,B-Tech,CSE (SPL)-VI J,2022544917.rishita@ug.sharda.ac.in,CS - AI& Machine Learning
+550,Mohammad Ramiz,2022464237,2201010411,B-Tech,CSE (SPL)-VI J,2022464237.mohammad@ug.sharda.ac.in,CS - AI& Machine Learning
+551,Mohd Kashif,2022420368,2201010423,B-Tech,CSE (SPL)-VI J,2022420368.mohd@ug.sharda.ac.in,CS - AI& Machine Learning
+552,Mr Anmol Kumar Sah,2022834880,2201010440,B-Tech,CSE (SPL)-VI J,2022834880.anmolkumar@ug.sharda.ac.in,CS - AI& Machine Learning
+553,Mridul Hemrajani,2022511920,2201010446,B-Tech,CSE (SPL)-VI J,2022511920.mridul@ug.sharda.ac.in,CS - AI& Machine Learning
+554,Nupur Srivastava,2022404434,2201010486,B-Tech,CSE (SPL)-VI J,2022404434.nupur@ug.sharda.ac.in,CS - AI& Machine Learning
+555,Pallav Prakash,2022494330,2201010492,B-Tech,CSE (SPL)-VI J,2022494330.pallav@ug.sharda.ac.in,CS - AI& Machine Learning
+556,Ritu Raj Kumar,2022507803,2201010590,B-Tech,CSE (SPL)-VI J,2022507803.ritu@ug.sharda.ac.in,CS - AI& Machine Learning
+557,Samarth Agrawal,2022004067,2201010624,B-Tech,CSE (SPL)-VI J,2022004067.samarth@ug.sharda.ac.in,CS - AI& Machine Learning
+558,Sameer Ahmed,2022003455,2201010625,B-Tech,CSE (SPL)-VI J,2022003455.sameer@ug.sharda.ac.in,CS - AI& Machine Learning
+559,Shashank Singh,2022446086,2201010657,B-Tech,CSE (SPL)-VI J,2022446086.shashank@ug.sharda.ac.in,CS - AI& Machine Learning
+560,Sheema Wani,2022442734,2201010662,B-Tech,CSE (SPL)-VI J,2022442734.sheema@ug.sharda.ac.in,CS - AI& Machine Learning
+561,Shivam Roy,2022306140,2201010674,B-Tech,CSE (SPL)-VI J,2022306140.shivam@ug.sharda.ac.in,CS - AI& Machine Learning
+562,Shivank Mehrotra,2022396848,2201010678,B-Tech,CSE (SPL)-VI J,2022396848.shivank@ug.sharda.ac.in,CS - AI& Machine Learning
+563,Shubham Jaswar,2022445249,2201010690,B-Tech,CSE (SPL)-VI J,2022445249.shubham@ug.sharda.ac.in,CS - AI& Machine Learning
+564,Tanishka Singh,2022006059,2201010738,B-Tech,CSE (SPL)-VI J,2022006059.tanishka@ug.sharda.ac.in,CS - AI& Machine Learning
+565,Taran Bhuee,2022005125,2201010748,B-Tech,CSE (SPL)-VI J,2022005125.taran@ug.sharda.ac.in,CS - AI& Machine Learning
+566,Umair Hamza,2022413409,2201010760,B-Tech,CSE (SPL)-VI J,2022413409.umair@ug.sharda.ac.in,CS - AI& Machine Learning
+567,Vaibhav Vaish,2022354885,2201010772,B-Tech,CSE (SPL)-VI J,2022354885.vaibhav@ug.sharda.ac.in,CS - AI& Machine Learning
+568,Varsha Gola,2022003792,2201010777,B-Tech,CSE (SPL)-VI J,2022003792.varsha@ug.sharda.ac.in,CS - AI& Machine Learning
+569,Vikash Kumar Yadav,2022498647,2201010789,B-Tech,CSE (SPL)-VI J,2022498647.vikash@ug.sharda.ac.in,CS - AI& Machine Learning
+570,Vinayak Agarwal,2022521262,2201010792,B-Tech,CSE (SPL)-VI J,2022521262.vinayak@ug.sharda.ac.in,CS - AI& Machine Learning
+571,Yash Chauhan,2022339160,2201010808,B-Tech,CSE (SPL)-VI J,2022339160.yash@ug.sharda.ac.in,CS - AI& Machine Learning
+572,Akhtar Raza,2022007267,2201010838,B-Tech,CSE (SPL)-VI J,2022007267.akhtar@ug.sharda.ac.in,CS - AI& Machine Learning
+573,Tohin Majumder,2022620180,2201010904,B-Tech,CSE (SPL)-VI J,2022620180.tohin@ug.sharda.ac.in,CS - AI& Machine Learning
+574,Ashish Sharma,2022479218,2201010929,B-Tech,CSE (SPL)-VI J,2022479218.ashish@ug.sharda.ac.in,CS - AI& Machine Learning
+575,Vishal Choudhary,2022600192,2201010933,B-Tech,CSE (SPL)-VI J,2022600192.vishal@ug.sharda.ac.in,CS - AI& Machine Learning
+576,Budda Dhanushya Surya Manikanta,2022601761,2201010934,B-Tech,CSE (SPL)-VI J,2022601761.budda@ug.sharda.ac.in,CS - AI& Machine Learning
+577,Ansh Abrol,2022610396,2201010937,B-Tech,CSE (SPL)-VI J,2022610396.ansh@ug.sharda.ac.in,CS - AI& Machine Learning
+578,Suhani Mehta,2022623133,2201010939,B-Tech,CSE (SPL)-VI J,2022623133.suhani@ug.sharda.ac.in,CS - AI& Machine Learning
+579,aditya,2021362606,210101044,B-Tech,CSE (SPL)-VI K,2021362606.aditya@ug.sharda.ac.in,CS - AI& Machine Learning
+580,Aman Kumar,2021518169,210101063,B-Tech,CSE (SPL)-VI K,2021518169.aman@ug.sharda.ac.in,CS - AI& Machine Learning
+581,Aryan .,2021455580,210101114,B-Tech,CSE (SPL)-VI K,,CS - AI& Machine Learning
+582,Chandra Prakash,2021341739,210101150,B-Tech,CSE (SPL)-VI K,2021341739.chandra@ug.sharda.ac.in,CS - AI& Machine Learning
+583,Dhruv Misra,2021399162,210101172,B-Tech,CSE (SPL)-VI K,2021399162.dhruv@ug.sharda.ac.in,CS - AI& Machine Learning
+584,Harshit Pandey,2021411743,210101211,B-Tech,CSE (SPL)-VI K,,CS - AI& Machine Learning
+585,Hasya Narula,2021344584,210101214,B-Tech,CSE (SPL)-VI K,2021344584.hasya@ug.sharda.ac.in,CS - AI& Machine Learning
+586,karan puri,2021390811,210101238,B-Tech,CSE (SPL)-VI K,2021390811.karan@ug.sharda.ac.in,CS - AI& Machine Learning
+587,"Moh,Toheed",2021369165,2101134004,B-Tech,CSE (SPL)-VI K,2021369165.moh@ug.sharda.ac.in,CS - AI& Machine Learning
+588,Aaradhya Raj,2022004949,2201010006,B-Tech,CSE (SPL)-VI K,2022004949.aaradhya@ug.sharda.ac.in,CS - AI& Machine Learning
+589,Ankesh Anand,2022006849,2201010092,B-Tech,CSE (SPL)-VI K,2022006849.ankesh@ug.sharda.ac.in,CS - AI& Machine Learning
+590,Antriksh Singh Rawat,2022589100,2201010107,B-Tech,CSE (SPL)-VI K,2022589100.antriksh@ug.sharda.ac.in,CS - AI& Machine Learning
+591,Ayush Grover,2022512918,2201010170,B-Tech,CSE (SPL)-VI K,2022512918.ayush@ug.sharda.ac.in,CS - AI& Machine Learning
+592,Chirag Kumar,2022309968,2201010192,B-Tech,CSE (SPL)-VI K,2022309968.chirag@ug.sharda.ac.in,CS - AI& Machine Learning
+593,Deepanshu Talan,2022473465,2201010205,B-Tech,CSE (SPL)-VI K,2022473465.deepanshu@ug.sharda.ac.in,CS - AI& Machine Learning
+594,Deependra Singh Shishodia,2022340865,2201010208,B-Tech,CSE (SPL)-VI K,2022340865.deependra@ug.sharda.ac.in,CS - AI& Machine Learning
+595,Harsh Kumar,2022527313,2201010267,B-Tech,CSE (SPL)-VI K,2022527313.harsh@ug.sharda.ac.in,CS - AI& Machine Learning
+596,Hunar Sajjan Agrawal,2022572764,2201010290,B-Tech,CSE (SPL)-VI K,2022572764.hunar@ug.sharda.ac.in,CS - AI& Machine Learning
+597,Ishika Tomar,2022416375,2201010295,B-Tech,CSE (SPL)-VI K,2022416375.ishika@ug.sharda.ac.in,CS - AI& Machine Learning
+598,Kaif Akram,2022000628,2201010313,B-Tech,CSE (SPL)-VI K,2022000628.kaif@ug.sharda.ac.in,CS - AI& Machine Learning
+599,Manav Mehta,2022512289,2201010366,B-Tech,CSE (SPL)-VI K,2022512289.manav@ug.sharda.ac.in,CS - AI& Machine Learning
+600,Mayank Singh,2022510361,2201010385,B-Tech,CSE (SPL)-VI K,2022510361.mayank@ug.sharda.ac.in,CS - AI& Machine Learning
+601,Mehak Parashar,2022449092,2201010400,B-Tech,CSE (SPL)-VI K,2022449092.mehak@ug.sharda.ac.in,CS - AI& Machine Learning
+602,Mohammad Aamir Sohail,2022505589,2201010407,B-Tech,CSE (SPL)-VI K,2022505589.mohammad@ug.sharda.ac.in,CS - AI& Machine Learning
+603,Mohd Sufyan,2022574378,2201010426,B-Tech,CSE (SPL)-VI K,2022574378.mohd@ug.sharda.ac.in,CS - AI& Machine Learning
+604,Mokara Praneetha,2022539044,2201010434,B-Tech,CSE (SPL)-VI K,2022539044.mokara@ug.sharda.ac.in,CS - AI& Machine Learning
+605,Nikhil Kumar Mishra,2022001306,2201010469,B-Tech,CSE (SPL)-VI K,2022001306.nikhil@ug.sharda.ac.in,CS - AI& Machine Learning
+606,Nitya Singh,2022515421,2201010484,B-Tech,CSE (SPL)-VI K,2022515421.nitya@ug.sharda.ac.in,CS - AI& Machine Learning
+607,Priyanshu Kumar,2022563312,2201010532,B-Tech,CSE (SPL)-VI K,2022563312.priyanshu@ug.sharda.ac.in,CS - AI& Machine Learning
+608,Rishabh Balodhi,2022483967,2201010573,B-Tech,CSE (SPL)-VI K,2022483967.rishabh@ug.sharda.ac.in,CS - AI& Machine Learning
+609,Rishabh Sharma,2022330451,2201010576,B-Tech,CSE (SPL)-VI K,2022330451.rishabh@ug.sharda.ac.in,CS - AI& Machine Learning
+610,Riya Mehta,2022006324,2201010593,B-Tech,CSE (SPL)-VI K,2022006324.riya@ug.sharda.ac.in,CS - AI& Machine Learning
+611,Sahil Singh,2022495866,2201010613,B-Tech,CSE (SPL)-VI K,2022495866.sahil@ug.sharda.ac.in,CS - AI& Machine Learning
+612,Sankalp Goel,2022006712,2201010633,B-Tech,CSE (SPL)-VI K,2022006712.sankalp@ug.sharda.ac.in,CS - AI& Machine Learning
+613,Suraj Kumar Jaiswal,2022368174,2201010728,B-Tech,CSE (SPL)-VI K,2022368174.suraj@ug.sharda.ac.in,CS - AI& Machine Learning
+614,Utsav Jain,2022484153,2201010767,B-Tech,CSE (SPL)-VI K,2022484153.utsav@ug.sharda.ac.in,CS - AI& Machine Learning
+615,Yash Bansal,2022003650,2201010806,B-Tech,CSE (SPL)-VI K,2022003650.yash@ug.sharda.ac.in,CS - AI& Machine Learning
+616,Suraj Kumar Patel,2022005848,2201010922,B-Tech,CSE (SPL)-VI K,2022005848.suraj@ug.sharda.ac.in,CS - AI& Machine Learning
+617,Ritik Chaudhary,2022007324,2201010924,B-Tech,CSE (SPL)-VI K,2022007324.ritik@ug.sharda.ac.in,CS - AI& Machine Learning
+618,Anshika Singh,2022007387,2201010925,B-Tech,CSE (SPL)-VI K,2022007387.anshika@ug.sharda.ac.in,CS - AI& Machine Learning
+619,Vishal Pandit,2022311612,2201010927,B-Tech,CSE (SPL)-VI K,2022311612.vishal@ug.sharda.ac.in,CS - AI& Machine Learning
+620,Udit Chaudhary,2022530497,2201010932,B-Tech,CSE (SPL)-VI K,2022530497.udit@ug.sharda.ac.in,CS - AI& Machine Learning
+621,Nitish Kumar,2022608097,2201010935,B-Tech,CSE (SPL)-VI K,2022608097.nitish@ug.sharda.ac.in,CS - AI& Machine Learning
+622,Devang Solanki,2021380904,210101166,B-Tech,CSE (SPL)-VI K,2021380904.devang@ug.sharda.ac.in,CS - AI& Machine Learning
+623,Adarsh Lakhanpal,2022386358,2201010033,B-Tech,CSE (SPL)-VI K,2022386358.adarsh@ug.sharda.ac.in,CS - AI& Machine Learning
+624,Akshi Dagar,2022510612,2201010068,B-Tech,CSE (SPL)-VI K,2022510612.akshi@ug.sharda.ac.in,CS - AI& Machine Learning
+625,Anshuman .,2022004729,2201010104,B-Tech,CSE (SPL)-VI K,2022004729.anshuman@ug.sharda.ac.in,CS - AI& Machine Learning
+626,Aryan Singh,2022003451,2201010147,B-Tech,CSE (SPL)-VI K,2022003451.aryan@ug.sharda.ac.in,CS - AI& Machine Learning
+627,Divyansh Bhardwaj,2022000299,2201010226,B-Tech,CSE (SPL)-VI K,2022000299.divyansh@ug.sharda.ac.in,CS - AI& Machine Learning
+628,Garv Ruhella,2022509891,2201010242,B-Tech,CSE (SPL)-VI K,2022509891.garv@ug.sharda.ac.in,CS - AI& Machine Learning
+629,Gopal Sharma,2022536194,2201010250,B-Tech,CSE (SPL)-VI K,2022536194.gopal@ug.sharda.ac.in,CS - AI& Machine Learning
+630,Gulshan Baghel,2022005315,2201010255,B-Tech,CSE (SPL)-VI K,2022005315.gulshan@ug.sharda.ac.in,CS - AI& Machine Learning
+631,Naman Saini,2022390387,2201010455,B-Tech,CSE (SPL)-VI K,2022390387.naman@ug.sharda.ac.in,CS - AI& Machine Learning
+632,Prabhat Parmar,2022504250,2201010508,B-Tech,CSE (SPL)-VI K,2022504250.prabhat@ug.sharda.ac.in,CS - AI& Machine Learning
+633,Ranjan Kumar,2022477888,2201010559,B-Tech,CSE (SPL)-VI K,2022477888.ranjan@ug.sharda.ac.in,CS - AI& Machine Learning
+634,"Prakhar,Prakash Singh",2021407901,210101360,B-Tech,CSE (SPL)-VI K,2021407901.prakhar@ug.sharda.ac.in,CS - AI& Machine Learning
+635,Rishav Singh,2021307894,210101395,B-Tech,CSE (SPL)-VI K,2021307894.rishav@ug.sharda.ac.in,CS - AI& Machine Learning
+636,Devendra Singh,2022490456,2201010214,B-Tech,CSE (SPL)-VI K,2022490456.devendra@ug.sharda.ac.in,CS - AI& Machine Learning
+637,Prateek Singh,2022003855,2201010516,B-Tech,CSE (SPL)-VI K,2022003855.prateek@ug.sharda.ac.in,CS - AI& Machine Learning
+638,Vinay Kumar,2022006315,2201010791,B-Tech,CSE (SPL)-VI K,2022006315.vinay@ug.sharda.ac.in,CS - AI& Machine Learning
+639,Aaditya Patwal,2021476666,210101001,B-Tech,CSE (SPL)-VI L,2021476666.aaditya@ug.sharda.ac.in,CS - AI& Machine Learning
+640,lakshit verma,2021406215,210101266,B-Tech,CSE (SPL)-VI L,2021406215.lakshit@ug.sharda.ac.in,CS - AI& Machine Learning
+641,Mahmud Abubakar,2021826104,210101272,B-Tech,CSE (SPL)-VI L,2021826104.mahmud@ug.sharda.ac.in,CS - AI& Machine Learning
+642,Shreyansh Tiwari,2021472701,210101476,B-Tech,CSE (SPL)-VI L,2021472701.shreyansh@ug.sharda.ac.in,CS - AI& Machine Learning
+643,Abhilasha Kalita,2022398713,2201010017,B-Tech,CSE (SPL)-VI L,2022398713.abhilasha@ug.sharda.ac.in,CS - AI& Machine Learning
+644,Abhishek Kumar Choudhary,2022508386,2201010025,B-Tech,CSE (SPL)-VI L,2022508386.abhishek@ug.sharda.ac.in,CS - AI& Machine Learning
+645,Abhitab Singh,2022006640,2201010027,B-Tech,CSE (SPL)-VI L,2022006640.abhitab@ug.sharda.ac.in,CS - AI& Machine Learning
+646,Adarsh Tiwari,2022004657,2201010035,B-Tech,CSE (SPL)-VI L,2022004657.adarsh@ug.sharda.ac.in,CS - AI& Machine Learning
+647,Anurag Singh Bisht,2022007148,2201010114,B-Tech,CSE (SPL)-VI L,2022007148.anurag@ug.sharda.ac.in,CS - AI& Machine Learning
+648,Aryan Vashistha,2022459065,2201010149,B-Tech,CSE (SPL)-VI L,2022459065.aryan@ug.sharda.ac.in,CS - AI& Machine Learning
+649,Ayush Singh,2022006161,2201010172,B-Tech,CSE (SPL)-VI L,2022006161.ayush@ug.sharda.ac.in,CS - AI& Machine Learning
+650,Bhavya Gaba,2022421393,2201010177,B-Tech,CSE (SPL)-VI L,2022421393.bhavya@ug.sharda.ac.in,CS - AI& Machine Learning
+651,Chaman Preet,2022509542,2201010186,B-Tech,CSE (SPL)-VI L,2022509542.chaman@ug.sharda.ac.in,CS - AI& Machine Learning
+652,Chirag Singh Pundir,2022361815,2201010195,B-Tech,CSE (SPL)-VI L,2022361815.chirag@ug.sharda.ac.in,CS - AI& Machine Learning
+653,Gunjan Kumar,2022472743,2201010256,B-Tech,CSE (SPL)-VI L,2022472743.gunjan@ug.sharda.ac.in,CS - AI& Machine Learning
+654,Harsh Bhati,2022554328,2201010262,B-Tech,CSE (SPL)-VI L,2022554328.harsh@ug.sharda.ac.in,CS - AI& Machine Learning
+655,Harsh Dubey,2022509576,2201010264,B-Tech,CSE (SPL)-VI L,2022509576.harsh@ug.sharda.ac.in,CS - AI& Machine Learning
+656,Kartikey Shukla,2022304714,2201010321,B-Tech,CSE (SPL)-VI L,2022304714.kartikey@ug.sharda.ac.in,CS - AI& Machine Learning
+657,Kashish .,2022484080,2201010322,B-Tech,CSE (SPL)-VI L,2022484080.kashish@ug.sharda.ac.in,CS - AI& Machine Learning
+658,Md Ahsan,2022006647,2201010388,B-Tech,CSE (SPL)-VI L,2022006647.md@ug.sharda.ac.in,CS - AI& Machine Learning
+659,Md. Moudud Ahmed Misil,2022811762,2201010398,B-Tech,CSE (SPL)-VI L,2022811762.md.moududahmed@ug.sharda.ac.in,CS - AI& Machine Learning
+660,Muqtar Ali,2022006421,2201010450,B-Tech,CSE (SPL)-VI L,2022006421.muqtar@ug.sharda.ac.in,CS - AI& Machine Learning
+661,Naveen Kumar Singh,2022005748,2201010460,B-Tech,CSE (SPL)-VI L,2022005748.naveen@ug.sharda.ac.in,CS - AI& Machine Learning
+662,Nikhil Shukla,2022451626,2201010471,B-Tech,CSE (SPL)-VI L,2022451626.nikhil@ug.sharda.ac.in,CS - AI& Machine Learning
+663,Nishant Yadav,2022549867,2201010478,B-Tech,CSE (SPL)-VI L,2022549867.nishant@ug.sharda.ac.in,CS - AI& Machine Learning
+664,Prince Tyagi,2022561375,2201010525,B-Tech,CSE (SPL)-VI L,2022561375.prince@ug.sharda.ac.in,CS - AI& Machine Learning
+665,Priyam Aryan,2022409593,2201010527,B-Tech,CSE (SPL)-VI L,2022409593.priyam@ug.sharda.ac.in,CS - AI& Machine Learning
+666,Rishav Anand,2022548738,2201010578,B-Tech,CSE (SPL)-VI L,2022548738.rishav@ug.sharda.ac.in,CS - AI& Machine Learning
+667,Saksham Makhija,2022512443,2201010616,B-Tech,CSE (SPL)-VI L,2022512443.saksham@ug.sharda.ac.in,CS - AI& Machine Learning
+668,Saud Zargar,2022354910,2201010644,B-Tech,CSE (SPL)-VI L,2022354910.saud@ug.sharda.ac.in,CS - AI& Machine Learning
+669,Shaily Saxena,2022005080,2201010653,B-Tech,CSE (SPL)-VI L,2022005080.shaily@ug.sharda.ac.in,CS - AI& Machine Learning
+670,Shashwat Ambar Pathak,2022387850,2201010658,B-Tech,CSE (SPL)-VI L,2022387850.shashwat@ug.sharda.ac.in,CS - AI& Machine Learning
+671,Shekhar Kumar Singh,2022309446,2201010663,B-Tech,CSE (SPL)-VI L,2022309446.shekhar@ug.sharda.ac.in,CS - AI& Machine Learning
+672,Shipra Moharana,2022499440,2201010666,B-Tech,CSE (SPL)-VI L,2022499440.shipra@ug.sharda.ac.in,CS - AI& Machine Learning
+673,Shivani Singh,2022466983,2201010677,B-Tech,CSE (SPL)-VI L,2022466983.shivani@ug.sharda.ac.in,CS - AI& Machine Learning
+674,Sneha Singh,2022409813,2201010702,B-Tech,CSE (SPL)-VI L,2022409813.sneha@ug.sharda.ac.in,CS - AI& Machine Learning
+675,Sonal Chaudhary,2022816972,2201010707,B-Tech,CSE (SPL)-VI L,2022816972.sonal@ug.sharda.ac.in,CS - AI& Machine Learning
+676,Srivash A,2022471296,2201010717,B-Tech,CSE (SPL)-VI L,2022471296.srivash@ug.sharda.ac.in,CS - AI& Machine Learning
+677,Yash Attri,2022482202,2201010805,B-Tech,CSE (SPL)-VI L,2022482202.yash@ug.sharda.ac.in,CS - AI& Machine Learning
+678,Priyanshu Singh,2022007193,2201010923,B-Tech,CSE (SPL)-VI L,2022007193.priyanshu@ug.sharda.ac.in,CS - AI& Machine Learning
+679,Aman Kumar,2022618129,2201010938,B-Tech,CSE (SPL)-VI L,2022618129.aman@ug.sharda.ac.in,CS - AI& Machine Learning
+680,Saurabh Raj,2022623875,2201010940,B-Tech,CSE (SPL)-VI L,2022623875.saurabh@ug.sharda.ac.in,CS - AI& Machine Learning
+681,Shubham Singh,2023253225,2301017016,B-Tech,CSE (SPL)-VI L,2023253225.shubham@ug.sharda.ac.in,CS - AI& Machine Learning
+682,Sunny Kumar Singh,2022463885,2201010725,B-Tech,CSE (SPL)-VI L,2022463885.sunny@ug.sharda.ac.in,CS - AI& Machine Learning
+683,Tanvir Singh,2022401760,2201010746,B-Tech,CSE (SPL)-VI L,2022401760.tanvir@ug.sharda.ac.in,CS - AI& Machine Learning
+684,Umang .,2022006170,2201010761,B-Tech,CSE (SPL)-VI L,2022006170.umang@ug.sharda.ac.in,CS - AI& Machine Learning
+685,Vishakha Chauhan,2022519978,2201010793,B-Tech,CSE (SPL)-VI L,2022519978.vishakha@ug.sharda.ac.in,CS - AI& Machine Learning
+686,Ayaz .,2022506228,2201010930,B-Tech,CSE (SPL)-VI L,2022506228.ayaz@ug.sharda.ac.in,CS - AI& Machine Learning
+687,Aaisha Siddiqah,2022486764,2201010004,B-Tech,CSE (SPL)-VI L,2022486764.aaisha@ug.sharda.ac.in,CS - AI& Machine Learning
+688,Abdul Rehman,2022380686,2201010011,B-Tech,CSE (SPL)-VI L,2022380686.abdul@ug.sharda.ac.in,CS - AI& Machine Learning
+689,Abhinav Singh Negi,2022516040,2201010020,B-Tech,CSE (SPL)-VI L,2022516040.abhinav@ug.sharda.ac.in,CS - AI& Machine Learning
+690,Abhinav Thapliyal,2022354445,2201010021,B-Tech,CSE (SPL)-VI L,2022354445.abhinav@ug.sharda.ac.in,CS - AI& Machine Learning
+691,Abhishek Yadav,2022460612,2201010026,B-Tech,CSE (SPL)-VI L,2022460612.abhishek@ug.sharda.ac.in,CS - AI& Machine Learning
+692,Manish Kumar,2022001992,2201010371,B-Tech,CSE (SPL)-VI L,2022001992.manish@ug.sharda.ac.in,CS - AI& Machine Learning
+693,Akarsh Katiyar,2022508637,2201010060,B-Tech,CSE (SPL)-VI L,2022508637.akarsh@ug.sharda.ac.in,CS - AI& Machine Learning
+694,Vanshika Gaur,2022338152,2201010773,B-Tech,CSE (SPL)-VI L,2022338152.vanshika@ug.sharda.ac.in,CS - AI& Machine Learning
+695,Chandra Prakash,2021002535,210101305,B-Tech,CSE (SPL)-VI M,2021002535.chandra@ug.sharda.ac.in,CSE- Data Science
+696,Abhishek Kumar,2022004361,2201010024,B-Tech,CSE (SPL)-VI M,2022004361.abhishek@ug.sharda.ac.in,CSE- Data Science
+697,Akash Kumar Singh,2022506579,2201010061,B-Tech,CSE (SPL)-VI M,2022506579.akash@ug.sharda.ac.in,CSE- Data Science
+698,Akhil Sharma,2022334026,2201010063,B-Tech,CSE (SPL)-VI M,2022334026.akhil@ug.sharda.ac.in,CSE- Data Science
+699,Akshat Thakur,2022426354,2201010067,B-Tech,CSE (SPL)-VI M,2022426354.akshat@ug.sharda.ac.in,CSE- Data Science
+700,Anirudh Sharma,2022005817,2201010087,B-Tech,CSE (SPL)-VI M,2022005817.anirudh@ug.sharda.ac.in,CSE- Data Science
+701,Ankit Kumar,2022409017,2201010094,B-Tech,CSE (SPL)-VI M,2022409017.ankit@ug.sharda.ac.in,CSE- Data Science
+702,Anshara Beigh,2022535335,2201010100,B-Tech,CSE (SPL)-VI M,2022535335.anshara@ug.sharda.ac.in,CSE- Data Science
+703,Anurag Ranjan,2022369167,2201010113,B-Tech,CSE (SPL)-VI M,2022369167.anurag@ug.sharda.ac.in,CSE- Data Science
+704,Arbaaj Mansoori,2022456042,2201010120,B-Tech,CSE (SPL)-VI M,2022456042.arbaaj@ug.sharda.ac.in,CSE- Data Science
+705,Arunoday Kumar,2022539806,2201010133,B-Tech,CSE (SPL)-VI M,2022539806.arunoday@ug.sharda.ac.in,CSE- Data Science
+706,Aryan Raj,2022504700,2201010144,B-Tech,CSE (SPL)-VI M,2022504700.aryan@ug.sharda.ac.in,CSE- Data Science
+707,Ashish Kumar,2022360832,2201010151,B-Tech,CSE (SPL)-VI M,2022360832.ashish@ug.sharda.ac.in,CSE- Data Science
+708,Ayush Tripathi,2022542429,2201010174,B-Tech,CSE (SPL)-VI M,2022542429.ayush@ug.sharda.ac.in,CSE- Data Science
+709,Debadrita Mukherjee,2022825759,2201010202,B-Tech,CSE (SPL)-VI M,2022825759.debadrita@ug.sharda.ac.in,CSE- Data Science
+710,Devansh Joshi,2022005712,2201010210,B-Tech,CSE (SPL)-VI M,2022005712.devansh@ug.sharda.ac.in,CSE- Data Science
+711,Harshit Singh,2022325712,2201010280,B-Tech,CSE (SPL)-VI M,2022325712.harshit@ug.sharda.ac.in,CSE- Data Science
+712,Jatin Dhangar,2022005046,2201010302,B-Tech,CSE (SPL)-VI M,2022005046.jatin@ug.sharda.ac.in,CSE- Data Science
+713,Jatin Kumar Singh,2022480883,2201010305,B-Tech,CSE (SPL)-VI M,2022480883.jatinkumar@ug.sharda.ac.in,CSE- Data Science
+714,Khushboo Kumari,2022469633,2201010328,B-Tech,CSE (SPL)-VI M,2022469633.khushboo@ug.sharda.ac.in,CSE- Data Science
+715,Manan Kaushik,2022366544,2201010363,B-Tech,CSE (SPL)-VI M,2022366544.manan@ug.sharda.ac.in,CSE- Data Science
+716,Manjay Raj,2022414035,2201010375,B-Tech,CSE (SPL)-VI M,2022414035.manjay@ug.sharda.ac.in,CSE- Data Science
+717,Manveer Kushwaha,2022456058,2201010381,B-Tech,CSE (SPL)-VI M,2022456058.manveer@ug.sharda.ac.in,CSE- Data Science
+718,Mayon Rajpoot,2022533506,2201010386,B-Tech,CSE (SPL)-VI M,2022533506.mayon@ug.sharda.ac.in,CSE- Data Science
+719,Mehul Kumar,2022338119,2201010402,B-Tech,CSE (SPL)-VI M,2022338119.mehul@ug.sharda.ac.in,CSE- Data Science
+720,Mohammad Adnan,2022438436,2201010408,B-Tech,CSE (SPL)-VI M,2022438436.mohammad@ug.sharda.ac.in,CSE- Data Science
+721,Mohammad Muzammil,2022403267,2201010410,B-Tech,CSE (SPL)-VI M,2022403267.mohammad@ug.sharda.ac.in,CSE- Data Science
+722,Mridul Mehta,2022007037,2201010447,B-Tech,CSE (SPL)-VI M,2022007037.mridul@ug.sharda.ac.in,CSE- Data Science
+723,Navya Sharma,2022428888,2201010463,B-Tech,CSE (SPL)-VI M,2022428888.navya@ug.sharda.ac.in,CSE- Data Science
+724,Piyush Shukla,2022496362,2201010504,B-Tech,CSE (SPL)-VI M,2022496362.piyush@ug.sharda.ac.in,CSE- Data Science
+725,Prince Kumar Yadav,2022005278,2201010524,B-Tech,CSE (SPL)-VI M,2022005278.prince@ug.sharda.ac.in,CSE- Data Science
+726,Priyansh Singhal,2022529691,2201010528,B-Tech,CSE (SPL)-VI M,2022529691.priyansh@ug.sharda.ac.in,CSE- Data Science
+727,Priyanshu Kumar Giri,2022439234,2201010533,B-Tech,CSE (SPL)-VI M,2022439234.priyanshu@ug.sharda.ac.in,CSE- Data Science
+728,Raj Karan Singh,2022006709,2201010548,B-Tech,CSE (SPL)-VI M,2022006709.raj@ug.sharda.ac.in,CSE- Data Science
+729,Ranya Riti,2022006115,2201010560,B-Tech,CSE (SPL)-VI M,2022006115.ranya@ug.sharda.ac.in,CSE- Data Science
+730,Rebekah Russel,2022410984,2201010566,B-Tech,CSE (SPL)-VI M,2022410984.rebekah@ug.sharda.ac.in,CSE- Data Science
+731,Ritu Raj,2022307000,2201010589,B-Tech,CSE (SPL)-VI M,2022307000.ritu@ug.sharda.ac.in,CSE- Data Science
+732,Sadaf Zahra,2022553875,2201010609,B-Tech,CSE (SPL)-VI M,2022553875.sadaf@ug.sharda.ac.in,CSE- Data Science
+733,Sakshi Deo,2022459247,2201010618,B-Tech,CSE (SPL)-VI M,2022459247.sakshi@ug.sharda.ac.in,CSE- Data Science
+734,Saurabh Mishra,2022465132,2201010649,B-Tech,CSE (SPL)-VI M,2022465132.saurabh@ug.sharda.ac.in,CSE- Data Science
+735,Sivam Visnu,2022513718,2201010696,B-Tech,CSE (SPL)-VI M,2022513718.sivam@ug.sharda.ac.in,CSE- Data Science
+736,Smriti Kumari,2022518889,2201010697,B-Tech,CSE (SPL)-VI M,2022518889.smriti@ug.sharda.ac.in,CSE- Data Science
+737,Sonal Malhotra,2022003733,2201010708,B-Tech,CSE (SPL)-VI M,2022003733.sonal@ug.sharda.ac.in,CSE- Data Science
+738,Tanishq Chauhan,2022335852,2201010739,B-Tech,CSE (SPL)-VI M,2022335852.tanishq@ug.sharda.ac.in,CSE- Data Science
+739,Tanu Yadav,2022005013,2201010742,B-Tech,CSE (SPL)-VI M,2022005013.tanu@ug.sharda.ac.in,CSE- Data Science
+740,Tanuj Saxena,2022520199,2201010744,B-Tech,CSE (SPL)-VI M,2022520199.tanuj@ug.sharda.ac.in,CSE- Data Science
+741,Tummenye Amos Mwakasusa,2022823509,2201010755,B-Tech,CSE (SPL)-VI M,2022823509.tummenye@ug.sharda.ac.in,CSE- Data Science
+742,Ujjwal Maurya,2022421811,2201010758,B-Tech,CSE (SPL)-VI M,2022421811.ujjwal@ug.sharda.ac.in,CSE- Data Science
+743,Uma Chauhan,2022477719,2201010759,B-Tech,CSE (SPL)-VI M,2022477719.uma@ug.sharda.ac.in,CSE- Data Science
+744,Uttam Kumar,2022374380,2201010768,B-Tech,CSE (SPL)-VI M,2022374380.uttam@ug.sharda.ac.in,CSE- Data Science
+745,Vanshika Yadav,2022495156,2201010775,B-Tech,CSE (SPL)-VI M,2022495156.vanshika@ug.sharda.ac.in,CSE- Data Science
+746,Wasiullah Aman,2022006597,2201010802,B-Tech,CSE (SPL)-VI M,2022006597.wasiullah@ug.sharda.ac.in,CSE- Data Science
+747,Yashi Singh,2022518973,2201010814,B-Tech,CSE (SPL)-VI M,2022518973.yashi@ug.sharda.ac.in,CSE- Data Science
+748,Yuvraj Singh Chahar,2022490281,2201010824,B-Tech,CSE (SPL)-VI M,2022490281.yuvraj@ug.sharda.ac.in,CSE- Data Science
+749,Jeevansh Ahuja,2022006563,2201010942,B-Tech,CSE (SPL)-VI M,2022006563.jeevansh@ug.sharda.ac.in,CSE- Data Science
+750,Nikhil Singh Chauhan,2022006893,2201010943,B-Tech,CSE (SPL)-VI M,2022006893.nikhil@ug.sharda.ac.in,CSE- Data Science
+751,Kapil Gupta,2022007789,2201010945,B-Tech,CSE (SPL)-VI M,2022007789.kapil@ug.sharda.ac.in,CSE- Data Science
+752,Utkarsh Anand,2022565521,2201010948,B-Tech,CSE (SPL)-VI M,2022565521.utkarsh@ug.sharda.ac.in,CSE- Data Science
+753,Aditya Pandey,2022573142,2201010949,B-Tech,CSE (SPL)-VI M,2022573142.aditya@ug.sharda.ac.in,CSE- Data Science
+754,Ram Kumar,2022586591,2201010950,B-Tech,CSE (SPL)-VI M,2022586591.ram@ug.sharda.ac.in,CSE- Data Science
+755,Mohammad Ashif Iqbal,2022599098,2201010951,B-Tech,CSE (SPL)-VI M,2022599098.mohammad@ug.sharda.ac.in,CSE- Data Science
+756,Kamal Ahmad,2022603519,2201010952,B-Tech,CSE (SPL)-VI M,2022603519.kamal@ug.sharda.ac.in,CSE- Data Science
+757,Aditya Raj,2022617520,2201010954,B-Tech,CSE (SPL)-VI M,2022617520.aditya@ug.sharda.ac.in,CSE- Data Science
+758,Isha .,2022618106,2201010955,B-Tech,CSE (SPL)-VI M,2022618106.isha@ug.sharda.ac.in,CSE- Data Science
+759,Akshat Verma,2021365266,210101054,B-Tech,CSE (SPL)-VI N,2021365266.akshat@ug.sharda.ac.in,CSE- Data Science
+760,Chandra Shekhar Sati,2021424420,210101151,B-Tech,CSE (SPL)-VI N,2021424420.chandra@ug.sharda.ac.in,CSE- Data Science
+761,nirupam rabha,2021373851,210101339,B-Tech,CSE (SPL)-VI N,2021373851.nirupam@ug.sharda.ac.in,CSE- Data Science
+762,Bhupender Gautam,2022005947,2201010179,B-Tech,CSE (SPL)-VI N,2022005947.bhupender@ug.sharda.ac.in,CSE- Data Science
+763,Pankaj Kumar,2022404832,2201010494,B-Tech,CSE (SPL)-VI N,2022404832.pankaj@ug.sharda.ac.in,CSE- Data Science
+764,Raj Kumar,2022312671,2201010549,B-Tech,CSE (SPL)-VI N,2022312671.raj@ug.sharda.ac.in,CSE- Data Science
+765,Soumya Sharma,2022003992,2201010712,B-Tech,CSE (SPL)-VI N,2022003992.soumya@ug.sharda.ac.in,CSE- Data Science
+766,Varun Kumar,2022432344,2201010946,B-Tech,CSE (SPL)-VI N,2022432344.varun@ug.sharda.ac.in,CSE- Data Science
+767,Avinash Maurya,2022460800,2201010164,B-Tech,CSE (SPL)-VI N,2022460800.avinash@ug.sharda.ac.in,CSE- Data Science
+768,Jatin Gupta,2022320806,2201010303,B-Tech,CSE (SPL)-VI N,2022320806.jatin@ug.sharda.ac.in,CSE- Data Science
+769,MD Shahid Hussain,2022405621,2201010396,B-Tech,CSE (SPL)-VI N,2022405621.md@ug.sharda.ac.in,CSE- Data Science
+770,Sameer Saifi,2022396862,2201010626,B-Tech,CSE (SPL)-VI N,2022396862.sameer@ug.sharda.ac.in,CSE- Data Science
+771,Saransh Singhania,2022487134,2201010638,B-Tech,CSE (SPL)-VI N,2022487134.saransh@ug.sharda.ac.in,CSE- Data Science
+772,Anamika Sangwan,2022542651,2201010947,B-Tech,CSE (SPL)-VI N,2022542651.anamika@ug.sharda.ac.in,CSE- Data Science
+773,Amulya V Singh,2022603988,2201010953,B-Tech,CSE (SPL)-VI N,2022603988.amulya@ug.sharda.ac.in,CSE- Data Science
+774,Nitin Kumar Thakur,2022008213,2201010981,B-Tech,CSE (SPL)-VI N,2022008213.nitin@ug.sharda.ac.in,CSE- Data Science
+775,Aditya Raj,2022387999,2201010046,B-Tech,CSE (SPL)-VI N,2022387999.aditya@ug.sharda.ac.in,CSE- Data Science
+776,Vanshit Wadhera,2022522914,2201010776,B-Tech,CSE (SPL)-VI N,2022522914.vanshit@ug.sharda.ac.in,CSE- Data Science
+777,Arfat Hussain,2022505539,2201010124,B-Tech,CSE (SPL)-VI N,2022505539.arfat@ug.sharda.ac.in,CSE- Data Science
+778,Akim Tartisio Ramdan,2022826376,2201010064,B-Tech,CSE (SPL)-VI N,2022826376.akim@ug.sharda.ac.in,CSE- IOT & Application
+779,Srishti Singh Chauhan,2022007474,2201010960,B-Tech,CSE (SPL)-VI N,2022007474.srishti@ug.sharda.ac.in,CSE- IOT & Application
+780,Harsh Vashistha,2022008078,2201010967,B-Tech,CSE (SPL)-VI N,2022008078.harsh@ug.sharda.ac.in,CSE- IOT & Application
+781,Mohd Hashir,2022008085,2201010968,B-Tech,CSE (SPL)-VI N,2022008085.mohd@ug.sharda.ac.in,CSE- IOT & Application
+782,Samiksha Sharma,2022008217,2201010971,B-Tech,CSE (SPL)-VI N,2022008217.samiksha@ug.sharda.ac.in,CSE- IOT & Application
+783,Avishkar Yadav,2022008317,2201010974,B-Tech,CSE (SPL)-VI N,2022008317.avishkar@ug.sharda.ac.in,CSE- IOT & Application
+784,Sujal Dev,2022008331,2201010975,B-Tech,CSE (SPL)-VI N,2022008331.sujal@ug.sharda.ac.in,CSE- IOT & Application
+785,Urja Raj,2022622988,2201010977,B-Tech,CSE (SPL)-VI N,2022622988.urja@ug.sharda.ac.in,CSE- IOT & Application
+786,Shubham Sharma,2022006289,2201010959,B-Tech,CSE (SPL)-VI N,2022006289.shubham@ug.sharda.ac.in,CSE- IOT & Application
+787,Nitin Chauhan,2022008160,2201010970,B-Tech,CSE (SPL)-VI N,2022008160.nitin@ug.sharda.ac.in,CSE- IOT & Application
+788,Ashutosh Kumar,2022006860,2201010154,B-Tech,CSE (SPL)-VI N,2022006860.ashutosh@ug.sharda.ac.in,CSE- IOT & Application
+789,Harshit .,2022489738,2201010276,B-Tech,CSE (SPL)-VI N,2022489738.harshit@ug.sharda.ac.in,CSE- IOT & Application
+790,Rachit Sinha,2022002885,2201010957,B-Tech,CSE (SPL)-VI N,2022002885.rachit@ug.sharda.ac.in,CSE- IOT & Application
+791,Dev Singh,2022004595,2201010958,B-Tech,CSE (SPL)-VI N,2022004595.dev@ug.sharda.ac.in,CSE- IOT & Application
+792,Rahan .,2022007672,2201010962,B-Tech,CSE (SPL)-VI N,2022007672.rahan@ug.sharda.ac.in,CSE- IOT & Application
+793,Priyanshu Soni,2022007731,2201010963,B-Tech,CSE (SPL)-VI N,2022007731.priyanshu@ug.sharda.ac.in,CSE- IOT & Application
+794,Ravi Shankar Poddar,2022007802,2201010964,B-Tech,CSE (SPL)-VI N,2022007802.ravi@ug.sharda.ac.in,CSE- IOT & Application
+795,Chandan Kumar,2022008050,2201010966,B-Tech,CSE (SPL)-VI N,2022008050.chandan@ug.sharda.ac.in,CSE- IOT & Application
+796,Harsh Ujjwal,2022008126,2201010969,B-Tech,CSE (SPL)-VI N,2022008126.harsh@ug.sharda.ac.in,CSE- IOT & Application
+797,Ayaz Ahmad,2022008263,2201010973,B-Tech,CSE (SPL)-VI N,2022008263.ayaz@ug.sharda.ac.in,CSE- IOT & Application
+798,Sanjeet .,2022619784,2201010976,B-Tech,CSE (SPL)-VI N,2022619784.sanjeet@ug.sharda.ac.in,CSE- IOT & Application
+799,Anurag Nishad,2021455216,210101098,B-Tech,CSE (SPL)-VI O,2021455216.anurag@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+800,Abhay Singh Tomar,2022006231,2201010016,B-Tech,CSE (SPL)-VI O,2022006231.abhay@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+801,Abhinav Rajpati,2022473539,2201010019,B-Tech,CSE (SPL)-VI O,2022473539.abhinav@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+802,Adarsh Banyal,2022405514,2201010031,B-Tech,CSE (SPL)-VI O,2022405514.adarsh@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+803,Aditi Negi,2022310618,2201010037,B-Tech,CSE (SPL)-VI O,2022310618.aditi@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+804,Aditya Kaushik,2022484226,2201010040,B-Tech,CSE (SPL)-VI O,2022484226.aditya@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+805,Ajay Pratap Singh,2022474671,2201010057,B-Tech,CSE (SPL)-VI O,2022474671.ajay@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+806,Alok Kumar Tiwari,2022447404,2201010072,B-Tech,CSE (SPL)-VI O,2022447404.alok@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+807,Aryan Kumiyal,2022466374,2201010142,B-Tech,CSE (SPL)-VI O,2022466374.aryan@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+808,Aryan Pal,2022440656,2201010143,B-Tech,CSE (SPL)-VI O,2022440656.aryan@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+809,Ayush Singh,2022005319,2201010173,B-Tech,CSE (SPL)-VI O,2022005319.ayush@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+810,Dakshesh Chaturvedi,2022003898,2201010198,B-Tech,CSE (SPL)-VI O,2022003898.dakshesh@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+811,Diwakar Pareek,2022512685,2201010230,B-Tech,CSE (SPL)-VI O,2022512685.diwakar@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+812,Dushyant Kumar,2022407190,2201010232,B-Tech,CSE (SPL)-VI O,2022407190.dushyant@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+813,Gagandeep Singh Sindhu,2022498160,2201010240,B-Tech,CSE (SPL)-VI O,2022498160.gagandeep@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+814,Gauri Shivhare,2022319788,2201010248,B-Tech,CSE (SPL)-VI O,2022319788.gauri@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+815,Hamzah .,2022395985,2201010258,B-Tech,CSE (SPL)-VI O,2022395985.hamzah@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+816,Hardik Saxena,2022552126,2201010260,B-Tech,CSE (SPL)-VI O,2022552126.hardik@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+817,Jatin Chaudhary,2022508051,2201010301,B-Tech,CSE (SPL)-VI O,2022508051.jatin@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+818,Kashvi Walia,2022346529,2201010324,B-Tech,CSE (SPL)-VI O,2022346529.kashvi@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+819,MD Nazmus Sakib,2022806985,2201010394,B-Tech,CSE (SPL)-VI O,2022806985.md@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+820,Mukund Kumar Sharma,2022476924,2201010449,B-Tech,CSE (SPL)-VI O,2022476924.mukund@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+821,Neeraj Narwat,2022004628,2201010465,B-Tech,CSE (SPL)-VI O,2022004628.neeraj@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+822,Nikhil Raj,2022515845,2201010470,B-Tech,CSE (SPL)-VI O,2022515845.nikhil@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+823,Pallawi Hansdak,2022512684,2201010493,B-Tech,CSE (SPL)-VI O,2022512684.pallawi@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+824,Pranaav Bhatnagar,2022313141,2201010511,B-Tech,CSE (SPL)-VI O,2022313141.pranaav@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+825,Raghvendra Singh,2022482472,2201010542,B-Tech,CSE (SPL)-VI O,2022482472.raghvendra@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+826,Rajeev .,2022005894,2201010554,B-Tech,CSE (SPL)-VI O,2022005894.rajeev@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+827,Sahaam Javid Shah Misgar,2022506566,2201010610,B-Tech,CSE (SPL)-VI O,2022506566.sahaam@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+828,Sameer Singh,2022509145,2201010627,B-Tech,CSE (SPL)-VI O,2022509145.sameer@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+829,Sarthak Chaudhary,2022001202,2201010640,B-Tech,CSE (SPL)-VI O,2022001202.sarthak@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+830,Sneha Sinha,2022005556,2201010703,B-Tech,CSE (SPL)-VI O,2022005556.sneha@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+831,Sourabh Singh,2022350649,2201010714,B-Tech,CSE (SPL)-VI O,2022350649.sourabh@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+832,Thirtho Raj Saha,2022817674,2201010752,B-Tech,CSE (SPL)-VI O,2022817674.thirtho@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+833,Tridev Sharma,2022439682,2201010753,B-Tech,CSE (SPL)-VI O,2022439682.tridev@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+834,Vaibhav Bhatnagar,2022006271,2201010769,B-Tech,CSE (SPL)-VI O,2022006271.vaibhay@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+835,Vedhanshu Singh,2022003490,2201010783,B-Tech,CSE (SPL)-VI O,2022003490.vedhanshu@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+836,Vibhas Dutta,2022492708,2201010785,B-Tech,CSE (SPL)-VI O,2022492708.vibhas@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+837,Wend-Wooga Arthur Donald Konvelbo,2022801912,2201010803,B-Tech,CSE (SPL)-VI O,2022801912.wend-woogaarthurdonald@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+838,Yibo Abraham Kevin Kini,2022805927,2201010819,B-Tech,CSE (SPL)-VI O,2022805927.yibo@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+839,Ankit Kumar,2022387644,2201010982,B-Tech,CSE (SPL)-VI O,2022387644.ankit@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+840,Khevender Singh,2022570125,2201010983,B-Tech,CSE (SPL)-VI O,2022570125.khevender@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+841,Gannon Mossang,2022572570,2201010984,B-Tech,CSE (SPL)-VI O,2022572570.gannon@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+842,Bidhan Lama,2022836076,2201010986,B-Tech,CSE (SPL)-VI O,2022836076.bidhan@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+843,MD Nadim Mostofa,2022836286,2201010987,B-Tech,CSE (SPL)-VI O,2022836286.mdnadim@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+844,Aatithya Bhandari,2022837222,2201010988,B-Tech,CSE (SPL)-VI O,2022837222.aatithya@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+845,Rishika Sharma,2022305070,2201010580,B-Tech,CSE (SPL)-VI O,2022305070.rishika@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+846,Kushagra Singh,2022007017,2201010351,B-Tech,CSE (SPL)-VI O,2022007017.kushagra@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+847,Utkarsh Pandey,2022001453,2201010766,B-Tech,CSE (SPL)-VI O,2022001453.utkarsh@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+848,Gaurav .,2022007457,2201010980,B-Tech,CSE (SPL)-VI O,2022007457.gaurav@ug.sharda.ac.in,CSE-Cyber & Forensic-MicroSoft
+849,Sneha Bajpai,2022513156,2201010699,B-Tech,CSE (SPL)-VI P,2022513156.sneha@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+850,Ayush Harsh,2022476818,2201010171,B-Tech,CSE (SPL)-VI P,2022476818.ayush@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+851,Hani Kumar,2022431320,2201010259,B-Tech,CSE (SPL)-VI P,2022431320.hani@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+852,Harshul Garg,2022006750,2201010282,B-Tech,CSE (SPL)-VI P,2022006750.harshul@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+853,Sohail Akhtar,2022006106,2201010704,B-Tech,CSE (SPL)-VI P,2022006106.sohail@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+854,Sumit Kumar,2022003592,2201010722,B-Tech,CSE (SPL)-VI P,2022003592.sumit@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+855,Gaurav Kumar,2022579523,2201010979,B-Tech,CSE (SPL)-VI P,2022579523.gaurav@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+856,Aditya Priya,2022306619,2201010044,B-Tech,CSE (SPL)-VI P,2022306619.aditya@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+857,Aftab Mansoori,2022005043,2201010054,B-Tech,CSE (SPL)-VI P,2022005043.aftab@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+858,Anjali Gupta,2022006195,2201010089,B-Tech,CSE (SPL)-VI P,2022006195.anjali@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+859,Anvi Singh,2022569459,2201010117,B-Tech,CSE (SPL)-VI P,2022569459.anvi@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+860,Arya Tiwari,2022006607,2201010137,B-Tech,CSE (SPL)-VI P,2022006607.arya@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+861,Aryan Singh,2022394539,2201010148,B-Tech,CSE (SPL)-VI P,2022394539.aryan@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+862,Devanshi Sharma,2022330517,2201010212,B-Tech,CSE (SPL)-VI P,2022330517.devanshi@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+863,Dhruv Maheshwari,2022560746,2201010219,B-Tech,CSE (SPL)-VI P,2022560746.dhruv@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+864,Diksha Sharma,2022004439,2201010221,B-Tech,CSE (SPL)-VI P,2022004439.diksha@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+865,Md Jauhar Imam,2022514043,2201010390,B-Tech,CSE (SPL)-VI P,2022514043.md@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+866,Md Naiyar Imam,2022514039,2201010393,B-Tech,CSE (SPL)-VI P,2022514039.md@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+867,Pratham Kumar,2022489962,2201010519,B-Tech,CSE (SPL)-VI P,2022489962.pratham@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+868,Rahul Choudhary,2022307728,2201010544,B-Tech,CSE (SPL)-VI P,2022307728.rahul@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+869,Utkarsh Mishra,2022316318,2201010765,B-Tech,CSE (SPL)-VI P,2022316318.utkarsh@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+870,Vishal Kumar,2022005003,2201010795,B-Tech,CSE (SPL)-VI P,2022005003.vishal@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+871,Aryan Rana,2022307102,2201010145,B-Tech,CSE (SPL)-VI P,2022307102.aryan@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+872,Dhruv Goel,2022004886,2201010218,B-Tech,CSE (SPL)-VI P,2022004886.dhruv@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+873,Nikil .,2022494267,2201010473,B-Tech,CSE (SPL)-VI P,2022494267.nikil@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+874,Rishav .,2022006280,2201010577,B-Tech,CSE (SPL)-VI P,2022006280.rishav@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+875,Saransh Aggarwal,2022447868,2201010637,B-Tech,CSE (SPL)-VI P,2022447868.saransh@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+876,Shrey Kapri,2022400313,2201010683,B-Tech,CSE (SPL)-VI P,2022400313.shrey@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+877,Shubham Kumar,2022006905,2201010691,B-Tech,CSE (SPL)-VI P,2022006905.shubham@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+878,Bhagrajyoti Behera,2022007628,2201010978,B-Tech,CSE (SPL)-VI P,2022007628.bhagrajyoti@ug.sharda.ac.in,CSE-Cloud Tech & Virtualiz-AWS
+879,Anubhav .,2022435623,2201010108,B-Tech,CSE (SPL)-VI P,2022435623.anubhav@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+880,Mohd Kaif,2022431018,2201010421,B-Tech,CSE (SPL)-VI P,2022431018.mohd@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+881,Piyush .,2022434137,2201010501,B-Tech,CSE (SPL)-VI P,2022434137.piyush@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+882,Arnav Singh,2022343833,2201010129,B-Tech,CSE (SPL)-VI P,2022343833.arnav@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+883,Lokireddy Chakridharreddy,2022601278,2201010921,B-Tech,CSE (SPL)-VI P,2022601278.lokireddy@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+884,Aklavya .,2022003323,2201010065,B-Tech,CSE (SPL)-VI P,2022003323.aklavya@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+885,Arpan Garg,2022523814,2201010130,B-Tech,CSE (SPL)-VI P,2022523814.arpan@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+886,Bilal Ansari,2022314446,2201010181,B-Tech,CSE (SPL)-VI P,2022314446.bilal@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+887,Divyanshu Bisht,2022342643,2201010228,B-Tech,CSE (SPL)-VI P,2022342643.divyanshu@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+888,Kuldeep Pal,2022007077,2201010343,B-Tech,CSE (SPL)-VI P,2022007077.kuldeep@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+889,Lovish Jain,2022006247,2201010359,B-Tech,CSE (SPL)-VI P,2022006247.lovish@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+890,Mohd Saim,2022006233,2201010425,B-Tech,CSE (SPL)-VI P,2022006233.mohd@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+891,Mr Pramish Bhandari,2022817981,2201010442,B-Tech,CSE (SPL)-VI P,2022817981.pramish@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+892,Priyanshu Singh,2022003325,2201010535,B-Tech,CSE (SPL)-VI P,2022003325.priyanshu@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+893,Princi .,2022007217,2201010916,B-Tech,CSE (SPL)-VI P,2022007217.princi@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+894,Yusuf Mushtaque,2022543882,2201010918,B-Tech,CSE (SPL)-VI P,2022543882.yusuf@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+895,Pratyush .,2022594965,2201010919,B-Tech,CSE (SPL)-VI P,2022594965.pratyush@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+896,Ashish Kumar Yadav,2022597147,2201010920,B-Tech,CSE (SPL)-VI P,2022597147.ashish@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+897,Felix Sikukutu Hausiku,2022003741,2201070028,B-Tech,CSE (SPL)-VI P,2022003741.felixsikukutu@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+898,Ankit .,2022006824,2201010093,B-Tech,CSE (SPL)-VI P,2022006824.ankit@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+899,Manish Yadav,2022351697,2201010373,B-Tech,CSE (SPL)-VI P,2022351697.manish@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+900,Nishchal KC,2022833430,2201010479,B-Tech,CSE (SPL)-VI P,2022833430.nishchal@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
+901,Veeragoni Chandu,2022360934,2201010784,B-Tech,CSE (SPL)-VI P,2022360934.veeragoni@ug.sharda.ac.in,B.Tech (CSE - Block Chain)
