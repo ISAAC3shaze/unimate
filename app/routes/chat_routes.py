@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 from app.db import get_connection
-
+from app.routes.attendance_routes import get_attendance
 router = APIRouter()
 
 class ChatRequest(BaseModel):
@@ -31,8 +31,22 @@ def chat(data: ChatRequest):
     # 🧠 RULE-BASED INTENT DETECTION
 
     # 1️⃣ ATTENDANCE
-    if "attendance" in message:
-        return {"response": f"Fetching your attendance for {system_id}..."}
+    if  "attendance" in message:
+        try:
+            # 🔥 Call your attendance function
+            result = get_attendance(system_id)
+
+            # adjust based on your actual return
+            attendance = result.get("attendance", "not available")
+
+            return {
+            "response": f"Your attendance is {attendance}."
+        }
+
+        except Exception as e:
+            return {
+            "response": "Sorry, I couldn't fetch your attendance right now."
+        }
 
     # 2️⃣ FREE CLASS
     elif "free class" in message:
