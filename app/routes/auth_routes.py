@@ -48,18 +48,30 @@ def login_student(data: LoginRequest):
             VALUES (%s, %s)
         """, (data.system_id, session_token))
 
+        otp = r.get(f"otp:{data.system_id}")
+
         conn.commit()
         cur.close()
         conn.close()
 
-        return {
-            "status": "success",
-            "message": "OTP required",
-            "session_token": session_token,
-            "name": name,
-            "course": course,
-            "section": section
-        }
+        if otp:
+            return {
+        "status": "success",
+        "message": "Login successful",
+        "session_token": session_token,
+        "name": name,
+        "course": course,
+        "section": section
+    }
+        else:
+            return {
+        "status": "success",
+        "message": "OTP required",
+        "session_token": session_token,
+        "name": name,
+        "course": course,
+        "section": section
+    }
 
     except Exception as e:
         return {"status": "error", "message": str(e)}
