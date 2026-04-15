@@ -95,11 +95,17 @@ def chat(data: ChatRequest):
                 }
         
         # 🎯 FACULTY LIVE
+        # 🎯 FACULTY LIVE
         if any(k in message for k in ["faculty", "where is", "dr."]):
             from app.routes.faculty_live_routes import get_faculty_live
 
-            faculty_name = message.replace("where is", "").strip()
-            faculty_name = faculty_name.replace("dr.", "").strip()
+                # 🔥 CLEAN EXTRACTION (IMPORTANT)
+            faculty_name = message.replace("where is", "")
+            faculty_name = faculty_name.strip()
+            faculty_name = " ".join(faculty_name.split())  # removes extra spaces
+
+            # 🧪 DEBUG (remove later if you want)
+            print(f"Extracted faculty: {faculty_name}")
 
             result = get_faculty_live(faculty_name)
 
@@ -109,9 +115,8 @@ def chat(data: ChatRequest):
                 }
             else:
                 return {
-                "response": result.get("message", "Faculty not found")
-                }
-        print(result)
+            "response": result.get("message", "Faculty not found")
+        }
     
         # ❌ DEFAULT (ALWAYS LAST)
         return {"response": "Ask me about your attendance or absentee"}
