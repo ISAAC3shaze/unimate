@@ -2,7 +2,6 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from app.db import get_connection
 
-
 router = APIRouter()
 
 
@@ -17,7 +16,7 @@ def chat(data: ChatRequest):
         message = data.message.lower()
         token = data.session_token
 
-        # 🔐 GET SYSTEM ID
+        # 🔐 GET SYSTEM ID FROM SESSION
         conn = get_connection()
         cur = conn.cursor()
 
@@ -51,8 +50,21 @@ def chat(data: ChatRequest):
             else:
                 return {"response": result["message"]}
 
-        # ❌ DEFAULT
-        return {"response": "Ask me about your attendance"}
+        # 🎯 ABSENTEE
+        if "absent" in message:
+            from app.routes.absentee_routes import get_absentee
+
+            result = get_absentee(token)
+
+            if result["status"] == "success":
+                return {
+                    "response": f"Your absentee details:\n{result['absentee']}"
+                }
+            else:
+                return {"response": result["message"]}
+
+        # ❌ DEFAULT (ALWAYS LAST)
+        return {"response": "Ask me about your attendance or absentee"}
 
     except Exception as e:
         return {"response": str(e)}
