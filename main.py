@@ -103,3 +103,4 @@ def create_tables():
 @app.on_event("startup")
 def startup():
     create_tables()
+    #redeploy fix
