@@ -83,11 +83,18 @@ def check_login(session_token: str):
             conn.close()
             return {"status": "error", "message": "Invalid session"}
 
+        system_id, otp, created_at = session
 
+        today = date.today()
 
-        cur.close()
-        conn.close()
-        return {"status": "logged_in"}
+        if otp and created_at.date() == today:
+            cur.close()
+            conn.close()
+            return {"status": "logged_in"}
+        else:
+            cur.close()
+            conn.close()
+            return {"status": "otp_required"}
 
     except Exception as e:
         return {"status": "error", "message": str(e)}
