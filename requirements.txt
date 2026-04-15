@@ -1,8 +1,6 @@
 fastapi
 uvicorn
-groq
 requests
-streamlit
 playwright
 psycopg2-binary
 python-dotenv
