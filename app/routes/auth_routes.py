@@ -3,7 +3,8 @@ from pydantic import BaseModel
 from app.db import get_connection
 from app.automation import trigger_otp
 import uuid
-from datetime import date
+from datetime import datetime, timedelta
+from app.reddis_client import r
 
 router = APIRouter()
 
@@ -151,14 +152,19 @@ def verify_otp(session_token: str, data: OTPRequest):
             conn.close()
             return {"status": "error", "message": "Invalid session"}
 
-        # store OTP
-        cur.execute("""
-            UPDATE sessions
-            SET otp = %s, created_at = CURRENT_TIMESTAMP
-            WHERE session_token = %s
-        """, (data.otp, session_token))
+        # ✅ FIX: extract system_id
+        system_id = session[0]
 
-        conn.commit()
+        
+
+        now = datetime.now()
+        midnight = datetime.combine(now.date() + timedelta(days=1), datetime.min.time())
+        seconds_until_midnight = int((midnight - now).total_seconds())
+
+        # 🔐 store OTP till midnight (per user)
+        
+        r.setex(f"otp:{system_id}", seconds_until_midnight, data.otp)
+
         cur.close()
         conn.close()
 
