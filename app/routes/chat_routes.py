@@ -39,23 +39,24 @@ def chat(data: ChatRequest):
         conn.close()
 
         # 🎯 ATTENDANCE ONLY
-        if "attendance" in message:
-            try:
-                result = get_attendance(system_id)
+    if "attendance" in message:
+        try:
+            from app.routes.attendance_routes import get_attendance
+
+            result = get_attendance(token)
+
+            if result["status"] == "success":
+                att = result["attendance"]
 
                 return {
-                    "response": f"Your attendance is {result}"
-                }
-
-            except Exception as e:
+                "response": f"Your attendance:\nTotal: {att['total']}\nPresent: {att['present']}\nAbsent: {att['absent']}"
+            }
+            else:
                 return {
-                    "response": f"Error fetching attendance: {str(e)}"
-                }
+                "response": result["message"]
+            }
 
-        # ❌ DEFAULT
-        return {
-            "response": "Ask me about your attendance."
+        except Exception as e:
+            return {
+            "response": f"Error fetching attendance: {str(e)}"
         }
-
-    except Exception as e:
-        return {"response": str(e)}
