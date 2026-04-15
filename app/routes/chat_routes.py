@@ -89,8 +89,10 @@ def chat(data: ChatRequest):
                 return {
                  "response": f"Free classrooms:\n{result['free_classes']}"
                 }
-        else:
-                return {"response": result["message"]}
+            else:
+                return{
+                    "response": result["message"]
+                }
         
 
     
