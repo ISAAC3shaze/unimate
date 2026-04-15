@@ -94,6 +94,22 @@ def chat(data: ChatRequest):
                     "response": result["message"]
                 }
         
+        # 🎯 FACULTY LIVE
+        if "faculty" in message or "where is" in message:
+            from app.routes.faculty_routes import get_faculty_live
+
+            # simple extraction (for now)
+            words = message.split()
+            faculty_name = words[-1]   # last word
+
+            result = get_faculty_live(faculty_name)
+
+            if result["status"] == "success":
+                return {
+                "response": f"{faculty_name} is at {result['location']}"
+                }
+            else:
+                return {"response": result["message"]}
 
     
         # ❌ DEFAULT (ALWAYS LAST)
