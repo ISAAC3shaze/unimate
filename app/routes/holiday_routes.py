@@ -1,10 +1,9 @@
 from fastapi import APIRouter
 from app.db import get_connection
 from app.automation import fetch_holidays
-
+from app.redis_client import r
 
 router = APIRouter()
-
 
 @router.get("/holidays/{session_token}")
 def get_holidays(session_token: str):
@@ -12,15 +11,12 @@ def get_holidays(session_token: str):
         conn = get_connection()
         cur = conn.cursor()
 
-
         cur.execute("""
-            SELECT system_id, otp FROM sessions
+            SELECT system_id FROM sessions
             WHERE session_token = %s
         """, (session_token,))
 
         session = cur.fetchone()
-
-
 
         cur.close()
         conn.close()
@@ -28,16 +24,18 @@ def get_holidays(session_token: str):
         if not session:
             return {"status": "error", "message": "Invalid session"}
 
-        system_id, otp = session
+        system_id = session[0]
+
+        otp = r.get(f"otp:{system_id}")
 
         if not otp:
             return {"status": "error", "message": "OTP required"}
 
-        data = fetch_holidays(system_id, otp)
+        holidays = fetch_holidays(system_id, otp)
 
         return {
             "status": "success",
-            "data": data
+            "holidays": holidays
         }
 
     except Exception as e:
