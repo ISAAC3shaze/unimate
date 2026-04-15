@@ -95,22 +95,23 @@ def chat(data: ChatRequest):
                 }
         
         # 🎯 FACULTY LIVE
-        if "faculty" in message or "where is" in message:
+        if any(k in message for k in ["faculty", "where is", "dr."]):
             from app.routes.faculty_live_routes import get_faculty_live
 
-            # simple extraction (for now)
-            words = message.split()
-            faculty_name = words[-1]   # last word
+            faculty_name = message.replace("where is", "").strip()
+            faculty_name = faculty_name.replace("dr.", "").strip()
 
             result = get_faculty_live(faculty_name)
 
             if result["status"] == "success":
                 return {
-                "response": f"{faculty_name} is at {result['location']}"
+            "response": f"{faculty_name} is at {result['location']}"
                 }
             else:
-                return {"response": result["message"]}
-
+                return {
+                "response": result.get("message", "Faculty not found")
+                }
+        print(result)
     
         # ❌ DEFAULT (ALWAYS LAST)
         return {"response": "Ask me about your attendance or absentee"}
