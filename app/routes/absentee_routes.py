@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.db import get_connection
-from app.automation import fetch_absentee
+from app.automation import fetch_absentee_alert
 from app.redis_client import r   # ✅ ADD THIS
 
 router = APIRouter()
@@ -38,7 +38,7 @@ def get_absentee(session_token: str):
             }
 
         # 🚀 FETCH ABSENTEE
-        absentee = fetch_absentee(system_id, otp)
+        absentee = fetch_absentee_alert(system_id, otp)
 
         return {
             "status": "success",
