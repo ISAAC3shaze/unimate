@@ -2,8 +2,9 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from app.db import get_connection
 from app.routes.attendance_routes import get_attendance
-import requests
+
 router = APIRouter()
+
 
 class ChatRequest(BaseModel):
     message: str
@@ -12,47 +13,49 @@ class ChatRequest(BaseModel):
 
 @router.post("/chat")
 def chat(data: ChatRequest):
-    message = data.message.lower()
-    token = data.session_token
+    try:
+        message = data.message.lower()
+        token = data.session_token
 
-    conn = get_connection()
-    cur = conn.cursor()
+        # 🔐 GET SYSTEM ID FROM SESSION
+        conn = get_connection()
+        cur = conn.cursor()
 
-    # 🔐 Get system_id from session
-    cur.execute("""
-        SELECT system_id FROM sessions WHERE session_token = %s
-    """, (token,))
-    session = cur.fetchone()
+        cur.execute("""
+            SELECT system_id FROM sessions
+            WHERE session_token = %s
+        """, (token,))
 
-    if not session:
-        return {"response": "Invalid session. Please login again."}
+        session = cur.fetchone()
 
-    system_id = session[0]
+        if not session:
+            cur.close()
+            conn.close()
+            return {"response": "Invalid session. Please login again."}
 
-    # 🧠 RULE-BASED INTENT DETECTION
+        system_id = session[0]
 
-    # 1️⃣ ATTENDANCE
-     # make sure this is at top
+        cur.close()
+        conn.close()
 
+        # 🎯 ATTENDANCE ONLY
+        if "attendance" in message:
+            try:
+                result = get_attendance(system_id)
 
-    if "attendance" in message:
-        try:
-            return {
-            "response": "Attendance feature connected, session validation pending."
-            }   
-        except Exception as e:
-            return {
-            "response": "Error fetching attendance."
+                return {
+                    "response": f"Your attendance is {result}"
+                }
+
+            except Exception as e:
+                return {
+                    "response": f"Error fetching attendance: {str(e)}"
+                }
+
+        # ❌ DEFAULT
+        return {
+            "response": "Ask me about your attendance."
         }
 
-    # 2️⃣ FREE CLASS
-    elif "free class" in message:
-        return {"response": "Checking free classrooms..."}
-
-    # 3️⃣ FACULTY
-    elif "where is" in message or "faculty" in message:
-        return {"response": "Checking faculty location..."}
-
-    # 4️⃣ DEFAULT
-    else:
-        return {"response": "Sorry, I didn’t understand. Try asking about attendance, timetable, or free classes."}
+    except Exception as e:
+        return {"response": str(e)}
