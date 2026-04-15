@@ -73,7 +73,7 @@ def check_login(session_token: str):
         cur = conn.cursor()
 
         cur.execute("""
-            SELECT system_id, otp, created_at FROM sessions
+            SELECT system_id FROM sessions
             WHERE session_token = %s
         """, (session_token,))
 
@@ -84,17 +84,19 @@ def check_login(session_token: str):
             conn.close()
             return {"status": "error", "message": "Invalid session"}
 
-        system_id, otp, created_at = session
+        system_id = session[0]
 
-        today = date.today()
+        # 🔥 CHECK REDIS (IMPORTANT PART)
+        from app.redis_client import r
 
-        if otp and created_at.date() == today:
-            cur.close()
-            conn.close()
+        otp = r.get(f"otp:{system_id}")
+
+        cur.close()
+        conn.close()
+
+        if otp:
             return {"status": "logged_in"}
         else:
-            cur.close()
-            conn.close()
             return {"status": "otp_required"}
 
     except Exception as e:
