@@ -96,7 +96,7 @@ def chat(data: ChatRequest):
         
         # 🎯 FACULTY LIVE
         if "faculty" in message or "where is" in message:
-            from app.routes.faculty_routes import get_faculty_live
+            from app.routes.faculty_live_routes import get_faculty_live
 
             # simple extraction (for now)
             words = message.split()
