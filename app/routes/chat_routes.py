@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 from app.db import get_connection
-from app.routes.attendance_routes import get_attendance
+
 
 router = APIRouter()
 
@@ -17,7 +17,7 @@ def chat(data: ChatRequest):
         message = data.message.lower()
         token = data.session_token
 
-        # 🔐 GET SYSTEM ID FROM SESSION
+        # 🔐 GET SYSTEM ID
         conn = get_connection()
         cur = conn.cursor()
 
@@ -28,19 +28,16 @@ def chat(data: ChatRequest):
 
         session = cur.fetchone()
 
-        if not session:
-            cur.close()
-            conn.close()
-            return {"response": "Invalid session. Please login again."}
-
-        system_id = session[0]
-
         cur.close()
         conn.close()
 
-        # 🎯 ATTENDANCE ONLY
-    if "attendance" in message:
-        try:
+        if not session:
+            return {"response": "Invalid session"}
+
+        system_id = session[0]
+
+        # 🎯 ATTENDANCE
+        if "attendance" in message:
             from app.routes.attendance_routes import get_attendance
 
             result = get_attendance(token)
@@ -49,14 +46,13 @@ def chat(data: ChatRequest):
                 att = result["attendance"]
 
                 return {
-                "response": f"Your attendance:\nTotal: {att['total']}\nPresent: {att['present']}\nAbsent: {att['absent']}"
-            }
+                    "response": f"Your attendance:\nTotal: {att['total']}\nPresent: {att['present']}\nAbsent: {att['absent']}"
+                }
             else:
-                return {
-                "response": result["message"]
-            }
+                return {"response": result["message"]}
 
-        except Exception as e:
-            return {
-            "response": f"Error fetching attendance: {str(e)}"
-        }
+        # ❌ DEFAULT
+        return {"response": "Ask me about your attendance"}
+
+    except Exception as e:
+        return {"response": str(e)}
