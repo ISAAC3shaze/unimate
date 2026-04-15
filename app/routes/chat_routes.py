@@ -37,19 +37,11 @@ def chat(data: ChatRequest):
 
     if "attendance" in message:
         try:
-            res = requests.get(
-            f"https://unimate-production.up.railway.app/attendance/{system_id}"
-            )
-
-            data = res.json()
-
             return {
-                "response": f"Your attendance is {data}"
-            }
-    
+            "response": "Attendance feature connected, session validation pending."
+            }   
         except Exception as e:
-             print("ERROR:", e)
-        return {
+            return {
             "response": "Error fetching attendance."
         }
 
