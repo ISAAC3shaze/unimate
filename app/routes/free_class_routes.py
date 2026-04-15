@@ -13,7 +13,7 @@ def get_free_class_now():
 
         now = datetime.now()
         current_time = now.time()
-        current_day = now.strftime("%a")  # Mon, Tue
+        current_day = now.strftime("%a")
 
         cur.execute("""
             SELECT room
@@ -29,15 +29,9 @@ def get_free_class_now():
         cur.close()
         conn.close()
 
-        if rooms:
-            return {
-                "status": "available",
-                "rooms": [r[0] for r in rooms]
-            }
-
         return {
-            "status": "no_free_class",
-            "rooms": []
+            "status": "success",
+            "free_classes": [r[0] for r in rooms]
         }
 
     except Exception as e:

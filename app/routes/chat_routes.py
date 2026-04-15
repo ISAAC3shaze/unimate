@@ -78,6 +78,22 @@ def chat(data: ChatRequest):
         else:
             return {"response": result["message"]}
         
+
+        # 🎯 FREE CLASSROOM
+        if "free" in message:
+            from app.routes.free_class_routes import get_free_class_now
+
+            result = get_free_class_now()
+
+            if result["status"] == "success":
+                return {
+                 "response": f"Free classrooms:\n{result['free_classes']}"
+                }
+        else:
+            return {"response": result["message"]}
+        
+
+    
         # ❌ DEFAULT (ALWAYS LAST)
         return {"response": "Ask me about your attendance or absentee"}
 
