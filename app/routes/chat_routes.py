@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from app.db import get_connection
 from app.routes.attendance_routes import get_attendance
+import requests
 router = APIRouter()
 
 class ChatRequest(BaseModel):
@@ -31,38 +32,24 @@ def chat(data: ChatRequest):
     # 🧠 RULE-BASED INTENT DETECTION
 
     # 1️⃣ ATTENDANCE
+     # make sure this is at top
+
+
     if "attendance" in message:
         try:
-            conn = get_connection()
-            cur = conn.cursor()
+            res = requests.get(
+            f"https://unimate-production.up.railway.app/attendance/{system_id}"
+            )
 
-            # simple test query
-            cur.execute("""
-                SELECT * FROM attendance WHERE system_id = %s
-                """, (system_id,))
+            data = res.json()
 
-            data = cur.fetchone()
-
-            cur.close()
-            conn.close()
-
-            if data:
-                return {
-                "response": f"Attendance data found: {data}"
-            }
-            else:
-                return {
-                "response": "No attendance data found."
-            }
-
-        except Exception as e:
-            print("FULL ERROR:", str(e))
             return {
-            "response": f"Error: {str(e)}"
-        }
-        
+                "response": f"Your attendance is {data}"
+            }
+    
         except Exception as e:
-            return {
+             print("ERROR:", e)
+        return {
             "response": "Error fetching attendance."
         }
 
