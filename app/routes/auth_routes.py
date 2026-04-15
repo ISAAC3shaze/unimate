@@ -4,7 +4,7 @@ from app.db import get_connection
 from app.automation import trigger_otp
 import uuid
 from datetime import datetime, timedelta
-from app.reddis_client import r
+from app.redis_client import r
 
 router = APIRouter()
 
