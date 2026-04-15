@@ -75,8 +75,8 @@ def chat(data: ChatRequest):
                  return {
             "response": f"Upcoming holidays:\n{result['holidays']}"
              }
-        else:
-            return {"response": result["message"]}
+            else:
+                return {"response": result["message"]}
         
 
         # 🎯 FREE CLASSROOM
