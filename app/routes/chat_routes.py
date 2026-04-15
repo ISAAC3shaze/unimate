@@ -63,6 +63,21 @@ def chat(data: ChatRequest):
             else:
                 return {"response": result["message"]}
 
+        
+       
+        # 🎯 HOLIDAYS
+        if "holiday" in message:
+            from app.routes.holiday_routes import get_holidays
+
+            result = get_holidays(token)
+
+            if result["status"] == "success":
+                 return {
+            "response": f"Upcoming holidays:\n{result['holidays']}"
+             }
+        else:
+            return {"response": result["message"]}
+        
         # ❌ DEFAULT (ALWAYS LAST)
         return {"response": "Ask me about your attendance or absentee"}
 
