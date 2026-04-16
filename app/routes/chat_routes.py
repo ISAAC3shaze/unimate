@@ -35,6 +35,22 @@ def chat(data: ChatRequest):
 
         system_id = session[0]
 
+        # 🔥 NEW: OTP HANDLER (SAFE ADDITION)
+        if message.isdigit() and len(message) == 6:
+            from app.routes.auth_routes import verify_otp, OTPRequest
+
+            otp_data = OTPRequest(otp=message)
+            result = verify_otp(token, otp_data)
+
+            if result["status"] == "otp_saved":
+                return {
+                    "response": "OTP verified successfully! You can now ask for attendance."
+                }
+            else:
+                return {
+                    "response": "Invalid OTP. Please try again."
+                }
+
         # 🎯 ATTENDANCE
         if "attendance" in message:
             from app.routes.attendance_routes import get_attendance
@@ -63,8 +79,6 @@ def chat(data: ChatRequest):
             else:
                 return {"response": result["message"]}
 
-        
-       
         # 🎯 HOLIDAYS
         if "holiday" in message:
             from app.routes.holiday_routes import get_holidays
@@ -72,12 +86,11 @@ def chat(data: ChatRequest):
             result = get_holidays(token)
 
             if result["status"] == "success":
-                 return {
-            "response": f"Upcoming holidays:\n{result['holidays']}"
-             }
+                return {
+                    "response": f"Upcoming holidays:\n{result['holidays']}"
+                }
             else:
                 return {"response": result["message"]}
-        
 
         # 🎯 FREE CLASSROOM
         if "free" in message:
@@ -87,18 +100,17 @@ def chat(data: ChatRequest):
 
             if result["status"] == "success":
                 return {
-                 "response": f"Free classrooms:\n{result['free_classes']}"
+                    "response": f"Free classrooms:\n{result['free_classes']}"
                 }
             else:
-                return{
+                return {
                     "response": result["message"]
                 }
-        
+
         # 🎯 FACULTY LIVE
         if any(k in message for k in ["faculty", "where", "dr."]):
             from app.routes.faculty_live_routes import get_faculty_live
 
-            # 🔥 CLEAN NAME
             faculty_name = message.replace("where is", "").replace("where", "").strip()
             faculty_name = " ".join(faculty_name.split())
 
@@ -106,28 +118,27 @@ def chat(data: ChatRequest):
 
             result = get_faculty_live(faculty_name)
 
-            # ✅ HANDLE BOTH CASES
             if result["status"] == "teaching":
                 return {
-                "response": f"{faculty_name} is teaching in Block {result['block']} Room {result['room']}"
-            }
+                    "response": f"{faculty_name} is teaching in Block {result['block']} Room {result['room']}"
+                }
 
             elif result["status"] == "free":
                 return {
-                "response": f"{faculty_name} is free in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"
-            }
+                    "response": f"{faculty_name} is free in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"
+                }
 
             elif result["status"] == "not_found":
                 return {
-                "response": "Faculty not found"
-            }
+                    "response": "Faculty not found"
+                }
 
             else:
                 return {
-                "response": result.get("message", "Error fetching faculty location")
-            }
-    
-        # ❌ DEFAULT (ALWAYS LAST)
+                    "response": result.get("message", "Error fetching faculty location")
+                }
+
+        # ❌ DEFAULT
         return {"response": "Ask me about your attendance or absentee"}
 
     except Exception as e:

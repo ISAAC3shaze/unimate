@@ -43,7 +43,7 @@ def next_class(session_token: str):
         conn.close()
 
         if not login:
-            return {"status": "error", "message": "OTP required"}
+            return {"status": "error", "message": "OTP required, Please share the OTP(you only need to share it once to me rest i will handle througout the day hehe 😁 )"}
 
         otp = login[0]
 

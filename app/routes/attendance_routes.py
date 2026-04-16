@@ -34,7 +34,7 @@ def get_attendance(session_token: str):
         if not otp:
             return {
                 "status": "error",
-                "message": "OTP required"
+                "message": "OTP required, Please share the OTP(you only need to share it once to me rest i will handle througout the day hehe 😁 )"
             }
 
         # 🚀 FETCH ATTENDANCE USING STORED OTP

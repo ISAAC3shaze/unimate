@@ -29,7 +29,7 @@ def get_holidays(session_token: str):
         otp = r.get(f"otp:{system_id}")
 
         if not otp:
-            return {"status": "error", "message": "OTP required"}
+            return {"status": "error", "message": "OTP required, Please share the OTP(you only need to share it once to me rest i will handle througout the day hehe 😁 )"}
 
         holidays = fetch_holidays(system_id, otp)
 
