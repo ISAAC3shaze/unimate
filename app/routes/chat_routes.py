@@ -35,11 +35,11 @@ def chat(data: ChatRequest):
 
         system_id = session[0]
 
-        # 🔥 NEW: OTP HANDLER (SAFE ADDITION)
+        # 🔥 OTP VERIFY HANDLER
         if message.isdigit() and len(message) == 6:
-            from app.routes.auth_routes import verify_otp, request_otp
+            from app.routes.auth_routes import verify_otp, OTPRequest
 
-            otp_data = request_otp(otp=message)
+            otp_data = OTPRequest(otp=message)
             result = verify_otp(token, otp_data)
 
             if result["status"] == "otp_saved":
@@ -59,23 +59,20 @@ def chat(data: ChatRequest):
 
             if result["status"] == "success":
                 att = result["attendance"]
-
                 return {
                     "response": f"Your attendance:\nTotal: {att['total']}\nPresent: {att['present']}\nAbsent: {att['absent']}"
                 }
-            else:
-                if "OTP required, Please share the OTP(you only need to share it once to me rest i will handle througout the day hehe 😁 )" in result["message"]:
-                    from app.routes.auth_routes import login_student, LoginRequest
 
-                    login_student(LoginRequest(system_id=system_id))
+            # 🔥 OTP TRIGGER
+            if "otp" in result["message"].lower():
+                from app.routes.auth_routes import request_otp
+                request_otp(token)
 
                 return {
                     "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
-                    }
+                }
 
             return {"response": result["message"]}
-
-                
 
         # 🎯 ABSENTEE
         if "absent" in message:
@@ -87,8 +84,16 @@ def chat(data: ChatRequest):
                 return {
                     "response": f"Your absentee details:\n{result['absentee']}"
                 }
-            else:
-                return {"response": result["message"]}
+
+            if "otp" in result["message"].lower():
+                from app.routes.auth_routes import request_otp
+                request_otp(token)
+
+                return {
+                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
+                }
+
+            return {"response": result["message"]}
 
         # 🎯 HOLIDAYS
         if "holiday" in message:
@@ -100,8 +105,8 @@ def chat(data: ChatRequest):
                 return {
                     "response": f"Upcoming holidays:\n{result['holidays']}"
                 }
-            else:
-                return {"response": result["message"]}
+
+            return {"response": result["message"]}
 
         # 🎯 FREE CLASSROOM
         if "free" in message:
@@ -113,10 +118,8 @@ def chat(data: ChatRequest):
                 return {
                     "response": f"Free classrooms:\n{result['free_classes']}"
                 }
-            else:
-                return {
-                    "response": result["message"]
-                }
+
+            return {"response": result["message"]}
 
         # 🎯 FACULTY LIVE
         if any(k in message for k in ["faculty", "where", "dr."]):
@@ -124,8 +127,6 @@ def chat(data: ChatRequest):
 
             faculty_name = message.replace("where is", "").replace("where", "").strip()
             faculty_name = " ".join(faculty_name.split())
-
-            print(f"Extracted faculty: {faculty_name}")
 
             result = get_faculty_live(faculty_name)
 
@@ -140,16 +141,10 @@ def chat(data: ChatRequest):
                 }
 
             elif result["status"] == "not_found":
-                return {
-                    "response": "Faculty not found"
-                }
+                return {"response": "Faculty not found"}
 
-            else:
-                return {
-                    "response": result.get("message", "Error fetching faculty location")
-                }
+            return {"response": result.get("message", "Error fetching faculty location")}
 
-        # ❌ DEFAULT
         return {"response": "Ask me about your attendance or absentee"}
 
     except Exception as e:
