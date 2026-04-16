@@ -20,11 +20,11 @@ def get_faculty_live(faculty_name: str):
         cur.execute("""
             SELECT location_block, location_room
             FROM faculty_timetable
-            WHERE LOWER(faculty_name) = LOWER(%s)
+            WHERE LOWER(faculty_name) LIKE %s
             AND day_of_week = %s
             AND start_time <= %s
             AND end_time >= %s
-        """, (faculty_name, current_day, current_time, current_time))
+        """, (f"%{faculty_name.lower()}%", current_day, current_time, current_time))
 
         result = cur.fetchone()
 
@@ -41,8 +41,8 @@ def get_faculty_live(faculty_name: str):
         cur.execute("""
             SELECT block, room_no, cabin_no
             FROM faculty
-            WHERE LOWER(faculty_name) = LOWER(%s)
-        """, (faculty_name,))
+            WHERE LOWER(faculty_name) LIKE %s
+        """, (f"%{faculty_name.lower()}%",))
 
         faculty = cur.fetchone()
 

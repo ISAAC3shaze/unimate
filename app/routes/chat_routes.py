@@ -95,28 +95,37 @@ def chat(data: ChatRequest):
                 }
         
         # 🎯 FACULTY LIVE
-        # 🎯 FACULTY LIVE
-        if any(k in message for k in ["faculty", "where is", "dr."]):
+        if any(k in message for k in ["faculty", "where", "dr."]):
             from app.routes.faculty_live_routes import get_faculty_live
 
-                # 🔥 CLEAN EXTRACTION (IMPORTANT)
-            faculty_name = message.replace("where is", "")
-            faculty_name = faculty_name.strip()
-            faculty_name = " ".join(faculty_name.split())  # removes extra spaces
+            # 🔥 CLEAN NAME
+            faculty_name = message.replace("where is", "").replace("where", "").strip()
+            faculty_name = " ".join(faculty_name.split())
 
-            # 🧪 DEBUG (remove later if you want)
             print(f"Extracted faculty: {faculty_name}")
 
             result = get_faculty_live(faculty_name)
 
-            if result["status"] == "success":
+            # ✅ HANDLE BOTH CASES
+            if result["status"] == "teaching":
                 return {
-            "response": f"{faculty_name} is at {result['location']}"
-                }
+                "response": f"{faculty_name} is teaching in Block {result['block']} Room {result['room']}"
+            }
+
+            elif result["status"] == "free":
+                return {
+                "response": f"{faculty_name} is free in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"
+            }
+
+            elif result["status"] == "not_found":
+                return {
+                "response": "Faculty not found"
+            }
+
             else:
                 return {
-            "response": result.get("message", "Faculty not found")
-        }
+                "response": result.get("message", "Error fetching faculty location")
+            }
     
         # ❌ DEFAULT (ALWAYS LAST)
         return {"response": "Ask me about your attendance or absentee"}
