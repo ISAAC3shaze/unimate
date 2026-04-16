@@ -64,7 +64,16 @@ def chat(data: ChatRequest):
                     "response": f"Your attendance:\nTotal: {att['total']}\nPresent: {att['present']}\nAbsent: {att['absent']}"
                 }
             else:
-                return {"response": result["message"]}
+                if "OTP required, Please share the OTP(you only need to share it once to me rest i will handle througout the day hehe 😁 )" in result["message"]:
+                    from app.routes.auth_routes import login, LoginRequest
+
+                    login(LoginRequest(system_id=system_id))
+
+                return {
+                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
+                }
+
+                
 
         # 🎯 ABSENTEE
         if "absent" in message:
