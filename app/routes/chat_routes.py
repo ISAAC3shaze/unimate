@@ -59,9 +59,31 @@ def chat(data: ChatRequest):
 
             if result["status"] == "success":
                 att = result["attendance"]
-                return {
-                    "response": f"Your attendance:\nTotal: {att['total']}\nPresent: {att['present']}\nAbsent: {att['absent']}"
-                }
+
+                total = att["total"]
+                present = att["present"]
+                absent = att["absent"]
+
+                # 🧠 Calculate percentage
+                percentage = (present / total) * 100 if total > 0 else 0
+                percentage = round(percentage, 1)
+
+                # 🎯 Smart message
+            if percentage >= 75:
+                status_msg = "✅ You’re in a safe zone. Keep it up!"
+            elif percentage >= 60:
+                status_msg = "⚠️ You’re getting close to the risk zone. Try to attend more classes."
+            else:
+                status_msg = "🚨 You’re below 75%. Risk of being debarred!"
+
+            # 💬 Final conversational response
+            return {
+                "response": (
+                    f"You’ve attended {present} out of {total} classes.\n\n"
+                    f"Your attendance is {percentage}%.\n\n"
+                    f"{status_msg}"
+                )
+            }
 
             # 🔥 OTP TRIGGER
             if "otp" in result["message"].lower():
