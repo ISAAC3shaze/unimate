@@ -65,9 +65,9 @@ def chat(data: ChatRequest):
                 }
             else:
                 if "OTP required, Please share the OTP(you only need to share it once to me rest i will handle througout the day hehe 😁 )" in result["message"]:
-                    from app.routes.auth_routes import login, LoginRequest
+                    from app.routes.auth_routes import login_student, LoginRequest
 
-                    login(LoginRequest(system_id=system_id))
+                    login_student(LoginRequest(system_id=system_id))
 
                 return {
                     "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
