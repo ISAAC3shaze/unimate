@@ -37,9 +37,9 @@ def chat(data: ChatRequest):
 
         # 🔥 NEW: OTP HANDLER (SAFE ADDITION)
         if message.isdigit() and len(message) == 6:
-            from app.routes.auth_routes import verify_otp, OTPRequest
+            from app.routes.auth_routes import verify_otp, request_otp
 
-            otp_data = OTPRequest(otp=message)
+            otp_data = request_otp(otp=message)
             result = verify_otp(token, otp_data)
 
             if result["status"] == "otp_saved":
