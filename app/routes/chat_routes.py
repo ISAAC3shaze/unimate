@@ -118,16 +118,72 @@ def chat(data: ChatRequest):
             return {"response": result["message"]}
 
         # 🎯 HOLIDAYS
+        # 🎯 HOLIDAYS
         if "holiday" in message:
             from app.routes.holiday_routes import get_holidays
+            from datetime import datetime
+            import re
 
             result = get_holidays(token)
 
             if result["status"] == "success":
-                return {
-                    "response": f"Upcoming holidays:\n{result['holidays']}"
-                }
+                holidays = result["holidays"]
+                today = datetime.now()
 
+                parsed_holidays = []
+
+                for h in holidays:
+                    try:
+                        raw_date = h["date"].split(":")[-1].strip()
+
+                        # 🔥 Remove st/nd/rd/th
+                        clean_date = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', raw_date)
+
+                        date_obj = datetime.strptime(clean_date, "%d %b %Y")
+
+                        if date_obj >= today:
+                            parsed_holidays.append({
+                                "name": h["name"],
+                                "date": date_obj
+                            })
+                    except:
+                        continue
+
+                parsed_holidays.sort(key=lambda x: x["date"])
+
+                # 🧠 detect number
+                count = 1
+                for word in message.split():
+                    if word.isdigit():
+                        count = int(word)
+
+                # 🧠 full list intent
+                if "all" in message or "full" in message:
+                    selected = parsed_holidays
+                else:
+                    selected = parsed_holidays[:count]
+
+                if not selected:
+                    return {"response": "No upcoming holidays found."}
+
+                # 💬 Better conversational tone
+                if len(selected) == 1:
+                    h = selected[0]
+                    formatted_date = h["date"].strftime("%d %b %Y")
+
+                    return {
+                        "response": f"Your next holiday is {h['name']} on {formatted_date} 🎉"
+                    }
+
+                response = "Here are your upcoming holidays:\n\n"
+
+                for h in selected:
+                    formatted_date = h["date"].strftime("%d %b %Y")
+                    response += f"• {h['name']} — {formatted_date}\n"
+
+                return {"response": response}
+
+        else:
             return {"response": result["message"]}
 
         # 🎯 FREE CLASSROOM
