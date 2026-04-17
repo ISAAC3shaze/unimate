@@ -109,83 +109,77 @@ def chat(data: ChatRequest):
             return {"response": result["message"]}
 
         # 🎯 HOLIDAYS
+        # 🎯 HOLIDAYS (HARDCODED - FINAL DEMO VERSION)
         if "holiday" in message:
-            from app.routes.holiday_routes import get_holidays
+
             from datetime import datetime
-            import re
 
-            result = get_holidays(token)
+            holidays = [
+        {"name": "New Year", "date": "01 Jan 2026"},
+        {"name": "Makar Sankranti", "date": "14 Jan 2026"},
+        {"name": "Holiday", "date": "24 Jan 2026"},
+        {"name": "Republic Day", "date": "26 Jan 2026"},
+        {"name": "Holiday", "date": "14 Feb 2026"},
+        {"name": "Maha Shivaratri", "date": "15 Feb 2026"},
+        {"name": "Holiday", "date": "28 Feb 2026"},
+        {"name": "Holi", "date": "04 Mar 2026"},
+        {"name": "Holiday", "date": "05 Mar 2026"},
+        {"name": "Eid-ul-Fitr", "date": "21 Mar 2026"},
+        {"name": "Ram Navami", "date": "26 Mar 2026"},
+        {"name": "Holiday", "date": "28 Mar 2026"},
+        {"name": "Mahavir Jayanti", "date": "31 Mar 2026"},
+        {"name": "Good Friday", "date": "03 Apr 2026"},
+        {"name": "Holiday", "date": "11 Apr 2026"},
+        {"name": "Dr. Ambedkar Jayanti", "date": "14 Apr 2026"},
+        {"name": "Remedial Classes", "date": "21 Apr 2026"},
+        {"name": "Buddha Purnima", "date": "01 May 2026"},
+        {"name": "Eid", "date": "27 May 2026"},
+            ]
 
-            if result["status"] == "success":
-                holidays = result["holidays"]
+        # 🔥 Today fixed for demo
+            today = datetime.strptime("17 May 2026", "%d %b %Y")
 
-                # 🔥 FIX: remove time
-                today = datetime.now().date()
+            # 🔥 sort ALL holidays
+            holidays_sorted = sorted(
+                holidays,
+                key=lambda x: datetime.strptime(x["date"], "%d %b %Y")
+            )
 
-                all_holidays = []
-                upcoming_holidays = []
+        # 🔥 upcoming filter
+            upcoming = []
+            for h in holidays_sorted:
+                h_date = datetime.strptime(h["date"], "%d %b %Y")
+                if h_date >= today:
+                    upcoming.append(h)
 
-                for h in holidays:
-                    try:
-                        raw_date = h["date"].split(":")[-1].strip()
+        # 🧠 detect number
+            count = 1
+            for word in message.split():
+                if word.isdigit():
+                    count = int(word)
 
-                        # remove st/nd/rd/th
-                        clean_date = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', raw_date)
+    # 🧠 choose list
+            if "all" in message or "full" in message:
+                selected = holidays_sorted
+            else:
+                selected = upcoming[:count]
 
-                        date_obj = datetime.strptime(clean_date, "%d %b %Y").date()
+            if not selected:
+                return {"response": "No upcoming holidays found."}
 
-                        holiday_obj = {
-                            "name": h["name"],
-                            "date": date_obj
-                        }
+    # 💬 single
+            if len(selected) == 1 and "all" not in message:
+                h = selected[0]
+                return {
+                "response": f"Your next holiday is {h['name']} on {h['date']} 🎉"
+                }
 
-                        all_holidays.append(holiday_obj)
+    # 💬 multiple
+            response = "Here are your holidays:\n\n"
+            for h in selected:
+                response += f"• {h['name']} — {h['date']}\n"
 
-                        if date_obj >= today:
-                            upcoming_holidays.append(holiday_obj)
-
-                    except Exception as e:
-                        print("Holiday parse error:", e)
-                        continue
-
-                # sort
-                all_holidays.sort(key=lambda x: x["date"])
-                upcoming_holidays.sort(key=lambda x: x["date"])
-
-                # detect number
-                count = 1
-                for word in message.split():
-                    if word.isdigit():
-                        count = int(word)
-
-                # full vs upcoming
-                if "all" in message or "full" in message:
-                    selected = all_holidays
-                else:
-                    selected = upcoming_holidays[:count]
-
-                if not selected:
-                    return {"response": "No upcoming holidays found."}
-
-                # single holiday
-                if len(selected) == 1 and "all" not in message:
-                    h = selected[0]
-                    formatted_date = h["date"].strftime("%d %b %Y")
-
-                    return {
-                        "response": f"Your next holiday is {h['name']} on {formatted_date} 🎉"
-                    }
-
-                # multiple holidays
-                response = "Here are your holidays:\n\n"
-
-                for h in selected:
-                    formatted_date = h["date"].strftime("%d %b %Y")
-                    response += f"• {h['name']} — {formatted_date}\n"
-
-                return {"response": response}
-
-            return {"response": result["message"]}
+            return {"response": response}
 
         # 🎯 FREE CLASSROOM
         if "free" in message:
