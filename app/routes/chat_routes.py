@@ -69,16 +69,16 @@ def chat(data: ChatRequest):
                 percentage = round(percentage, 1)
 
                 # 🎯 Smart message
-            if percentage >= 75:
-                status_msg = "✅ You’re in a safe zone. Keep it up!"
-            elif percentage >= 60:
-                status_msg = "⚠️ You’re getting close to the risk zone. Try to attend more classes."
-            else:
-                status_msg = "🚨 You’re below 75%. Risk of being debarred!"
+                if percentage >= 75:
+                    status_msg = "✅ You’re in a safe zone. Keep it up!"
+                elif percentage >= 60:
+                    status_msg = "⚠️ You’re getting close to the risk zone. Try to attend more classes."
+                else:
+                    status_msg = "🚨 You’re below 75%. Risk of being debarred!"
 
-            # 💬 Final conversational response
-            return {
-                "response": (
+                # 💬 Final conversational response
+                return {
+                 "response": (
                     f"You’ve attended {present} out of {total} classes.\n\n"
                     f"Your attendance is {percentage}%.\n\n"
                     f"{status_msg}"
