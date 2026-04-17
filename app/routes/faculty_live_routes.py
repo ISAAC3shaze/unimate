@@ -11,38 +11,52 @@ def get_faculty_live(faculty_name: str):
         conn = get_connection()
         cur = conn.cursor()
 
-        # current time + day
+        # 🧠 CLEAN NAME (VERY IMPORTANT)
+        clean_name = faculty_name.lower()
+
+        for word in ["dr.", "dr", "mr.", "mr", "ms.", "ms", "prof.", "prof"]:
+            clean_name = clean_name.replace(word, "")
+
+        clean_name = clean_name.strip()
+
+        # 🕒 CURRENT TIME + DAY
         now = datetime.now()
         current_time = now.time()
         current_day = now.strftime("%a")  # Mon, Tue
 
-        # check timetable
+        # 🎯 CHECK IF TEACHING
         cur.execute("""
-            SELECT location_block, location_room
+            SELECT location_block, location_room, faculty_name
             FROM faculty_timetable
             WHERE LOWER(faculty_name) LIKE %s
             AND day_of_week = %s
             AND start_time <= %s
             AND end_time >= %s
-        """, (f"%{faculty_name.lower()}%", current_day, current_time, current_time))
+            LIMIT 1
+        """, (f"%{clean_name}%", current_day, current_time, current_time))
 
         result = cur.fetchone()
 
         if result:
+            block, room, actual_name = result
+
             cur.close()
             conn.close()
+
             return {
                 "status": "teaching",
-                "block": result[0],
-                "room": result[1]
+                "name": actual_name,
+                "block": block,
+                "room": room
             }
 
-        # else → get cabin
+        # 🎯 ELSE → CHECK CABIN
         cur.execute("""
-            SELECT block, room_no, cabin_no
+            SELECT block, room_no, cabin_no, faculty_name
             FROM faculty
             WHERE LOWER(faculty_name) LIKE %s
-        """, (f"%{faculty_name.lower()}%",))
+            LIMIT 1
+        """, (f"%{clean_name}%",))
 
         faculty = cur.fetchone()
 
@@ -50,11 +64,14 @@ def get_faculty_live(faculty_name: str):
         conn.close()
 
         if faculty:
+            block, room, cabin, actual_name = faculty
+
             return {
                 "status": "free",
-                "block": faculty[0],
-                "room": faculty[1],
-                "cabin": faculty[2]
+                "name": actual_name,
+                "block": block,
+                "room": room,
+                "cabin": cabin
             }
 
         return {"status": "not_found"}

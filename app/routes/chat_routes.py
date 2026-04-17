@@ -193,7 +193,7 @@ def chat(data: ChatRequest):
             return {"response": result["message"]}
 
         # 🎯 FACULTY
-        if any(k in message for k in ["faculty", "where", "dr."]):
+        if any(k in message for k in ["faculty", "where", "dr", "sir"]):
             from app.routes.faculty_live_routes import get_faculty_live
 
             faculty_name = message.replace("where is", "").replace("where", "").strip()
@@ -202,15 +202,23 @@ def chat(data: ChatRequest):
             result = get_faculty_live(faculty_name)
 
             if result["status"] == "teaching":
-                return {"response": f"{faculty_name} is teaching in Block {result['block']} Room {result['room']}"}
+                return {
+                "response": f"{result['name']} is teaching in Block {result['block']} Room {result['room']}"
+                }
 
             elif result["status"] == "free":
-                return {"response": f"{faculty_name} is free in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"}
+                return {
+                "response": f"{result['name']} is available in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"
+                }
 
             elif result["status"] == "not_found":
-                return {"response": "Faculty not found"}
+                return {
+                    "response": "I couldn’t find that faculty. Try typing just the name."
+                }
 
-            return {"response": result.get("message", "Error fetching faculty location")}
+            return {
+                "response": result.get("message", "Error fetching faculty location")
+                }
 
         return {"response": "Ask me about your attendance, holidays, or absentee"}
 
