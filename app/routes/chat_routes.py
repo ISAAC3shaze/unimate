@@ -118,7 +118,9 @@ def chat(data: ChatRequest):
 
             if result["status"] == "success":
                 holidays = result["holidays"]
-                today = datetime.now()
+
+                # 🔥 FIX: remove time
+                today = datetime.now().date()
 
                 all_holidays = []
                 upcoming_holidays = []
@@ -126,9 +128,11 @@ def chat(data: ChatRequest):
                 for h in holidays:
                     try:
                         raw_date = h["date"].split(":")[-1].strip()
+
+                        # remove st/nd/rd/th
                         clean_date = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', raw_date)
 
-                        date_obj = datetime.strptime(clean_date, "%d %b %Y")
+                        date_obj = datetime.strptime(clean_date, "%d %b %Y").date()
 
                         holiday_obj = {
                             "name": h["name"],
@@ -140,19 +144,21 @@ def chat(data: ChatRequest):
                         if date_obj >= today:
                             upcoming_holidays.append(holiday_obj)
 
-                    except:
+                    except Exception as e:
+                        print("Holiday parse error:", e)
                         continue
 
+                # sort
                 all_holidays.sort(key=lambda x: x["date"])
                 upcoming_holidays.sort(key=lambda x: x["date"])
 
-                # 🧠 detect number
+                # detect number
                 count = 1
                 for word in message.split():
                     if word.isdigit():
                         count = int(word)
 
-                # 🔥 FIXED: FULL uses ALL holidays
+                # full vs upcoming
                 if "all" in message or "full" in message:
                     selected = all_holidays
                 else:
@@ -161,13 +167,16 @@ def chat(data: ChatRequest):
                 if not selected:
                     return {"response": "No upcoming holidays found."}
 
+                # single holiday
                 if len(selected) == 1 and "all" not in message:
                     h = selected[0]
                     formatted_date = h["date"].strftime("%d %b %Y")
+
                     return {
                         "response": f"Your next holiday is {h['name']} on {formatted_date} 🎉"
                     }
 
+                # multiple holidays
                 response = "Here are your holidays:\n\n"
 
                 for h in selected:
