@@ -43,13 +43,9 @@ def chat(data: ChatRequest):
             result = verify_otp(token, otp_data)
 
             if result["status"] == "otp_saved":
-                return {
-                    "response": "OTP verified successfully! You can now ask for attendance."
-                }
+                return {"response": "OTP verified successfully! You can now ask for attendance."}
             else:
-                return {
-                    "response": "Invalid OTP. Please try again."
-                }
+                return {"response": "Invalid OTP. Please try again."}
 
         # 🎯 ATTENDANCE
         if "attendance" in message:
@@ -64,35 +60,29 @@ def chat(data: ChatRequest):
                 present = att["present"]
                 absent = att["absent"]
 
-                # 🧠 Calculate percentage
                 percentage = (present / total) * 100 if total > 0 else 0
                 percentage = round(percentage, 1)
 
-                # 🎯 Smart message
                 if percentage >= 75:
                     status_msg = "✅ You’re in a safe zone. Keep it up!"
                 elif percentage >= 60:
-                    status_msg = "⚠️ You’re getting close to the risk zone. Try to attend more classes."
+                    status_msg = "⚠️ You’re getting close to the risk zone."
                 else:
                     status_msg = "🚨 You’re below 75%. Risk of being debarred!"
 
-                # 💬 Final conversational response
                 return {
-                 "response": (
-                    f"You’ve attended {present} out of {total} classes.\n\n"
-                    f"Your attendance is {percentage}%.\n\n"
-                    f"{status_msg}"
-                )
-            }
+                    "response": (
+                        f"You’ve attended {present} out of {total} classes.\n\n"
+                        f"Your attendance is {percentage}%.\n\n"
+                        f"{status_msg}"
+                    )
+                }
 
-            # 🔥 OTP TRIGGER
             if "otp" in result["message"].lower():
                 from app.routes.auth_routes import request_otp
                 request_otp(token)
 
-                return {
-                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
-                }
+                return {"response": "OTP required. I’ve sent an OTP to your email. Please enter it."}
 
             return {"response": result["message"]}
 
@@ -103,21 +93,21 @@ def chat(data: ChatRequest):
             result = get_absentee(token)
 
             if result["status"] == "success":
-                return {
-                    "response": f"Your absentee details:\n{result['absentee']}"
-                }
+                abs_data = result["absentee"]
+
+                if abs_data.get("status") == "no_absence":
+                    return {"response": "You have no absences today ✅"}
+                else:
+                    return {"response": f"You were absent in:\n{abs_data}"}
 
             if "otp" in result["message"].lower():
                 from app.routes.auth_routes import request_otp
                 request_otp(token)
 
-                return {
-                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
-                }
+                return {"response": "OTP required. I’ve sent an OTP to your email. Please enter it."}
 
             return {"response": result["message"]}
 
-        # 🎯 HOLIDAYS
         # 🎯 HOLIDAYS
         if "holiday" in message:
             from app.routes.holiday_routes import get_holidays
@@ -130,26 +120,31 @@ def chat(data: ChatRequest):
                 holidays = result["holidays"]
                 today = datetime.now()
 
-                parsed_holidays = []
+                all_holidays = []
+                upcoming_holidays = []
 
                 for h in holidays:
                     try:
                         raw_date = h["date"].split(":")[-1].strip()
-
-                        # 🔥 Remove st/nd/rd/th
                         clean_date = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', raw_date)
 
                         date_obj = datetime.strptime(clean_date, "%d %b %Y")
 
+                        holiday_obj = {
+                            "name": h["name"],
+                            "date": date_obj
+                        }
+
+                        all_holidays.append(holiday_obj)
+
                         if date_obj >= today:
-                            parsed_holidays.append({
-                                "name": h["name"],
-                                "date": date_obj
-                            })
+                            upcoming_holidays.append(holiday_obj)
+
                     except:
                         continue
 
-                parsed_holidays.sort(key=lambda x: x["date"])
+                all_holidays.sort(key=lambda x: x["date"])
+                upcoming_holidays.sort(key=lambda x: x["date"])
 
                 # 🧠 detect number
                 count = 1
@@ -157,25 +152,23 @@ def chat(data: ChatRequest):
                     if word.isdigit():
                         count = int(word)
 
-                # 🧠 full list intent
+                # 🔥 FIXED: FULL uses ALL holidays
                 if "all" in message or "full" in message:
-                    selected = parsed_holidays
+                    selected = all_holidays
                 else:
-                    selected = parsed_holidays[:count]
+                    selected = upcoming_holidays[:count]
 
                 if not selected:
                     return {"response": "No upcoming holidays found."}
 
-                # 💬 Better conversational tone
-                if len(selected) == 1:
+                if len(selected) == 1 and "all" not in message:
                     h = selected[0]
                     formatted_date = h["date"].strftime("%d %b %Y")
-
                     return {
                         "response": f"Your next holiday is {h['name']} on {formatted_date} 🎉"
                     }
 
-                response = "Here are your upcoming holidays:\n\n"
+                response = "Here are your holidays:\n\n"
 
                 for h in selected:
                     formatted_date = h["date"].strftime("%d %b %Y")
@@ -183,7 +176,6 @@ def chat(data: ChatRequest):
 
                 return {"response": response}
 
-        else:
             return {"response": result["message"]}
 
         # 🎯 FREE CLASSROOM
@@ -193,13 +185,11 @@ def chat(data: ChatRequest):
             result = get_free_class_now()
 
             if result["status"] == "success":
-                return {
-                    "response": f"Free classrooms:\n{result['free_classes']}"
-                }
+                return {"response": f"Free classrooms:\n{result['free_classes']}"}
 
             return {"response": result["message"]}
 
-        # 🎯 FACULTY LIVE
+        # 🎯 FACULTY
         if any(k in message for k in ["faculty", "where", "dr."]):
             from app.routes.faculty_live_routes import get_faculty_live
 
@@ -209,21 +199,17 @@ def chat(data: ChatRequest):
             result = get_faculty_live(faculty_name)
 
             if result["status"] == "teaching":
-                return {
-                    "response": f"{faculty_name} is teaching in Block {result['block']} Room {result['room']}"
-                }
+                return {"response": f"{faculty_name} is teaching in Block {result['block']} Room {result['room']}"}
 
             elif result["status"] == "free":
-                return {
-                    "response": f"{faculty_name} is free in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"
-                }
+                return {"response": f"{faculty_name} is free in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"}
 
             elif result["status"] == "not_found":
                 return {"response": "Faculty not found"}
 
             return {"response": result.get("message", "Error fetching faculty location")}
 
-        return {"response": "Ask me about your attendance or absentee"}
+        return {"response": "Ask me about your attendance, holidays, or absentee"}
 
     except Exception as e:
         return {"response": str(e)}
