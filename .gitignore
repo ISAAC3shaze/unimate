@@ -1,5 +1,34 @@
-venv/
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+
+# Environment variables
 .env
-.streamlit/
+
+# Playwright
+playwright-report/
+test-results/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Node (just in case)
+node_modules/
+.next/
+
+# Database (if any local)
+*.sqlite3

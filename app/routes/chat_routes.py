@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 from app.db import get_connection
+from app.redis_client import r
 
 router = APIRouter()
 
@@ -13,7 +14,10 @@ class ChatRequest(BaseModel):
 @router.post("/chat")
 def chat(data: ChatRequest):
     try:
-        message = data.message.lower()
+        from app.text_utils import normalize_message
+
+        raw_message = data.message
+        message = normalize_message(raw_message)
         token = data.session_token
 
         # 🔐 GET SYSTEM ID FROM SESSION
@@ -35,7 +39,7 @@ def chat(data: ChatRequest):
 
         system_id = session[0]
 
-        # 🔥 OTP VERIFY HANDLER
+        # ---------------- OTP INPUT HANDLER ----------------
         if message.isdigit() and len(message) == 6:
             from app.routes.auth_routes import verify_otp, OTPRequest
 
@@ -43,13 +47,28 @@ def chat(data: ChatRequest):
             result = verify_otp(token, otp_data)
 
             if result["status"] == "otp_saved":
-                return {"response": "OTP verified successfully! You can now ask for attendance."}
+                return {"response": "OTP verified successfully! Now ask again."}
             else:
                 return {"response": "Invalid OTP. Please try again."}
 
-        # 🎯 ATTENDANCE
-        if "attendance" in message:
+        # 🔐 COMMON OTP CHECK FUNCTION
+        def check_and_request_otp():
+            from app.routes.auth_routes import request_otp
+
+            otp = r.get(f"otp:{system_id}")
+            if not otp:
+                request_otp(token)
+                return False
+            return True
+
+        # ---------------- ATTENDANCE ----------------
+        if message.strip() == "attendance" or "overall attendance" in message:
             from app.routes.attendance_routes import get_attendance
+
+            if not check_and_request_otp():
+                return {
+                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
+                }
 
             result = get_attendance(token)
 
@@ -58,7 +77,6 @@ def chat(data: ChatRequest):
 
                 total = att["total"]
                 present = att["present"]
-                absent = att["absent"]
 
                 percentage = (present / total) * 100 if total > 0 else 0
                 percentage = round(percentage, 1)
@@ -78,17 +96,16 @@ def chat(data: ChatRequest):
                     )
                 }
 
-            if "otp" in result["message"].lower():
-                from app.routes.auth_routes import request_otp
-                request_otp(token)
+            return {"response": result.get("message", "Error fetching attendance")}
 
-                return {"response": "OTP required. I’ve sent an OTP to your email. Please enter it."}
-
-            return {"response": result["message"]}
-
-        # 🎯 ABSENTEE
+        # ---------------- ABSENTEE ----------------
         if "absent" in message:
             from app.routes.absentee_routes import get_absentee
+
+            if not check_and_request_otp():
+                return {
+                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
+                }
 
             result = get_absentee(token)
 
@@ -100,99 +117,35 @@ def chat(data: ChatRequest):
                 else:
                     return {"response": f"You were absent in:\n{abs_data}"}
 
-            if "otp" in result["message"].lower():
-                from app.routes.auth_routes import request_otp
-                request_otp(token)
+            return {"response": result.get("message", "Error fetching absentee data")}
 
-                return {"response": "OTP required. I’ve sent an OTP to your email. Please enter it."}
-
-            return {"response": result["message"]}
-
-        # 🎯 HOLIDAYS
-        # 🎯 HOLIDAYS (HARDCODED - FINAL DEMO VERSION)
-        if "holiday" in message:
-
-            from datetime import datetime
-
-            holidays = [
-        {"name": "New Year", "date": "01 Jan 2026"},
-        {"name": "Makar Sankranti", "date": "14 Jan 2026"},
-        {"name": "Holiday", "date": "24 Jan 2026"},
-        {"name": "Republic Day", "date": "26 Jan 2026"},
-        {"name": "Holiday", "date": "14 Feb 2026"},
-        {"name": "Maha Shivaratri", "date": "15 Feb 2026"},
-        {"name": "Holiday", "date": "28 Feb 2026"},
-        {"name": "Holi", "date": "04 Mar 2026"},
-        {"name": "Holiday", "date": "05 Mar 2026"},
-        {"name": "Eid-ul-Fitr", "date": "21 Mar 2026"},
-        {"name": "Ram Navami", "date": "26 Mar 2026"},
-        {"name": "Holiday", "date": "28 Mar 2026"},
-        {"name": "Mahavir Jayanti", "date": "31 Mar 2026"},
-        {"name": "Good Friday", "date": "03 Apr 2026"},
-        {"name": "Holiday", "date": "11 Apr 2026"},
-        {"name": "Dr. Ambedkar Jayanti", "date": "14 Apr 2026"},
-        {"name": "Remedial Classes", "date": "21 Apr 2026"},
-        {"name": "Buddha Purnima", "date": "01 May 2026"},
-        {"name": "Eid", "date": "27 May 2026"},
-            ]
-
-        # 🔥 Today fixed for demo
-            today = datetime.strptime("17 May 2026", "%d %b %Y")
-
-            # 🔥 sort ALL holidays
-            holidays_sorted = sorted(
-                holidays,
-                key=lambda x: datetime.strptime(x["date"], "%d %b %Y")
-            )
-
-        # 🔥 upcoming filter
-            upcoming = []
-            for h in holidays_sorted:
-                h_date = datetime.strptime(h["date"], "%d %b %Y")
-                if h_date >= today:
-                    upcoming.append(h)
-
-        # 🧠 detect number
-            count = 1
-            for word in message.split():
-                if word.isdigit():
-                    count = int(word)
-
-    # 🧠 choose list
-            if "all" in message or "full" in message:
-                selected = holidays_sorted
-            else:
-                selected = upcoming[:count]
-
-            if not selected:
-                return {"response": "No upcoming holidays found."}
-
-    # 💬 single
-            if len(selected) == 1 and "all" not in message:
-                h = selected[0]
-                return {
-                "response": f"Your next holiday is {h['name']} on {h['date']} 🎉"
-                }
-
-    # 💬 multiple
-            response = "Here are your holidays:\n\n"
-            for h in selected:
-                response += f"• {h['name']} — {h['date']}\n"
-
-            return {"response": response}
-
-        # 🎯 FREE CLASSROOM
-        if "free" in message:
+        # ---------------- FREE CLASSROOM ----------------
+        if "free class" in message or "free room" in message or "empty classroom" in message:
             from app.routes.free_class_routes import get_free_class_now
+            from datetime import datetime
 
             result = get_free_class_now()
 
             if result["status"] == "success":
-                return {"response": f"Free classrooms:\n{result['free_classes']}"}
+                rooms = result["free_classes"]
 
-            return {"response": result["message"]}
+                if not rooms:
+                    return {
+                        "response": "No classrooms are free at the moment. Try again later."
+                    }
 
-        # 🎯 FACULTY
+                rooms = rooms[:10]
+
+                current_time = datetime.now().strftime("%I:%M %p")
+                formatted = "\n".join([f"• Room {r}" for r in rooms])
+
+                return {
+                    "response": f"📍 Free classrooms at {current_time}:\n\n{formatted}"
+                }
+
+            return {"response": result.get("message", "Error fetching free classes")}
+
+        # ---------------- FACULTY ----------------
         if any(k in message for k in ["faculty", "where", "dr", "sir"]):
             from app.routes.faculty_live_routes import get_faculty_live
 
@@ -203,12 +156,12 @@ def chat(data: ChatRequest):
 
             if result["status"] == "teaching":
                 return {
-                "response": f"{result['name']} is teaching in Block {result['block']} Room {result['room']}"
+                    "response": f"{result['name']} is teaching in Block {result['block']} Room {result['room']}"
                 }
 
             elif result["status"] == "free":
                 return {
-                "response": f"{result['name']} is available in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"
+                    "response": f"{result['name']} is available in Block {result['block']} Room {result['room']} Cabin {result['cabin']}"
                 }
 
             elif result["status"] == "not_found":
@@ -218,9 +171,177 @@ def chat(data: ChatRequest):
 
             return {
                 "response": result.get("message", "Error fetching faculty location")
+            }
+
+        # ---------------- HOLIDAYS ----------------
+        if "holiday" in message:
+            from app.routes.holiday_routes import get_holidays
+            from app.routes.auth_routes import request_otp
+            from datetime import datetime
+            import re
+
+            result = get_holidays(token)
+
+            if result.get("status") == "error" and "otp" in result.get("message", "").lower():
+                request_otp(token)
+                return {
+                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
                 }
 
-        return {"response": "Ask me about your attendance, holidays, or absentee"}
+            if result.get("status") == "success":
+
+                holidays_data = result.get("holidays", {})
+                holidays = holidays_data.get("holidays", [])
+
+                # -------- CLEAN --------
+                cleaned_holidays = []
+                for h in holidays:
+                    if not isinstance(h, dict):
+                        continue
+
+                    name = h.get("name", "").strip()
+                    date = h.get("date", "").strip()
+
+                    if (
+                        "no record" in name.lower()
+                        or "today" in date.lower()
+                        or not name
+                        or not date
+                    ):
+                        continue
+
+                    cleaned_holidays.append({
+                        "name": name,
+                        "date": date
+                    })
+
+                holidays = cleaned_holidays
+
+                # -------- FILTER UPCOMING --------
+                today = datetime.now()
+                upcoming = []
+
+                for h in holidays:
+                    raw_date = h["date"]
+
+                    try:
+                        clean = raw_date.split(":")[-1].strip()
+                        clean = re.sub(r"(st|nd|rd|th)", "", clean)
+                        date_obj = datetime.strptime(clean, "%d %b %Y")
+
+                        if date_obj >= today:
+                            upcoming.append(h)
+
+                    except:
+                        continue
+
+                holidays = upcoming
+
+                if not holidays:
+                    return {"response": "No upcoming holidays found."}
+
+                formatted = "\n".join(
+                    [f"• {h['name']} — {h['date']}" for h in holidays[:10]]
+                )
+
+                return {
+                    "response": f"📅 Upcoming Holidays:\n\n{formatted}"
+                }
+
+            return {"response": result.get("message", "Error fetching holidays")}
+        
+        #RESULT
+        # ---------------- RESULTS ----------------
+        # ---------------- RESULTS ----------------
+        if "result" in message or "marks" in message or "ca" in message:
+            from app.routes.results_routes import get_results
+
+            if not check_and_request_otp():
+                return {
+                    "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
+                }
+
+            result = get_results(token)
+
+            if result["status"] == "success":
+
+            # ✅ FIXED NESTING
+                data = result["results"].get("results", [])
+
+                if not data:
+                    return {"response": "No results found."}
+
+                formatted = []
+
+                for item in data:
+                    formatted.append(
+                f"📘 {item.get('subject', 'N/A')}\n"
+                f"• Assignment 1: {item.get('assignment1', 'N/A')}/5\n"
+                f"• Assessment 1: {item.get('assessment1', 'N/A')}/10\n"
+                f"• Assignment 2: {item.get('assignment2', 'N/A')}/5\n"
+                f"• Assessment 2: {item.get('assessment2', 'N/A')}/5\n"
+                f"• Total: {item.get('total', 'N/A')}\n"
+                )
+
+                return {
+            "response": "📊 Your Continuous Assessment Marks:\n\n" + "\n".join(formatted)
+        }
+
+            return {"response": result.get("message", "Error fetching results")}
+        
+        #subject attendance
+        # ---------------- SUBJECT ATTENDANCE ----------------
+        if "subject attendance" in message or "detailed attendance" in message or "course attendance" in message:
+            from app.routes.subject_attendance_routes import get_subject_attendance
+
+            if not check_and_request_otp():
+                return {
+                "response": "OTP required. I’ve sent an OTP to your email. Please enter it."
+                }
+
+            result = get_subject_attendance(token)
+
+            if result["status"] == "success":
+                data = result.get("data", [])
+
+                if not data:
+                    return {"response": "No subject-wise attendance found."}
+
+                formatted = []
+
+                for item in data:
+                    perc = item.get("percentage", "0%").replace("%", "")
+                    try:
+                        perc_val = float(perc)
+                    except:
+                        perc_val = 0
+
+                    # 🎯 Smart indicator
+                    if perc_val >= 75:
+                        status = "✅good try to maintain above 75"
+                    elif perc_val >= 60:
+                        status = "⚠️bring it up to 75 or else you will get debbared"
+                    else:
+                        status = "🚨very low attendance please leep up with your rest of the classes"
+
+                    formatted.append(
+                f"{status} {item.get('subject')}\n"
+                f"• Faculty: {item.get('faculty')}\n"
+                f"• Attended: {item.get('attended')}/{item.get('delivered')}\n"
+                f"• Percentage: {item.get('percentage')}\n"
+            )
+
+                return {
+            "response": "📚 Subject-wise Attendance:\n\n" + "\n".join(formatted)
+        }
+
+            return {"response": result.get("message", "Error fetching subject attendance")}
+        
+
+        # ---------------- DEFAULT ----------------
+        return {
+            "response": "Ask me about your attendance, absentee, free classes, faculty, or holidays."
+        }
 
     except Exception as e:
         return {"response": str(e)}

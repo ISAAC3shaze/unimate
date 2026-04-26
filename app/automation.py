@@ -209,3 +209,164 @@ def fetch_holidays(system_id: str, otp: str):
     except Exception as e:
         context.close()
         return {"status": "error", "message": str(e)}
+
+    
+
+#FOR RESULT
+from app.automation import login
+from datetime import datetime
+
+def fetch_results(system_id: str, otp: str):
+    browser = get_browser()
+    context = browser.new_context()
+    page = context.new_page()
+
+    try:
+        # 🔐 LOGIN
+        login(page, system_id, otp)
+        page.wait_for_load_state("networkidle")
+
+        # 🚨 LOGIN FAIL CHECK
+        if page.locator("text=Invalid System ID OR OTP!").count() > 0:
+            context.close()
+            return {
+                "status": "error",
+                "message": "Login failed - invalid or expired OTP"
+            }
+
+        # 🔽 SCROLL (important for loading CA section)
+        for _ in range(6):
+            page.mouse.wheel(0, 1000)
+            page.wait_for_timeout(500)
+
+        page.wait_for_timeout(2000)
+
+        # 🔍 FIND ALL TABLES
+        tables = page.locator("table").all()
+
+        results = []
+
+        # 🎯 LOOP THROUGH TABLES TO FIND CORRECT ONE
+        for table in tables:
+            text = table.inner_text()
+
+            # identify CA table using headers
+            if "Assignment 1" in text and "Assessment 1" in text:
+
+                rows = table.locator("tbody tr").all()
+
+                for row in rows:
+                    cols = row.locator("td").all()
+
+                    if len(cols) < 6:
+                        continue
+
+                    subject = cols[0].inner_text().strip()
+                    a1 = cols[1].inner_text().strip()
+                    ass1 = cols[2].inner_text().strip()
+                    a2 = cols[3].inner_text().strip()
+                    ass2 = cols[4].inner_text().strip()
+                    total = cols[5].inner_text().strip()
+
+                    results.append({
+                        "subject": subject,
+                        "assignment1": a1,
+                        "assessment1": ass1,
+                        "assignment2": a2,
+                        "assessment2": ass2,
+                        "total": total
+                    })
+
+                break  # ✅ stop after finding correct table
+
+        context.close()
+
+        # 🚨 NO DATA FOUND
+        if not results:
+            return {
+                "status": "error",
+                "message": "Results table not found"
+            }
+
+        return {
+            "status": "success",
+            "results": results
+        }
+
+    except Exception as e:
+        context.close()
+        return {"status": "error", "message": str(e)}
+    
+#subject attendance
+def fetch_subject_attendance(system_id: str, otp: str):
+    browser = get_browser()
+    context = browser.new_context()
+    page = context.new_page()
+
+    try:
+        # 🔐 LOGIN
+        login(page, system_id, otp)
+        page.wait_for_load_state("networkidle")
+
+        # 🚨 LOGIN FAIL CHECK
+        if page.locator("text=Invalid System ID OR OTP!").count() > 0:
+            context.close()
+            return {
+                "status": "error",
+                "message": "Login failed - invalid or expired OTP"
+            }
+
+        # 🧭 CORRECT PAGE
+        page.goto("https://student.sharda.ac.in/admin/courses")
+        page.wait_for_load_state("networkidle")
+        # 🎯 SELECT CURRENT TERM (2502)
+        try:
+            tabs = page.locator("text=2502")
+
+            if tabs.count() > 0:
+                tabs.first.click()
+                page.wait_for_timeout(2000)
+        except:
+            pass
+
+        page.wait_for_selector("table")
+
+        rows = page.locator("table tbody tr").all()
+
+        data = []
+
+        for row in rows:
+            cols = row.locator("td").all()
+
+            if len(cols) < 11:
+                continue
+
+            try:
+                data.append({
+                    "subject": cols[1].inner_text().strip(),
+                    "code": cols[2].inner_text().strip(),
+                    "faculty": cols[4].inner_text().strip(),
+                    "delivered": cols[6].inner_text().strip(),
+                    "attended": cols[7].inner_text().strip(),
+                    "percentage": cols[10].inner_text().strip(),
+                })
+            except:
+                continue
+
+        context.close()
+
+        if not data:
+            return {
+                "status": "error",
+                "message": "No subject attendance data found"
+            }
+
+        return {
+            "status": "success",
+            "data": data
+        }
+
+    except Exception as e:
+        context.close()
+        return {"status": "error", "message": str(e)}
+    

@@ -48,30 +48,19 @@ def login_student(data: LoginRequest):
             VALUES (%s, %s)
         """, (data.system_id, session_token))
 
-        otp = r.get(f"otp:{data.system_id}")
-
         conn.commit()
         cur.close()
         conn.close()
 
-        if otp:
-            return {
-        "status": "success",
-        "message": "Login successful",
-        "session_token": session_token,
-        "name": name,
-        "course": course,
-        "section": section
-    }
-        else:
-            return {
-        "status": "success",
-        "message": "OTP required",
-        "session_token": session_token,
-        "name": name,
-        "course": course,
-        "section": section
-    }
+        # ✅ CLEAN LOGIN RESPONSE (NO OTP LOGIC HERE)
+        return {
+            "status": "success",
+            "message": "Login successful",
+            "session_token": session_token,
+            "name": name,
+            "course": course,
+            "section": section
+        }
 
     except Exception as e:
         return {"status": "error", "message": str(e)}
@@ -98,9 +87,7 @@ def check_login(session_token: str):
 
         system_id = session[0]
 
-        # 🔥 CHECK REDIS (IMPORTANT PART)
-        from app.redis_client import r
-
+        # 🔥 CHECK REDIS FOR OTP
         otp = r.get(f"otp:{system_id}")
 
         cur.close()
@@ -139,6 +126,7 @@ def request_otp(session_token: str):
         cur.close()
         conn.close()
 
+        # 🔥 TRIGGER OTP
         trigger_otp(system_id)
 
         return {"status": "otp_sent"}
@@ -166,17 +154,14 @@ def verify_otp(session_token: str, data: OTPRequest):
             conn.close()
             return {"status": "error", "message": "Invalid session"}
 
-        # ✅ FIX: extract system_id
         system_id = session[0]
 
-        
-
+        # 🕒 STORE OTP UNTIL MIDNIGHT
         now = datetime.now()
         midnight = datetime.combine(now.date() + timedelta(days=1), datetime.min.time())
         seconds_until_midnight = int((midnight - now).total_seconds())
 
-        # 🔐 store OTP till midnight (per user)
-        
+        # 🔐 SAVE OTP IN REDIS
         r.setex(f"otp:{system_id}", seconds_until_midnight, data.otp)
 
         cur.close()

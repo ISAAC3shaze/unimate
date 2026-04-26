@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from app.db import get_connection
 from datetime import datetime
+import re
 
 router = APIRouter()
 
@@ -11,18 +12,34 @@ def get_faculty_live(faculty_name: str):
         conn = get_connection()
         cur = conn.cursor()
 
-        # 🧠 CLEAN NAME (VERY IMPORTANT)
+        # 🧠 CLEAN NAME (IMPROVED)
         clean_name = faculty_name.lower()
 
-        for word in ["dr.", "dr", "mr.", "mr", "ms.", "ms", "prof.", "prof"]:
-            clean_name = clean_name.replace(word, "")
+        # remove noise words (IMPORTANT FIX)
+        clean_name = re.sub(
+            r"(where is|where|locate|find|sir|maam|madam|dr\.?|prof\.?|mr\.?|ms\.?)",
+            "",
+            clean_name,
+            flags=re.IGNORECASE
+        )
 
-        clean_name = clean_name.strip()
+        # remove extra spaces
+        clean_name = " ".join(clean_name.split())
+
+        print("🔍 Searching faculty:", clean_name)  # DEBUG
 
         # 🕒 CURRENT TIME + DAY
         now = datetime.now()
         current_time = now.time()
         current_day = now.strftime("%a")  # Mon, Tue
+        # 🧪 TEST MODE (temporary)
+        #now = datetime.now()
+
+        # simulate time (e.g. 11:30 AM)
+        #current_time = datetime.strptime("13:15:00", "%H:%M:%S").time()
+        #current_day = "Wed"   # match your timetable day
+
+        #print("🧪 Test Time:", current_time, "| Day:", current_day)
 
         # 🎯 CHECK IF TEACHING
         cur.execute("""
